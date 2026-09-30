@@ -1,0 +1,427 @@
+{
+  "meta": {
+    "siteName": "Union Transit",
+    "titleSuffix": "Union Transit"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "tracking": "Tracking",
+    "contact": "Contact",
+    "quote": "Request a quote",
+    "trackCta": "Track my goods"
+  },
+  "languageSwitcher": {
+    "fr": "FR",
+    "en": "EN",
+    "label": "Change language"
+  },
+  "footer": {
+    "navTitle": "Quick links",
+    "contactTitle": "Contact",
+    "legalLink": "Legal notice",
+    "rights": "All rights reserved.",
+    "addressLabel": "Registered office"
+  },
+  "whatsapp": {
+    "writeOnWhatsApp": "Write on WhatsApp",
+    "shareExperience": "Share my experience on WhatsApp",
+    "talkToAdvisor": "Talk to an advisor on WhatsApp"
+  },
+  "home": {
+    "meta": {
+      "title": "Union Transit — China-Dakar freight, air and sea",
+      "description": "Union Transit helps individuals and businesses import from China (Guangzhou, Yiwu) to Dakar: transport, purchasing, tracking and a dedicated advisor."
+    },
+    "hero": {
+      "title": "The union that delivers, from China to Dakar.",
+      "subtitle": "Air and sea freight, factory purchasing, supplier payments and a dedicated advisor at every step: your goods reach Dakar with no bad surprises.",
+      "ctaQuote": "Request a quote",
+      "ctaServices": "Discover our services"
+    },
+    "route": {
+      "title": "One route, four ways to get there",
+      "from": "Guangzhou / Yiwu",
+      "to": "Dakar",
+      "offers": {
+        "airExpress": "Air express — 1 to 3 days",
+        "airNormal": "Standard air — 7 to 10 days",
+        "seaLcl": "Sea groupage (LCL)",
+        "seaFcl": "Sea full container (FCL)"
+      }
+    },
+    "services": {
+      "title": "Our services",
+      "subtitle": "Transport, sourcing and quality control: solutions chosen to match your needs and budget.",
+      "cards": {
+        "airExpress": {
+          "title": "Air express",
+          "delay": "1 to 3 days",
+          "description": "The fastest option for urgent goods or samples you need quickly."
+        },
+        "airNormal": {
+          "title": "Standard air",
+          "delay": "7 to 10 days",
+          "description": "A good balance between speed and cost for your regular shipments."
+        },
+        "seaLcl": {
+          "title": "Sea groupage (LCL)",
+          "delay": "Quote on request",
+          "description": "Ideal for medium volumes: you share a container with other clients."
+        },
+        "seaFcl": {
+          "title": "Full container (FCL)",
+          "delay": "40 to 60 days",
+          "description": "For large volumes: a whole container reserved for your goods."
+        },
+        "sourcing": {
+          "title": "Sourcing and quality control",
+          "delay": "Quote on request",
+          "description": "A separate service: we find and inspect your product before purchase. The price depends on the product to source and the required specifications."
+        }
+      }
+    },
+    "why": {
+      "title": "Why choose us",
+      "items": {
+        "advisor": {
+          "title": "Dedicated advisor",
+          "description": "One single person follows your file from A to Z."
+        },
+        "tracking": {
+          "title": "Tracking at every step",
+          "description": "You always know where your goods are."
+        },
+        "updates": {
+          "title": "Updates every 15 days",
+          "description": "For sea freight, a regular progress update, even without asking."
+        },
+        "quote": {
+          "title": "Quote within 48 hours",
+          "description": "A fast, detailed answer, with no hidden fees."
+        },
+        "sourcing": {
+          "title": "Sourcing and quality",
+          "description": "We check your products before shipping."
+        },
+        "allInOne": {
+          "title": "Everything in one place",
+          "description": "Purchasing, inspection, payment and transport with a single contact."
+        }
+      }
+    },
+    "ambassadors": {
+      "title": "Our best ambassadors are you.",
+      "text": "We know this route better than anyone. Every file is handled simply, within the announced timeline, with real attention to your goods and your questions. This consistency, shipment after shipment, is why our clients come back and recommend us.",
+      "cta": "Share my experience on WhatsApp",
+      "form": {
+        "title": "Leave us your review",
+        "ratingLabel": "Your rating",
+        "starLabel": "{value} star(s)",
+        "nameLabel": "Your name (optional)",
+        "commentLabel": "Your comment (optional)",
+        "submit": "Send my review",
+        "thankYou": "Thank you for your review!"
+      }
+    },
+    "banner": {
+      "title": "An import project?",
+      "subtitle": "Let's talk about it: answer within 48 hours maximum.",
+      "cta": "Request a quote"
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Our services — Transport, purchasing and tracking | Union Transit",
+      "description": "Air and sea transport, purchasing in China, supplier payments and personalized tracking: discover all of Union Transit's services."
+    },
+    "hero": {
+      "title": "Our services",
+      "subtitle": "From factory purchase to delivery in Dakar, we handle every step of your import."
+    },
+    "transport": {
+      "title": "Transport, from China to Dakar",
+      "subtitle": "Departures from Guangzhou and Yiwu.",
+      "cards": {
+        "airExpress": {
+          "title": "Air express freight",
+          "delay": "1 to 3 days maximum",
+          "description": "For urgent goods or samples you need to receive quickly."
+        },
+        "airNormal": {
+          "title": "Standard air freight",
+          "delay": "7 to 10 days maximum",
+          "description": "A reliable air service for your regular shipments."
+        },
+        "seaLcl": {
+          "title": "Container groupage (LCL)",
+          "delay": "Quote on request",
+          "description": "You share container space with other clients: an economical solution for medium volumes."
+        },
+        "seaFcl": {
+          "title": "Full container (FCL)",
+          "delay": "40 to 60 days",
+          "description": "A whole container reserved for your goods, for large volumes."
+        }
+      }
+    },
+    "purchasing": {
+      "title": "Purchasing in China",
+      "items": {
+        "sourcing": {
+          "title": "Product sourcing",
+          "description": "We look for the products that match your needs."
+        },
+        "factories": {
+          "title": "Factory connections",
+          "description": "Direct access to manufacturers, without unnecessary middlemen."
+        },
+        "quality": {
+          "title": "Quality checks",
+          "description": "We inspect products before they are shipped."
+        },
+        "payment": {
+          "title": "Supplier payments",
+          "description": "We pay your suppliers on your behalf: Alipay, WeChat, bank transfer."
+        },
+        "consolidation": {
+          "title": "Small parcel consolidation",
+          "description": "Group several purchases into a single basket, for one shipment."
+        }
+      }
+    },
+    "tracking": {
+      "title": "Your tracking",
+      "items": {
+        "online": {
+          "title": "Online tracking",
+          "description": "Check the status of your goods at any time, with your tracking number."
+        },
+        "updates": {
+          "title": "Update every 15 days",
+          "description": "For sea freight, we keep you informed regularly, even without asking."
+        },
+        "advisor": {
+          "title": "Personal advisor",
+          "description": "One single person to answer all your questions."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "steps": {
+        "step1": {
+          "title": "Describe your needs",
+          "description": "You give us the details of your goods via the form or WhatsApp."
+        },
+        "step2": {
+          "title": "Quote within 48 hours",
+          "description": "We send you a clear, detailed quote, with no hidden fees."
+        },
+        "step3": {
+          "title": "We take over",
+          "description": "Purchasing, quality checks and transport: we handle everything."
+        },
+        "step4": {
+          "title": "Delivery in Dakar",
+          "description": "Your goods arrive at their destination, tracked all the way."
+        }
+      }
+    },
+    "banner": {
+      "title": "An import project?",
+      "subtitle": "Let's talk about it: answer within 48 hours maximum.",
+      "cta": "Request a quote"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About — Union Transit",
+      "description": "Union Transit, a logistics company based in Senegal with a team in China, helps entrepreneurs, retailers and individuals receive their goods from China without stress and on time."
+    },
+    "hero": {
+      "title": "About Union Transit",
+      "text": "Union Transit is a logistics company based in Senegal with an office in China, with a team in China and a team in Senegal. Our mission: do everything, and do it as well as possible, so that entrepreneurs, retailers, e-merchants, individuals and businesses receive their goods from China to Senegal with no stress, and on time."
+    },
+    "whoWeAre": {
+      "title": "Who we are",
+      "badgeSenegal": "Senegal",
+      "badgeChina": "China",
+      "text": "Union Transit is everyone's business. Without our clients, our expertise would go unseen; without us, it's a lot more stress for the client, who has to receive their goods on time. We unite and move forward together.",
+      "slogan": "United so that everyone wins."
+    },
+    "howWeWork": {
+      "title": "How we work",
+      "items": {
+        "expertise": {
+          "title": "Expertise",
+          "description": "Solid experience in purchasing and logistics, both national and international."
+        },
+        "seriousness": {
+          "title": "Reliability of process",
+          "description": "Clear timelines and a quote with no surprises."
+        },
+        "reliability": {
+          "title": "Dependability",
+          "description": "Tracking at every step, with regular updates."
+        }
+      }
+    },
+    "founder": {
+      "role": "Founder and manager",
+      "initials": "PM",
+      "bio": "PM has solid experience in sales, client relations and purchasing. He founded Union Transit to put that experience at the service of his clients. With a young, dynamic team, he pays close personal attention to every file, with a constant focus on client satisfaction, quality and keeping commitments."
+    },
+    "banner": {
+      "title": "Let's work together",
+      "subtitle": "Let's talk about your next shipment.",
+      "cta": "Contact us"
+    }
+  },
+  "tracking": {
+    "meta": {
+      "title": "Track your goods — Union Transit",
+      "description": "Track your goods in transit between China and Dakar with your Union Transit tracking number."
+    },
+    "hero": {
+      "title": "Track your goods",
+      "subtitle": "Enter your Union Transit tracking number to see the status of your shipment.",
+      "inputLabel": "Tracking number",
+      "inputPlaceholder": "UT-2026-00123",
+      "demoNote": "Demonstration example",
+      "cta": "Track"
+    },
+    "result": {
+      "trackingNumberLabel": "Tracking number",
+      "routeLabel": "Route",
+      "route": "Guangzhou → Dakar",
+      "modeLabel": "Transport mode",
+      "mode": "Sea freight (LCL groupage)",
+      "advisorLabel": "Assigned advisor",
+      "advisorName": "PM",
+      "currentStatusLabel": "Current status",
+      "lastUpdateLabel": "Last update",
+      "lastUpdateDate": "September 12, 2026",
+      "timelineTitle": "Tracking history",
+      "departureDate": "September 18, 2026",
+      "arrivalDate": "October 28, 2026",
+      "airStatuses": {
+        "received": "Received",
+        "inProgress": "In transit",
+        "arrived": "Arrived"
+      },
+      "seaStatuses": {
+        "received": "Received",
+        "loading": "Loading",
+        "departurePlanned": "Departure planned on {date}",
+        "leftPort": "Left the port",
+        "inProgress": "In transit",
+        "arrivalPlanned": "Arrival planned on {date}",
+        "arrived": "Arrived",
+        "customsWaiting": "Awaiting customs clearance",
+        "customsInProgress": "Customs clearance in progress",
+        "availableWarehouse": "Available at the warehouse"
+      }
+    },
+    "info": {
+      "text": "For a sea shipment, we also send you a progress update every 15 days, even if you don't check this page."
+    },
+    "demoDisclaimer": "Demonstration: this data is fictional. In V1, a search always shows this example; it will be connected to a real tracking system in a future version.",
+    "banner": {
+      "title": "A question about your shipment?",
+      "subtitle": "Your advisor answers you directly.",
+      "cta": "Write on WhatsApp"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact — Request a quote | Union Transit",
+      "description": "Request your China-Dakar import quote or write to us directly on WhatsApp. Answer within 48 hours maximum."
+    },
+    "hero": {
+      "title": "Contact us",
+      "subtitle": "Answer within 48 hours maximum."
+    },
+    "form": {
+      "title": "Request a quote",
+      "companyNameLabel": "Company name (optional)",
+      "lastNameLabel": "Last name",
+      "firstNameLabel": "First name",
+      "phoneLabel": "WhatsApp phone number",
+      "emailLabel": "Email (optional)",
+      "goodsTypeLabel": "Type of goods",
+      "quantityLabel": "Quantity (optional)",
+      "sizeLabel": "Size (dimensions, optional)",
+      "weightLabel": "Weight (optional)",
+      "notesLabel": "Additional notes (optional)",
+      "submit": "Send on WhatsApp",
+      "requiredNote": "Required fields",
+      "confirmation": "Thank you, your message is ready on WhatsApp. Send it so we can reply with your quote within 48 hours maximum.",
+      "whatsappMessage": {
+        "intro": "Hello Union Transit, I would like to request a quote.",
+        "companyName": "Company",
+        "name": "Name",
+        "phone": "Phone",
+        "email": "Email",
+        "goodsType": "Type of goods",
+        "quantity": "Quantity",
+        "size": "Size",
+        "weight": "Weight",
+        "notes": "Notes"
+      }
+    },
+    "sidebar": {
+      "directTitle": "A quick question?",
+      "directText": "Talk directly to an advisor on WhatsApp, without going through the form.",
+      "directCta": "Write on WhatsApp",
+      "coordinatesTitle": "Our contact details",
+      "addressLabel": "Registered office",
+      "emailLabel": "Email",
+      "whatsappSnLabel": "WhatsApp Senegal",
+      "whatsappCnLabel": "WhatsApp China"
+    }
+  },
+  "legal": {
+    "meta": {
+      "title": "Legal notice — Union Transit",
+      "description": "Legal notice of Union Transit SUARL, a logistics company based in Kaolack, Senegal."
+    },
+    "title": "Legal notice",
+    "company": {
+      "title": "Company identification",
+      "name": "Legal name: Union Transit, SUARL",
+      "headquartersLabel": "Registered office",
+      "rccm": "RCCM: [RCCM to be completed]",
+      "ninea": "NINEA: [NINEA to be completed]",
+      "manager": "Manager: Papa Touty Mara",
+      "contactLabel": "Contact",
+      "host": "Host: [hosting provider name and address to be completed]"
+    },
+    "personalData": {
+      "title": "Privacy policy",
+      "text": "Information entered in the contact form is used only to process your quote request and get back to you. It is neither resold nor shared with third parties. The form only sends your data to Union Transit, via WhatsApp."
+    },
+    "intellectualProperty": {
+      "title": "Intellectual property",
+      "text": "All content on this site (text, logo, images, layout) is the property of Union Transit, unless stated otherwise. Any reproduction without authorization is prohibited."
+    }
+  },
+  "comingSoon": {
+    "meta": {
+      "title": "Coming soon — Union Transit",
+      "description": "The Union Transit website is coming soon."
+    },
+    "title": "Coming soon",
+    "text": "Our website is being prepared. It's arriving very soon.",
+    "cta": "Write to us on WhatsApp"
+  },
+  "notFound": {
+    "meta": {
+      "title": "Page not found — Union Transit"
+    },
+    "title": "This page doesn't exist",
+    "text": "The page you are looking for is no longer available or has been moved.",
+    "cta": "Back to home"
+  }
+}
