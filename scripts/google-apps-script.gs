@@ -20,6 +20,31 @@
  *     9=Dedouanement en cours, 10=Disponible a l'entrepot).
  */
 
+var MONTHS_FR = [
+  "janvier",
+  "février",
+  "mars",
+  "avril",
+  "mai",
+  "juin",
+  "juillet",
+  "août",
+  "septembre",
+  "octobre",
+  "novembre",
+  "décembre",
+];
+
+// Google Sheets convertit automatiquement un texte qui ressemble a une date
+// (ex. "1 octobre 2026") en vraie date. On le reformate ici en texte lisible
+// pour ne jamais renvoyer un format technique (ISO) au site.
+function formatCell(value) {
+  if (Object.prototype.toString.call(value) === "[object Date]") {
+    return value.getDate() + " " + MONTHS_FR[value.getMonth()] + " " + value.getFullYear();
+  }
+  return value;
+}
+
 function getOrCreateSheet(name, headers) {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName(name);
@@ -44,14 +69,14 @@ function doGet(e) {
         if ((row[0] + "").trim().toUpperCase() === numero) {
           output = {
             found: true,
-            numero: row[0],
-            mode: row[1],
-            trajet: row[2],
+            numero: formatCell(row[0]),
+            mode: formatCell(row[1]),
+            trajet: formatCell(row[2]),
             etape: row[3],
-            dateMaj: row[4],
-            conseiller: row[5],
-            departPrevu: row[6],
-            arriveePrevue: row[7],
+            dateMaj: formatCell(row[4]),
+            conseiller: formatCell(row[5]),
+            departPrevu: formatCell(row[6]),
+            arriveePrevue: formatCell(row[7]),
           };
           break;
         }
