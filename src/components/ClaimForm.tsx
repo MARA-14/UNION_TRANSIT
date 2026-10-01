@@ -2,14 +2,21 @@
 
 import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { WHATSAPP_CLAIMS, buildWhatsAppLink } from "@/lib/whatsapp";
+import {
+  WHATSAPP_CLAIMS,
+  formatWhatsAppDisplay,
+  buildWhatsAppLink,
+} from "@/lib/whatsapp";
 import { logToSheet } from "@/lib/sheets";
+
+type Status = "idle" | "sending" | "success" | "error";
 
 export default function ClaimForm() {
   const t = useTranslations("claim.form");
-  const [submitted, setSubmitted] = useState(false);
+  const tWa = useTranslations("whatsapp");
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
 
@@ -29,25 +36,8 @@ export default function ClaimForm() {
     };
     const claimTypeLabel = claimTypeLabels[claimType] ?? claimType;
 
-    const lines = [
-      t("whatsappMessage.intro"),
-      "",
-      `${t("whatsappMessage.name")}: ${firstName} ${lastName}`.trim(),
-      `${t("whatsappMessage.phone")}: ${phone}`,
-    ];
-
-    if (trackingNumber) {
-      lines.push(`${t("whatsappMessage.trackingNumber")}: ${trackingNumber}`);
-    }
-
-    lines.push(
-      `${t("whatsappMessage.claimType")}: ${claimTypeLabel}`,
-      `${t("whatsappMessage.description")}: ${description}`,
-    );
-
-    const message = lines.join("\n");
-
-    logToSheet({
+    setStatus("sending");
+    const success = await logToSheet({
       type: "reclamation",
       lastName,
       firstName,
@@ -57,13 +47,28 @@ export default function ClaimForm() {
       description,
     });
 
-    window.open(buildWhatsAppLink(WHATSAPP_CLAIMS, message), "_blank", "noopener,noreferrer");
-    setSubmitted(true);
+    setStatus(success ? "success" : "error");
   }
 
   const inputClass =
     "w-full min-h-[44px] rounded-md border border-navy/20 bg-white px-4 py-2 text-navy placeholder:text-navy/30 focus-visible:outline focus-visible:outline-3 focus-visible:outline-gold focus-visible:outline-offset-2";
   const labelClass = "block text-sm font-medium text-navy mb-1.5";
+
+  if (status === "success") {
+    return (
+      <div className="rounded-xl border border-success/30 bg-success/10 p-6">
+        <p className="font-heading font-semibold text-success">
+          {t("successTitle")}
+        </p>
+        <p className="mt-2 text-sm text-navy/70">{t("successText")}</p>
+        <p className="mt-4 text-sm">
+          <a href={`tel:+${WHATSAPP_CLAIMS}`} className="font-medium text-navy hover:underline">
+            {formatWhatsAppDisplay(WHATSAPP_CLAIMS)}
+          </a>
+        </p>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
@@ -128,18 +133,27 @@ export default function ClaimForm() {
 
       <p className="text-xs text-navy/50">{t("requiredNote")}</p>
 
+      {status === "error" && (
+        <div role="alert" className="rounded-xl border border-gold/40 bg-gold/10 p-4">
+          <p className="text-sm text-navy">{t("errorText")}</p>
+          <a
+            href={buildWhatsAppLink(WHATSAPP_CLAIMS)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex min-h-[44px] items-center rounded-md bg-navy px-5 text-sm font-semibold text-white hover:bg-navy-dark"
+          >
+            {tWa("writeOnWhatsApp")}
+          </a>
+        </div>
+      )}
+
       <button
         type="submit"
-        className="w-full sm:w-auto min-h-[44px] rounded-md bg-success px-8 text-sm font-semibold text-white transition-colors hover:bg-success/90 focus-visible:outline focus-visible:outline-3 focus-visible:outline-navy focus-visible:outline-offset-2"
+        disabled={status === "sending"}
+        className="w-full sm:w-auto min-h-[44px] rounded-md bg-success px-8 text-sm font-semibold text-white transition-colors hover:bg-success/90 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-3 focus-visible:outline-navy focus-visible:outline-offset-2"
       >
-        {t("submit")}
+        {status === "sending" ? t("sending") : t("submit")}
       </button>
-
-      <div role="status" aria-live="polite">
-        {submitted && (
-          <p className="text-sm font-medium text-success">{t("confirmation")}</p>
-        )}
-      </div>
     </form>
   );
 }

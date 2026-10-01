@@ -2,17 +2,24 @@
 
 import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { WHATSAPP_SN, buildWhatsAppLink } from "@/lib/whatsapp";
+import {
+  WHATSAPP_SN,
+  WHATSAPP_CN,
+  formatWhatsAppDisplay,
+  buildWhatsAppLink,
+} from "@/lib/whatsapp";
 import { logToSheet } from "@/lib/sheets";
 
 type RequestType = "shipment" | "sourcing";
+type Status = "idle" | "sending" | "success" | "error";
 
 export default function ContactForm() {
   const t = useTranslations("contact.form");
+  const tWa = useTranslations("whatsapp");
   const [requestType, setRequestType] = useState<RequestType>("shipment");
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
 
@@ -41,44 +48,10 @@ export default function ContactForm() {
       ? (form.get("expectations") as string) ?? ""
       : (form.get("weight") as string) ?? "";
 
-    const lines = [
-      t("whatsappMessage.intro"),
-      "",
-      `${t("whatsappMessage.requestType")}: ${requestTypeLabel}`,
-    ];
-
-    if (companyName) {
-      lines.push(`${t("whatsappMessage.companyName")}: ${companyName}`);
-    }
-
-    lines.push(
-      `${t("whatsappMessage.name")}: ${firstName} ${lastName}`.trim(),
-      `${t("whatsappMessage.phone")}: ${phone}`,
-    );
-
-    if (email) {
-      lines.push(`${t("whatsappMessage.email")}: ${email}`);
-    }
-
-    if (isSourcing) {
-      lines.push(`${t("whatsappMessage.productToSource")}: ${goodsType}`);
-      if (size) lines.push(`${t("whatsappMessage.specs")}: ${size}`);
-      if (weight) lines.push(`${t("whatsappMessage.expectations")}: ${weight}`);
-    } else {
-      lines.push(`${t("whatsappMessage.goodsType")}: ${goodsType}`);
-      if (quantity) lines.push(`${t("whatsappMessage.quantity")}: ${quantity}`);
-      if (size) lines.push(`${t("whatsappMessage.size")}: ${size}`);
-      if (weight) lines.push(`${t("whatsappMessage.weight")}: ${weight}`);
-    }
-
-    if (notes) {
-      lines.push(`${t("whatsappMessage.notes")}: ${notes}`);
-    }
-
-    const message = lines.join("\n");
     const notesForSheet = `[${requestTypeLabel}]${notes ? ` ${notes}` : ""}`;
 
-    logToSheet({
+    setStatus("sending");
+    const success = await logToSheet({
       type: "devis",
       companyName,
       lastName,
@@ -92,13 +65,35 @@ export default function ContactForm() {
       notes: notesForSheet,
     });
 
-    window.open(buildWhatsAppLink(WHATSAPP_SN, message), "_blank", "noopener,noreferrer");
-    setSubmitted(true);
+    setStatus(success ? "success" : "error");
   }
 
   const inputClass =
     "w-full min-h-[44px] rounded-md border border-navy/20 bg-white px-4 py-2 text-navy placeholder:text-navy/30 focus-visible:outline focus-visible:outline-3 focus-visible:outline-gold focus-visible:outline-offset-2";
   const labelClass = "block text-sm font-medium text-navy mb-1.5";
+
+  if (status === "success") {
+    return (
+      <div className="rounded-xl border border-success/30 bg-success/10 p-6">
+        <p className="font-heading font-semibold text-success">
+          {t("successTitle")}
+        </p>
+        <p className="mt-2 text-sm text-navy/70">{t("successText")}</p>
+        <ul className="mt-4 space-y-2 text-sm">
+          <li>
+            <a href={`tel:+${WHATSAPP_SN}`} className="font-medium text-navy hover:underline">
+              {formatWhatsAppDisplay(WHATSAPP_SN)}
+            </a>
+          </li>
+          <li>
+            <a href={`tel:+${WHATSAPP_CN}`} className="font-medium text-navy hover:underline">
+              {formatWhatsAppDisplay(WHATSAPP_CN)}
+            </a>
+          </li>
+        </ul>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
@@ -239,20 +234,27 @@ export default function ContactForm() {
 
       <p className="text-xs text-navy/50">{t("requiredNote")}</p>
 
+      {status === "error" && (
+        <div role="alert" className="rounded-xl border border-gold/40 bg-gold/10 p-4">
+          <p className="text-sm text-navy">{t("errorText")}</p>
+          <a
+            href={buildWhatsAppLink(WHATSAPP_SN)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex min-h-[44px] items-center rounded-md bg-navy px-5 text-sm font-semibold text-white hover:bg-navy-dark"
+          >
+            {tWa("writeOnWhatsApp")}
+          </a>
+        </div>
+      )}
+
       <button
         type="submit"
-        className="w-full sm:w-auto min-h-[44px] rounded-md bg-success px-8 text-sm font-semibold text-white transition-colors hover:bg-success/90 focus-visible:outline focus-visible:outline-3 focus-visible:outline-navy focus-visible:outline-offset-2"
+        disabled={status === "sending"}
+        className="w-full sm:w-auto min-h-[44px] rounded-md bg-success px-8 text-sm font-semibold text-white transition-colors hover:bg-success/90 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:outline focus-visible:outline-3 focus-visible:outline-navy focus-visible:outline-offset-2"
       >
-        {t("submit")}
+        {status === "sending" ? t("sending") : t("submit")}
       </button>
-
-      <div role="status" aria-live="polite">
-        {submitted && (
-          <p className="text-sm font-medium text-success">
-            {t("confirmation")}
-          </p>
-        )}
-      </div>
     </form>
   );
 }

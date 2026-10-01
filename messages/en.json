@@ -368,25 +368,12 @@
       "specsLabel": "Desired specifications (optional)",
       "expectationsLabel": "Expectations: price, quality, other (optional)",
       "notesLabel": "Additional notes (optional)",
-      "submit": "Send on WhatsApp",
+      "submit": "Send my request",
+      "sending": "Sending…",
       "requiredNote": "Required fields",
-      "confirmation": "Thank you, your message is ready on WhatsApp. Send it so we can reply with your quote within 48 hours maximum.",
-      "whatsappMessage": {
-        "intro": "Hello Union Transit, I'm contacting you to get a quote for the information below. Looking forward to your reply as soon as possible.",
-        "requestType": "Type of request",
-        "companyName": "Company",
-        "name": "Name",
-        "phone": "Phone",
-        "email": "Email",
-        "goodsType": "Type of goods",
-        "quantity": "Quantity",
-        "size": "Size",
-        "weight": "Weight",
-        "productToSource": "Product to source",
-        "specs": "Desired specifications",
-        "expectations": "Expectations",
-        "notes": "Notes"
-      }
+      "successTitle": "Your request has been sent successfully.",
+      "successText": "An advisor will contact you within 48 hours maximum. If it's urgent, contact us directly (also available on WhatsApp):",
+      "errorText": "Something went wrong while sending. Please contact us directly:"
     },
     "sidebar": {
       "directTitle": "A quick question?",
@@ -425,16 +412,11 @@
       "claimTypeOther": "Other",
       "descriptionLabel": "Describe your complaint",
       "submit": "Send the complaint",
+      "sending": "Sending…",
       "requiredNote": "Required fields",
-      "confirmation": "Thank you, your complaint is ready on WhatsApp. Send the message so we can handle it as quickly as possible.",
-      "whatsappMessage": {
-        "intro": "Hello, I would like to file a complaint.",
-        "name": "Name",
-        "phone": "Phone",
-        "trackingNumber": "Tracking number",
-        "claimType": "Type of complaint",
-        "description": "Description"
-      }
+      "successTitle": "Your complaint has been sent successfully.",
+      "successText": "An advisor will contact you within 48 hours maximum. If it's urgent, contact us directly (also available on WhatsApp):",
+      "errorText": "Something went wrong while sending. Please contact us directly:"
     },
     "banner": {
       "title": "Need to talk about it directly?",

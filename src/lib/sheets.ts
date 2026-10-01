@@ -6,27 +6,25 @@ type SheetPayload =
   | { type: "reclamation"; [key: string]: string };
 
 /**
- * Fire-and-forget write to the Google Sheet via Apps Script.
- * Never throws: the WhatsApp flow (the primary path) must not be blocked
- * or fail if the sheet is unreachable or not configured yet.
+ * Writes to the Google Sheet via Apps Script. This is now the primary
+ * delivery path for form submissions (the Apps Script also emails a
+ * notification on each entry), so callers should await the result and
+ * show the visitor an error state if it returns false.
  */
-export function logToSheet(payload: SheetPayload) {
-  if (!WEBHOOK_URL) return;
+export async function logToSheet(payload: SheetPayload): Promise<boolean> {
+  if (!WEBHOOK_URL) return false;
 
-  fetch(WEBHOOK_URL, {
-    method: "POST",
-    headers: { "Content-Type": "text/plain" },
-    body: JSON.stringify(payload),
-  })
-    .then((res) => {
-      if (!res.ok) {
-        console.warn("logToSheet: unexpected response", res.status);
-      }
-    })
-    .catch((err) => {
-      // Never blocks the WhatsApp flow: the sheet is a convenience log, not the source of truth.
-      console.warn("logToSheet: request failed", err);
+  try {
+    const res = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify(payload),
     });
+    return res.ok;
+  } catch (err) {
+    console.warn("logToSheet: request failed", err);
+    return false;
+  }
 }
 
 export interface TrackingResult {

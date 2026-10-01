@@ -8,7 +8,7 @@ Site vitrine bilingue (FR/EN) d'Union Transit, société de logistique (Kaolack,
 - [Tailwind CSS](https://tailwindcss.com/)
 - [next-intl](https://next-intl.dev/) pour l'internationalisation (routes `/fr/...` et `/en/...`, avec des URLs traduites : ex. `/fr/a-propos` ↔ `/en/about`)
 - Polices [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) (titres) et [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) (texte courant), chargées via `next/font/google`
-- Aucune base de données : les formulaires (devis, avis, réclamation) construisent un message et ouvrent WhatsApp (`wa.me`) dans un nouvel onglet. Une copie de chaque soumission est en plus envoyée à un Google Sheet via un Google Apps Script (voir plus bas), qui sert aussi à alimenter la page Suivi — sans backend à héberger.
+- Aucune base de données : les formulaires (devis, avis, réclamation) envoient directement leurs données à un Google Sheet via un Google Apps Script (voir plus bas), qui envoie aussi un email de notification à chaque soumission et sert à alimenter la page Suivi — sans backend à héberger. Le visiteur voit un message de confirmation sur le site (pas de redirection WhatsApp) ; WhatsApp reste disponible comme canal de contact à part, et comme solution de secours si l'envoi échoue.
 
 ## Lancer le projet en local
 
@@ -29,11 +29,11 @@ Voir `.env.local.example` :
 - `NEXT_PUBLIC_WHATSAPP_SN` — numéro WhatsApp Sénégal, utilisé pour tous les boutons/liens WhatsApp destinés aux clients.
 - `NEXT_PUBLIC_WHATSAPP_CN` — numéro WhatsApp Chine (Guangzhou), affiché uniquement dans les coordonnées de contact.
 - `NEXT_PUBLIC_WHATSAPP_CLAIMS` — numéro WhatsApp dédié aux réclamations (page `/reclamation`), distinct du numéro de demande de devis.
-- `NEXT_PUBLIC_SHEETS_WEBHOOK_URL` — URL du Google Apps Script qui enregistre les avis, devis et réclamations dans un Google Sheet, et qui sert aussi à rechercher un numéro de suivi (voir section suivante). Laissée vide, les formulaires continuent de fonctionner normalement (WhatsApp), seules la copie dans le tableau et la recherche de suivi sont ignorées.
+- `NEXT_PUBLIC_SHEETS_WEBHOOK_URL` — URL du Google Apps Script qui enregistre les avis, devis et réclamations dans un Google Sheet (et déclenche l'email de notification), et qui sert aussi à rechercher un numéro de suivi (voir section suivante). **C'est désormais le chemin d'envoi principal des formulaires** : si cette URL est absente ou injoignable, le formulaire affiche une erreur et propose WhatsApp comme solution de secours, plutôt que d'échouer silencieusement.
 
 ## Avis, devis, réclamations et suivi (Google Sheet)
 
-Les formulaires d'avis (accueil), de devis (Contact) et de réclamation (`/reclamation`) envoient chacun une copie de leurs données à un Google Sheet, en plus de WhatsApp. La page Suivi (`/suivi`) interroge ce même Sheet pour afficher l'état réel d'un envoi à partir de son numéro de suivi.
+Les formulaires d'avis (accueil), de devis (Contact) et de réclamation (`/reclamation`) envoient directement leurs données à un Google Sheet — c'est le mode d'envoi principal, le client voit juste un message de confirmation sur le site. La page Suivi (`/suivi`) interroge ce même Sheet pour afficher l'état réel d'un envoi à partir de son numéro de suivi. À chaque nouvelle soumission (devis, avis ou réclamation), un **email de notification** est envoyé automatiquement (voir `NOTIFY_EMAIL` dans le script).
 
 **Le Google Sheet doit avoir ces onglets.** `Contacts`, `Avis` et `Reclamations` sont créés automatiquement par le script à la première soumission s'ils n'existent pas encore ; `Suivi` doit être créé et rempli **manuellement** par vous (c'est le seul onglet qui ne vient pas d'un formulaire du site) :
 
@@ -62,9 +62,10 @@ Les formulaires d'avis (accueil), de devis (Contact) et de réclamation (`/recla
    NEXT_PUBLIC_SHEETS_WEBHOOK_URL=https://script.google.com/macros/s/XXXXXXXXXXXX/exec
    ```
 6. Créez manuellement l'onglet **`Suivi`** avec les colonnes ci-dessus, et ajoutez-y une ligne par envoi en cours.
-7. Redémarrez `npm run dev`.
+7. Vérifiez/modifiez la constante `NOTIFY_EMAIL` en haut du script — c'est l'adresse qui reçoit l'email à chaque nouvelle demande (par défaut `contact@uniontransitgroup.com`).
+8. Redémarrez `npm run dev`.
 
-Si l'URL n'est pas renseignée, ou si Google Sheets est indisponible, les formulaires continuent de fonctionner normalement (l'envoi WhatsApp n'est jamais bloqué) et la page Suivi affiche simplement « numéro introuvable ».
+Si l'URL n'est pas renseignée, ou si Google Sheets est indisponible au moment de l'envoi, le formulaire affiche un message d'erreur avec un bouton WhatsApp de secours (le client peut toujours vous joindre). La page Suivi affiche simplement « numéro introuvable » dans ce cas.
 
 ## Construire pour la production
 
@@ -82,6 +83,6 @@ npm run start
 ## Points à brancher plus tard (V2)
 
 - **Page Suivi (`/suivi`, `/tracking`)** : fonctionne avec de vraies données, lues depuis l'onglet `Suivi` du Google Sheet (voir ci-dessus) — mais ce suivi reste **manuel** : il faut que vous mettiez à jour la ligne correspondante dans le Sheet à chaque changement de statut. Une évolution semi-automatique (connectée à un transporteur) reste possible en V2.
-- **Formulaires (devis, avis, réclamation)** : les données transitent uniquement par WhatsApp et par le Google Sheet configuré via `NEXT_PUBLIC_SHEETS_WEBHOOK_URL` (voir section dédiée ci-dessus) — aucune base de données propre au site.
+- **Formulaires (devis, avis, réclamation)** : les données transitent uniquement par le Google Sheet configuré via `NEXT_PUBLIC_SHEETS_WEBHOOK_URL` (voir section dédiée ci-dessus), avec WhatsApp en solution de secours si l'envoi échoue — aucune base de données propre au site.
 - **Informations légales** : RCCM, NINEA, adresse complète, email et hébergeur sont des placeholders entre crochets dans `messages/fr.json` / `messages/en.json` (clés `legal.company.*` et `contact.sidebar.*`) — à compléter avant mise en ligne.
 - **Numéro WhatsApp réclamations** (`NEXT_PUBLIC_WHATSAPP_CLAIMS`) : actuellement un numéro personnel temporaire (+212 6 02 44 74 94), à remplacer par le numéro chinois définitif quand il sera disponible (sur Vercel et dans `.env.local`).

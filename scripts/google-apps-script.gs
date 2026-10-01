@@ -18,7 +18,21 @@
  *     Maritime = 1 a 10 (1=Reception, 2=En chargement, 3=Depart prevu, 4=A quitte le port,
  *     5=En cours, 6=Arrivee prevue, 7=Arrive, 8=En attente de dedouanement,
  *     9=Dedouanement en cours, 10=Disponible a l'entrepot).
+ *
+ * A chaque devis, avis ou reclamation, un email de notification est envoye
+ * automatiquement a l'adresse ci-dessous. Changez-la si besoin.
  */
+
+var NOTIFY_EMAIL = "contact@uniontransitgroup.com";
+
+function notify(subject, body) {
+  try {
+    MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
+  } catch (err) {
+    // Ne bloque jamais l'enregistrement dans le Sheet si l'email echoue
+    // (ex. quota d'envoi depasse).
+  }
+}
 
 var MONTHS_FR = [
   "janvier",
@@ -96,6 +110,14 @@ function doPost(e) {
   if (data.type === "avis") {
     var avisSheet = getOrCreateSheet("Avis", ["Date", "Noms", "Note", "Commentaires"]);
     avisSheet.appendRow([timestamp, data.name || "", data.rating, data.comment || ""]);
+
+    notify(
+      "Nouvel avis client — Union Transit",
+      "Nouvel avis recu sur le site.\n\n" +
+        "Note : " + data.rating + "/5\n" +
+        "Nom : " + (data.name || "(non renseigne)") + "\n" +
+        "Commentaire : " + (data.comment || "(aucun)"),
+    );
   } else if (data.type === "reclamation") {
     var reclamSheet = getOrCreateSheet("Reclamations", [
       "Date",
@@ -115,6 +137,16 @@ function doPost(e) {
       data.claimType || "",
       data.description || "",
     ]);
+
+    notify(
+      "Nouvelle reclamation — Union Transit",
+      "Nouvelle reclamation recue sur le site.\n\n" +
+        "Nom : " + (data.lastName || "") + " " + (data.firstName || "") + "\n" +
+        "Telephone : " + (data.phone || "") + "\n" +
+        "Numero de suivi : " + (data.trackingNumber || "(non renseigne)") + "\n" +
+        "Type : " + (data.claimType || "") + "\n" +
+        "Description : " + (data.description || ""),
+    );
   } else {
     var contactsSheet = getOrCreateSheet("Contacts", [
       "Dates",
@@ -142,6 +174,20 @@ function doPost(e) {
       data.weight || "",
       data.notes || "",
     ]);
+
+    notify(
+      "Nouvelle demande de devis — Union Transit",
+      "Nouvelle demande de devis recue sur le site.\n\n" +
+        "Nom : " + (data.lastName || "") + " " + (data.firstName || "") + "\n" +
+        "Entreprise : " + (data.companyName || "(non renseigne)") + "\n" +
+        "Telephone : " + (data.phone || "") + "\n" +
+        "Email : " + (data.email || "(non renseigne)") + "\n" +
+        "Type de marchandise / Produit a sourcer : " + (data.goodsType || "") + "\n" +
+        "Quantite : " + (data.quantity || "(non renseigne)") + "\n" +
+        "Taille / Caracteristiques : " + (data.size || "(non renseigne)") + "\n" +
+        "Poids / Attentes : " + (data.weight || "(non renseigne)") + "\n" +
+        "Notes : " + (data.notes || "(aucune)"),
+    );
   }
 
   return ContentService.createTextOutput(

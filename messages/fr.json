@@ -368,25 +368,12 @@
       "specsLabel": "Caractéristiques / spécifications souhaitées (facultatif)",
       "expectationsLabel": "Attentes : prix, qualité, autres (facultatif)",
       "notesLabel": "Notes complémentaires (facultatif)",
-      "submit": "Envoyer sur WhatsApp",
+      "submit": "Envoyer ma demande",
+      "sending": "Envoi en cours…",
       "requiredNote": "Champs obligatoires",
-      "confirmation": "Merci, votre message est prêt sur WhatsApp. Envoyez-le pour que nous puissions vous répondre avec votre devis sous 48 h maximum.",
-      "whatsappMessage": {
-        "intro": "Bonjour Union Transit, je vous contacte afin d'avoir un devis pour les informations ci-dessous. Dans l'attente de votre réponse au plus vite.",
-        "requestType": "Type de demande",
-        "companyName": "Entreprise",
-        "name": "Nom",
-        "phone": "Téléphone",
-        "email": "Email",
-        "goodsType": "Type de marchandises",
-        "quantity": "Quantité",
-        "size": "Taille",
-        "weight": "Poids",
-        "productToSource": "Produit à sourcer",
-        "specs": "Caractéristiques souhaitées",
-        "expectations": "Attentes",
-        "notes": "Notes"
-      }
+      "successTitle": "Votre demande a bien été transmise.",
+      "successText": "Un conseiller vous contactera sous 48 h maximum. Si c'est urgent, contactez-nous directement (également disponible sur WhatsApp) :",
+      "errorText": "Un problème est survenu lors de l'envoi. Merci de nous contacter directement :"
     },
     "sidebar": {
       "directTitle": "Une question rapide ?",
@@ -425,16 +412,11 @@
       "claimTypeOther": "Autre",
       "descriptionLabel": "Décrivez votre réclamation",
       "submit": "Envoyer la réclamation",
+      "sending": "Envoi en cours…",
       "requiredNote": "Champs obligatoires",
-      "confirmation": "Merci, votre réclamation est prête sur WhatsApp. Envoyez le message pour que nous puissions la traiter au plus vite.",
-      "whatsappMessage": {
-        "intro": "Bonjour, je souhaite formuler une réclamation.",
-        "name": "Nom",
-        "phone": "Téléphone",
-        "trackingNumber": "Numéro de suivi",
-        "claimType": "Type de réclamation",
-        "description": "Description"
-      }
+      "successTitle": "Votre réclamation a bien été transmise.",
+      "successText": "Un conseiller vous contactera sous 48 h maximum. Si c'est urgent, contactez-nous directement (également disponible sur WhatsApp) :",
+      "errorText": "Un problème est survenu lors de l'envoi. Merci de nous contacter directement :"
     },
     "banner": {
       "title": "Besoin d'en parler directement ?",
