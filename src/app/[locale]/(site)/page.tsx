@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import WhatsAppLink from "@/components/WhatsAppLink";
 import AvisForm from "@/components/AvisForm";
-import ServiceCard from "@/components/ServiceCard";
+import AccordionCard from "@/components/AccordionCard";
 import ValueCard from "@/components/ValueCard";
 import FinalBanner from "@/components/FinalBanner";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
@@ -115,37 +115,43 @@ export default async function HomePage({
               {t("services.title")}
             </h2>
             <p className="mt-3 text-navy/70">{t("services.subtitle")}</p>
+            <p className="mt-2 text-sm text-navy/50">{t("services.hint")}</p>
           </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <ServiceCard
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <AccordionCard
               icon={<PlaneIcon className="h-6 w-6" />}
               title={t("services.cards.airExpress.title")}
-              delay={t("services.cards.airExpress.delay")}
-              description={t("services.cards.airExpress.description")}
+              badge={t("services.cards.airExpress.delay")}
+              summary={t("services.cards.airExpress.description")}
+              details={t("services.cards.airExpress.details")}
             />
-            <ServiceCard
+            <AccordionCard
               icon={<PlaneIcon className="h-6 w-6" />}
               title={t("services.cards.airNormal.title")}
-              delay={t("services.cards.airNormal.delay")}
-              description={t("services.cards.airNormal.description")}
+              badge={t("services.cards.airNormal.delay")}
+              summary={t("services.cards.airNormal.description")}
+              details={t("services.cards.airNormal.details")}
             />
-            <ServiceCard
+            <AccordionCard
               icon={<ShipIcon className="h-6 w-6" />}
               title={t("services.cards.seaLcl.title")}
-              delay={t("services.cards.seaLcl.delay")}
-              description={t("services.cards.seaLcl.description")}
+              badge={t("services.cards.seaLcl.delay")}
+              summary={t("services.cards.seaLcl.description")}
+              details={t("services.cards.seaLcl.details")}
             />
-            <ServiceCard
+            <AccordionCard
               icon={<ContainerIcon className="h-6 w-6" />}
               title={t("services.cards.seaFcl.title")}
-              delay={t("services.cards.seaFcl.delay")}
-              description={t("services.cards.seaFcl.description")}
+              badge={t("services.cards.seaFcl.delay")}
+              summary={t("services.cards.seaFcl.description")}
+              details={t("services.cards.seaFcl.details")}
             />
-            <ServiceCard
+            <AccordionCard
               icon={<SearchCheckIcon className="h-6 w-6" />}
               title={t("services.cards.sourcing.title")}
-              delay={t("services.cards.sourcing.delay")}
-              description={t("services.cards.sourcing.description")}
+              badge={t("services.cards.sourcing.delay")}
+              summary={t("services.cards.sourcing.description")}
+              details={t("services.cards.sourcing.details")}
             />
           </div>
         </div>

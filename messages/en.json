@@ -55,31 +55,37 @@
     "services": {
       "title": "Our services",
       "subtitle": "Transport, sourcing and quality control: solutions chosen to match your needs and budget.",
+      "hint": "Click a service to learn more.",
       "cards": {
         "airExpress": {
           "title": "Air express",
           "delay": "1 to 3 days",
-          "description": "The fastest option for urgent goods or samples you need quickly."
+          "description": "The fastest option for urgent goods or samples you need quickly.",
+          "details": "Air express is the fastest option: your goods arrive in 1 to 3 days. Ideal for urgent shipments, samples, or high-value products where transit time matters more than cost."
         },
         "airNormal": {
           "title": "Standard air",
           "delay": "7 to 10 days",
-          "description": "A good balance between speed and cost for your regular shipments."
+          "description": "A good balance between speed and cost for your regular shipments.",
+          "details": "Standard air freight offers a good balance between speed and cost, with delivery in 7 to 10 days. Choose it for your regular orders, when you don't need express speed but want to avoid sea freight lead times."
         },
         "seaLcl": {
           "title": "Sea groupage (LCL)",
           "delay": "Quote on request",
-          "description": "Ideal for medium volumes: you share a container with other clients."
+          "description": "Ideal for medium volumes: you share a container with other clients.",
+          "details": "Groupage means sharing container space with other clients: you only pay for the volume you use. It's the most economical option for medium volumes, when your goods don't fill a whole container. The timeline depends on how fast the container fills up, and is confirmed with your quote."
         },
         "seaFcl": {
           "title": "Full container (FCL)",
           "delay": "40 to 60 days",
-          "description": "For large volumes: a whole container reserved for your goods."
+          "description": "For large volumes: a whole container reserved for your goods.",
+          "details": "With a full container, an entire container (20 or 40 ft) is reserved just for your goods, with no waiting on other clients. Choose it for large volumes, when groupage is no longer enough or you want a more predictable departure date. Expect 40 to 60 days."
         },
         "sourcing": {
           "title": "Sourcing and quality control",
           "delay": "Quote on request",
-          "description": "A separate service: we find and inspect your product before purchase. The price depends on the product to source and the required specifications."
+          "description": "A separate service: we find and inspect your product before purchase. The price depends on the product to source and the required specifications.",
+          "details": "Sourcing means finding and selecting the right product and the right supplier in China for you, especially if you don't know where to start. Choose this service if you have a product idea but no reliable supplier yet, or if you want to compare several options before committing. For good sourcing, we need: the product you're looking for and its characteristics (material, size, function...), your expectations on price, quality and quantity, and any other criteria that matter to you. This service is billed separately, on a quote basis, depending on the product and the research involved."
         }
       }
     },

@@ -55,31 +55,37 @@
     "services": {
       "title": "Nos services",
       "subtitle": "Transport, sourcing et contrôle qualité : des solutions choisies selon vos besoins et votre budget.",
+      "hint": "Cliquez sur un service pour en savoir plus.",
       "cards": {
         "airExpress": {
           "title": "Aérien express",
           "delay": "1 à 3 jours",
-          "description": "La solution la plus rapide pour les marchandises urgentes ou à forte valeur."
+          "description": "La solution la plus rapide pour les marchandises urgentes ou à forte valeur.",
+          "details": "Le fret aérien express est la solution la plus rapide : votre marchandise arrive en 1 à 3 jours. Idéal pour les envois urgents, les échantillons, ou les produits à forte valeur pour lesquels le temps de transport est prioritaire par rapport au coût."
         },
         "airNormal": {
           "title": "Aérien normal",
           "delay": "7 à 10 jours",
-          "description": "Un bon équilibre entre rapidité et coût pour vos envois réguliers."
+          "description": "Un bon équilibre entre rapidité et coût pour vos envois réguliers.",
+          "details": "Le fret aérien normal offre un bon équilibre entre rapidité et coût, avec une livraison en 7 à 10 jours. À choisir pour vos commandes régulières, quand vous n'avez pas besoin de la vitesse de l'express mais voulez éviter les délais du maritime."
         },
         "seaLcl": {
           "title": "Groupage maritime (LCL)",
           "delay": "Sur devis",
-          "description": "Idéal pour les volumes moyens : vous partagez un conteneur avec d'autres clients."
+          "description": "Idéal pour les volumes moyens : vous partagez un conteneur avec d'autres clients.",
+          "details": "Le groupage consiste à partager l'espace d'un conteneur avec d'autres clients : vous ne payez que pour le volume que vous utilisez. C'est la solution la plus économique pour les volumes moyens, quand votre marchandise ne remplit pas un conteneur entier. Le délai dépend du remplissage du conteneur et vous est communiqué sur devis."
         },
         "seaFcl": {
           "title": "Conteneur complet (FCL)",
           "delay": "40 à 60 jours",
-          "description": "Pour les gros volumes : un conteneur entier réservé à votre marchandise."
+          "description": "Pour les gros volumes : un conteneur entier réservé à votre marchandise.",
+          "details": "Avec le conteneur complet, un conteneur entier (20 ou 40 pieds) est réservé uniquement à votre marchandise, sans attendre d'autres clients. À choisir pour les gros volumes, quand le groupage ne suffit plus ou que vous voulez un délai de départ plus prévisible. Comptez 40 à 60 jours."
         },
         "sourcing": {
           "title": "Sourcing et contrôle qualité",
           "delay": "Sur devis",
-          "description": "Un service à part : nous trouvons et vérifions votre produit avant achat. Le tarif dépend du produit à sourcer et des caractéristiques demandées."
+          "description": "Un service à part : nous trouvons et vérifions votre produit avant achat. Le tarif dépend du produit à sourcer et des caractéristiques demandées.",
+          "details": "Le sourcing, c'est le fait de chercher et de sélectionner pour vous le bon produit et le bon fournisseur en Chine, surtout si vous ne savez pas par où commencer. Choisissez ce service si vous avez une idée de produit mais pas encore de fournisseur fiable, ou si vous voulez comparer plusieurs options avant de vous engager. Pour un bon sourcing, nous avons besoin : du produit recherché et de ses caractéristiques (matière, taille, fonction...), de vos attentes en termes de prix, de qualité et de quantité, et de tout autre critère important pour vous. Ce service est facturé séparément, sur devis, selon le produit et les recherches à effectuer."
         }
       }
     },
