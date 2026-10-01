@@ -23,7 +23,7 @@
  * automatiquement a l'adresse ci-dessous. Changez-la si besoin.
  */
 
-var NOTIFY_EMAIL = "contact@uniontransitgroup.com";
+var NOTIFY_EMAIL = "marafreelance01@gmail.com";
 
 function notify(subject, body) {
   try {
