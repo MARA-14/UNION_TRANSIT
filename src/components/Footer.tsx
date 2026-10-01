@@ -50,6 +50,9 @@ export default function Footer() {
             <Link href="/contact" className="text-white/80 hover:text-white">
               {t("nav.contact")}
             </Link>
+            <Link href="/claim" className="text-white/80 hover:text-white">
+              {t("footer.claimLink")}
+            </Link>
           </nav>
         </div>
 

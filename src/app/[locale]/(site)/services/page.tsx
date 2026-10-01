@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import ServiceCard from "@/components/ServiceCard";
+import AccordionCard from "@/components/AccordionCard";
 import InfoCard from "@/components/InfoCard";
 import StepCard from "@/components/StepCard";
 import FinalBanner from "@/components/FinalBanner";
@@ -10,9 +10,10 @@ import {
   ContainerIcon,
   ClockIcon,
   UserIcon,
-  BadgeCheckIcon,
   ShieldIcon,
   LayersIcon,
+  SearchCheckIcon,
+  VerifiedSealIcon,
 } from "@/components/icons";
 
 export async function generateMetadata({
@@ -53,31 +54,38 @@ export default async function ServicesPage({
               {t("transport.title")}
             </h2>
             <p className="mt-3 text-navy/70">{t("transport.subtitle")}</p>
+            <p className="mt-2 text-sm text-navy/50">
+              {t("transport.hint")}
+            </p>
           </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <ServiceCard
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <AccordionCard
               icon={<PlaneIcon className="h-6 w-6" />}
               title={t("transport.cards.airExpress.title")}
-              delay={t("transport.cards.airExpress.delay")}
-              description={t("transport.cards.airExpress.description")}
+              badge={t("transport.cards.airExpress.delay")}
+              summary={t("transport.cards.airExpress.description")}
+              details={t("transport.cards.airExpress.details")}
             />
-            <ServiceCard
+            <AccordionCard
               icon={<PlaneIcon className="h-6 w-6" />}
               title={t("transport.cards.airNormal.title")}
-              delay={t("transport.cards.airNormal.delay")}
-              description={t("transport.cards.airNormal.description")}
+              badge={t("transport.cards.airNormal.delay")}
+              summary={t("transport.cards.airNormal.description")}
+              details={t("transport.cards.airNormal.details")}
             />
-            <ServiceCard
+            <AccordionCard
               icon={<ShipIcon className="h-6 w-6" />}
               title={t("transport.cards.seaLcl.title")}
-              delay={t("transport.cards.seaLcl.delay")}
-              description={t("transport.cards.seaLcl.description")}
+              badge={t("transport.cards.seaLcl.delay")}
+              summary={t("transport.cards.seaLcl.description")}
+              details={t("transport.cards.seaLcl.details")}
             />
-            <ServiceCard
+            <AccordionCard
               icon={<ContainerIcon className="h-6 w-6" />}
               title={t("transport.cards.seaFcl.title")}
-              delay={t("transport.cards.seaFcl.delay")}
-              description={t("transport.cards.seaFcl.description")}
+              badge={t("transport.cards.seaFcl.delay")}
+              summary={t("transport.cards.seaFcl.description")}
+              details={t("transport.cards.seaFcl.details")}
             />
           </div>
         </div>
@@ -89,31 +97,36 @@ export default async function ServicesPage({
           <h2 className="text-center font-heading text-2xl sm:text-3xl font-bold text-navy">
             {t("purchasing.title")}
           </h2>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <InfoCard
-              icon={<BadgeCheckIcon className="h-5 w-5" />}
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            <AccordionCard
+              icon={<SearchCheckIcon className="h-5 w-5" />}
               title={t("purchasing.items.sourcing.title")}
-              description={t("purchasing.items.sourcing.description")}
+              summary={t("purchasing.items.sourcing.description")}
+              details={t("purchasing.items.sourcing.details")}
             />
-            <InfoCard
+            <AccordionCard
               icon={<LayersIcon className="h-5 w-5" />}
               title={t("purchasing.items.factories.title")}
-              description={t("purchasing.items.factories.description")}
+              summary={t("purchasing.items.factories.description")}
+              details={t("purchasing.items.factories.details")}
             />
-            <InfoCard
+            <AccordionCard
               icon={<ShieldIcon className="h-5 w-5" />}
               title={t("purchasing.items.quality.title")}
-              description={t("purchasing.items.quality.description")}
+              summary={t("purchasing.items.quality.description")}
+              details={t("purchasing.items.quality.details")}
             />
-            <InfoCard
-              icon={<BadgeCheckIcon className="h-5 w-5" />}
+            <AccordionCard
+              icon={<VerifiedSealIcon className="h-5 w-5" />}
               title={t("purchasing.items.payment.title")}
-              description={t("purchasing.items.payment.description")}
+              summary={t("purchasing.items.payment.description")}
+              details={t("purchasing.items.payment.details")}
             />
-            <InfoCard
+            <AccordionCard
               icon={<ContainerIcon className="h-5 w-5" />}
               title={t("purchasing.items.consolidation.title")}
-              description={t("purchasing.items.consolidation.description")}
+              summary={t("purchasing.items.consolidation.description")}
+              details={t("purchasing.items.consolidation.details")}
             />
           </div>
         </div>

@@ -21,6 +21,7 @@
     "navTitle": "Liens rapides",
     "contactTitle": "Contact",
     "legalLink": "Mentions légales",
+    "claimLink": "Réclamation",
     "rights": "Tous droits réservés.",
     "addressLabel": "Siège social"
   },
@@ -143,26 +144,31 @@
     "transport": {
       "title": "Transport, de Chine vers Dakar",
       "subtitle": "Départs depuis Guangzhou et Yiwu.",
+      "hint": "Cliquez sur un service pour en savoir plus.",
       "cards": {
         "airExpress": {
           "title": "Fret aérien express",
           "delay": "1 à 3 jours maximum",
-          "description": "Pour les marchandises urgentes ou les échantillons à recevoir rapidement."
+          "description": "Pour les marchandises urgentes ou les échantillons à recevoir rapidement.",
+          "details": "Le fret aérien express est la solution la plus rapide : votre marchandise arrive en 1 à 3 jours. Idéal pour les envois urgents, les échantillons, ou les produits à forte valeur pour lesquels le temps de transport est prioritaire par rapport au coût."
         },
         "airNormal": {
           "title": "Fret aérien normal",
           "delay": "7 à 10 jours maximum",
-          "description": "Un service aérien fiable pour vos envois courants."
+          "description": "Un service aérien fiable pour vos envois courants.",
+          "details": "Le fret aérien normal offre un bon équilibre entre rapidité et coût, avec une livraison en 7 à 10 jours. À choisir pour vos commandes régulières, quand vous n'avez pas besoin de la vitesse de l'express mais voulez éviter les délais du maritime."
         },
         "seaLcl": {
           "title": "Groupage conteneur (LCL)",
           "delay": "Sur devis",
-          "description": "Vous partagez l'espace d'un conteneur avec d'autres clients : une solution économique pour les volumes moyens."
+          "description": "Vous partagez l'espace d'un conteneur avec d'autres clients : une solution économique pour les volumes moyens.",
+          "details": "Le groupage consiste à partager l'espace d'un conteneur avec d'autres clients : vous ne payez que pour le volume que vous utilisez. C'est la solution la plus économique pour les volumes moyens, quand votre marchandise ne remplit pas un conteneur entier. Le délai dépend du remplissage du conteneur et vous est communiqué sur devis."
         },
         "seaFcl": {
           "title": "Conteneur complet (FCL)",
           "delay": "40 à 60 jours",
-          "description": "Un conteneur entier réservé à votre marchandise, pour les gros volumes."
+          "description": "Un conteneur entier réservé à votre marchandise, pour les gros volumes.",
+          "details": "Avec le conteneur complet, un conteneur entier (20 ou 40 pieds) est réservé uniquement à votre marchandise, sans attendre d'autres clients. À choisir pour les gros volumes, quand le groupage ne suffit plus ou que vous voulez un délai de départ plus prévisible. Comptez 40 à 60 jours."
         }
       }
     },
@@ -171,23 +177,28 @@
       "items": {
         "sourcing": {
           "title": "Sourcing de produits",
-          "description": "Nous recherchons les produits qui correspondent à votre besoin."
+          "description": "Nous recherchons les produits qui correspondent à votre besoin.",
+          "details": "Le sourcing, c'est le fait de chercher et de sélectionner pour vous le bon produit et le bon fournisseur en Chine, surtout si vous ne savez pas par où commencer. Choisissez ce service si vous avez une idée de produit mais pas encore de fournisseur fiable, ou si vous voulez comparer plusieurs options avant de vous engager. Pour un bon sourcing, nous avons besoin : du produit recherché et de ses caractéristiques (matière, taille, fonction...), de vos attentes en termes de prix, de qualité et de quantité, et de tout autre critère important pour vous. Ce service est facturé séparément, sur devis, selon le produit et les recherches à effectuer."
         },
         "factories": {
           "title": "Mise en relation avec les usines",
-          "description": "Un accès direct aux fabricants, sans intermédiaire inutile."
+          "description": "Un accès direct aux fabricants, sans intermédiaire inutile.",
+          "details": "Nous vous mettons en contact direct avec des usines fiables, sans passer par des intermédiaires qui augmentent le prix sans valeur ajoutée. Utile si vous voulez produire en quantité ou négocier directement les conditions avec le fabricant."
         },
         "quality": {
           "title": "Vérification qualité",
-          "description": "Nous contrôlons les produits avant l'expédition."
+          "description": "Nous contrôlons les produits avant l'expédition.",
+          "details": "Avant l'expédition, nous vérifions que les produits correspondent à ce qui a été commandé : quantité, état, conformité. Cela évite les mauvaises surprises à la réception, surtout pour les commandes importantes ou les premiers achats avec un nouveau fournisseur."
         },
         "payment": {
           "title": "Paiement des fournisseurs",
-          "description": "Nous réglons vos fournisseurs pour votre compte : Alipay, WeChat, virement bancaire."
+          "description": "Nous réglons vos fournisseurs pour votre compte : Alipay, WeChat, virement bancaire.",
+          "details": "Si vous envoyez votre argent directement à un fournisseur en Chine depuis l'étranger, vous prenez un risque : en cas de problème (produit non conforme, fournisseur injoignable), il est très difficile de se faire rembourser. Nous recommandons donc de toujours passer par un agent en Chine pour le paiement : c'est sécurisé. Concrètement, vous vous déplacez à notre bureau à Dakar, vous donnez le montant en francs CFA, vous recevez une décharge écrite, et nous nous occupons du paiement sur place auprès du fournisseur. Nous vous envoyons ensuite le reçu de paiement."
         },
         "consolidation": {
           "title": "Consolidation de petits colis",
-          "description": "Regroupez plusieurs achats dans un seul panier, pour un envoi unique."
+          "description": "Regroupez plusieurs achats dans un seul panier, pour un envoi unique.",
+          "details": "Vous commandez plusieurs articles chez différents fournisseurs et vous voulez les recevoir en un seul envoi ? Nous proposons la consolidation gratuitement : nous regroupons tous vos achats dans un seul panier à notre entrepôt en Chine, et nous les expédions ensemble une fois que vous nous donnez votre accord."
         }
       }
     },
@@ -289,23 +300,20 @@
       "subtitle": "Saisissez votre numéro de suivi Union Transit pour connaître l'état de votre envoi.",
       "inputLabel": "Numéro de suivi",
       "inputPlaceholder": "UT-2026-00123",
-      "demoNote": "Exemple de démonstration",
       "cta": "Suivre"
     },
+    "searching": "Recherche en cours…",
+    "notFoundTitle": "Numéro introuvable",
+    "notFoundText": "Vérifiez le numéro saisi ou contactez votre conseiller si le problème persiste.",
     "result": {
       "trackingNumberLabel": "Numéro de suivi",
       "routeLabel": "Trajet",
-      "route": "Guangzhou → Dakar",
       "modeLabel": "Mode de transport",
-      "mode": "Maritime (groupage LCL)",
       "advisorLabel": "Conseiller assigné",
-      "advisorName": "PM",
+      "advisorWhatsappMessage": "Bonjour Mr MARA, je vous contacte pour avoir des renseignements sur mon colis.",
       "currentStatusLabel": "Statut actuel",
       "lastUpdateLabel": "Dernière mise à jour",
-      "lastUpdateDate": "12 septembre 2026",
       "timelineTitle": "Historique du suivi",
-      "departureDate": "18 septembre 2026",
-      "arrivalDate": "28 octobre 2026",
       "airStatuses": {
         "received": "Réception",
         "inProgress": "En cours",
@@ -327,7 +335,6 @@
     "info": {
       "text": "Pour un envoi maritime, nous vous envoyons aussi un point d'avancement tous les 15 jours, même si vous ne consultez pas cette page."
     },
-    "demoDisclaimer": "Démonstration : ces données sont fictives. En V1, la recherche affiche toujours cet exemple ; elle sera reliée à un système de suivi réel dans une prochaine version.",
     "banner": {
       "title": "Une question sur votre envoi ?",
       "subtitle": "Votre conseiller vous répond directement.",
@@ -345,6 +352,9 @@
     },
     "form": {
       "title": "Demander un devis",
+      "requestTypeLabel": "Type de demande",
+      "requestTypeShipment": "Expédition de colis",
+      "requestTypeSourcing": "Sourcing de produit",
       "companyNameLabel": "Nom de l'entreprise (facultatif)",
       "lastNameLabel": "Nom",
       "firstNameLabel": "Prénom",
@@ -354,12 +364,16 @@
       "quantityLabel": "Quantité (facultatif)",
       "sizeLabel": "Taille (dimensions, facultatif)",
       "weightLabel": "Poids (facultatif)",
+      "productToSourceLabel": "Produit à sourcer",
+      "specsLabel": "Caractéristiques / spécifications souhaitées (facultatif)",
+      "expectationsLabel": "Attentes : prix, qualité, autres (facultatif)",
       "notesLabel": "Notes complémentaires (facultatif)",
       "submit": "Envoyer sur WhatsApp",
       "requiredNote": "Champs obligatoires",
       "confirmation": "Merci, votre message est prêt sur WhatsApp. Envoyez-le pour que nous puissions vous répondre avec votre devis sous 48 h maximum.",
       "whatsappMessage": {
-        "intro": "Bonjour Union Transit, je souhaite une demande de devis.",
+        "intro": "Bonjour Union Transit, je vous contacte afin d'avoir un devis pour les informations ci-dessous. Dans l'attente de votre réponse au plus vite.",
+        "requestType": "Type de demande",
         "companyName": "Entreprise",
         "name": "Nom",
         "phone": "Téléphone",
@@ -368,6 +382,9 @@
         "quantity": "Quantité",
         "size": "Taille",
         "weight": "Poids",
+        "productToSource": "Produit à sourcer",
+        "specs": "Caractéristiques souhaitées",
+        "expectations": "Attentes",
         "notes": "Notes"
       }
     },
@@ -379,7 +396,50 @@
       "addressLabel": "Siège social",
       "emailLabel": "Email",
       "whatsappSnLabel": "WhatsApp Sénégal",
-      "whatsappCnLabel": "WhatsApp Chine"
+      "whatsappCnLabel": "WhatsApp Chine",
+      "claimTitle": "Un problème avec votre envoi ?",
+      "claimText": "Retard, perte, problème financier, erreur de chargement... faites-nous part de votre réclamation.",
+      "claimCta": "Faire une réclamation"
+    }
+  },
+  "claim": {
+    "meta": {
+      "title": "Réclamation — Union Transit",
+      "description": "Formulaire de réclamation Union Transit : retard, perte, problème financier, erreur de chargement ou autre."
+    },
+    "hero": {
+      "title": "Faire une réclamation",
+      "subtitle": "Un retard, une perte, un problème financier, une erreur de chargement ou toute autre situation qui affecte votre envoi : dites-le-nous, nous traitons chaque réclamation avec attention."
+    },
+    "form": {
+      "title": "Formulaire de réclamation",
+      "lastNameLabel": "Nom",
+      "firstNameLabel": "Prénom",
+      "phoneLabel": "Téléphone WhatsApp",
+      "trackingNumberLabel": "Numéro de suivi concerné (facultatif)",
+      "claimTypeLabel": "Type de réclamation",
+      "claimTypeDelay": "Retard",
+      "claimTypeLoss": "Perte",
+      "claimTypeFinancial": "Problème financier",
+      "claimTypeLoading": "Erreur de chargement",
+      "claimTypeOther": "Autre",
+      "descriptionLabel": "Décrivez votre réclamation",
+      "submit": "Envoyer la réclamation",
+      "requiredNote": "Champs obligatoires",
+      "confirmation": "Merci, votre réclamation est prête sur WhatsApp. Envoyez le message pour que nous puissions la traiter au plus vite.",
+      "whatsappMessage": {
+        "intro": "Bonjour, je souhaite formuler une réclamation.",
+        "name": "Nom",
+        "phone": "Téléphone",
+        "trackingNumber": "Numéro de suivi",
+        "claimType": "Type de réclamation",
+        "description": "Description"
+      }
+    },
+    "banner": {
+      "title": "Besoin d'en parler directement ?",
+      "subtitle": "Nous vous répondons dès que possible.",
+      "cta": "Écrire sur WhatsApp"
     }
   },
   "legal": {

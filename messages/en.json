@@ -21,6 +21,7 @@
     "navTitle": "Quick links",
     "contactTitle": "Contact",
     "legalLink": "Legal notice",
+    "claimLink": "Complaint",
     "rights": "All rights reserved.",
     "addressLabel": "Registered office"
   },
@@ -143,26 +144,31 @@
     "transport": {
       "title": "Transport, from China to Dakar",
       "subtitle": "Departures from Guangzhou and Yiwu.",
+      "hint": "Click a service to learn more.",
       "cards": {
         "airExpress": {
           "title": "Air express freight",
           "delay": "1 to 3 days maximum",
-          "description": "For urgent goods or samples you need to receive quickly."
+          "description": "For urgent goods or samples you need to receive quickly.",
+          "details": "Air express is the fastest option: your goods arrive in 1 to 3 days. Ideal for urgent shipments, samples, or high-value products where transit time matters more than cost."
         },
         "airNormal": {
           "title": "Standard air freight",
           "delay": "7 to 10 days maximum",
-          "description": "A reliable air service for your regular shipments."
+          "description": "A reliable air service for your regular shipments.",
+          "details": "Standard air freight offers a good balance between speed and cost, with delivery in 7 to 10 days. Choose it for your regular orders, when you don't need express speed but want to avoid sea freight lead times."
         },
         "seaLcl": {
           "title": "Container groupage (LCL)",
           "delay": "Quote on request",
-          "description": "You share container space with other clients: an economical solution for medium volumes."
+          "description": "You share container space with other clients: an economical solution for medium volumes.",
+          "details": "Groupage means sharing container space with other clients: you only pay for the volume you use. It's the most economical option for medium volumes, when your goods don't fill a whole container. The timeline depends on how fast the container fills up, and is confirmed with your quote."
         },
         "seaFcl": {
           "title": "Full container (FCL)",
           "delay": "40 to 60 days",
-          "description": "A whole container reserved for your goods, for large volumes."
+          "description": "A whole container reserved for your goods, for large volumes.",
+          "details": "With a full container, an entire container (20 or 40 ft) is reserved just for your goods, with no waiting on other clients. Choose it for large volumes, when groupage is no longer enough or you want a more predictable departure date. Expect 40 to 60 days."
         }
       }
     },
@@ -171,23 +177,28 @@
       "items": {
         "sourcing": {
           "title": "Product sourcing",
-          "description": "We look for the products that match your needs."
+          "description": "We look for the products that match your needs.",
+          "details": "Sourcing means finding and selecting the right product and the right supplier in China for you, especially if you don't know where to start. Choose this service if you have a product idea but no reliable supplier yet, or if you want to compare several options before committing. For good sourcing, we need: the product you're looking for and its characteristics (material, size, function...), your expectations on price, quality and quantity, and any other criteria that matter to you. This service is billed separately, on a quote basis, depending on the product and the research involved."
         },
         "factories": {
           "title": "Factory connections",
-          "description": "Direct access to manufacturers, without unnecessary middlemen."
+          "description": "Direct access to manufacturers, without unnecessary middlemen.",
+          "details": "We connect you directly with reliable factories, without middlemen who raise the price without adding value. Useful if you want to produce in volume or negotiate terms directly with the manufacturer."
         },
         "quality": {
           "title": "Quality checks",
-          "description": "We inspect products before they are shipped."
+          "description": "We inspect products before they are shipped.",
+          "details": "Before shipping, we check that the products match what was ordered: quantity, condition, compliance. This avoids bad surprises on arrival, especially for large orders or first purchases with a new supplier."
         },
         "payment": {
           "title": "Supplier payments",
-          "description": "We pay your suppliers on your behalf: Alipay, WeChat, bank transfer."
+          "description": "We pay your suppliers on your behalf: Alipay, WeChat, bank transfer.",
+          "details": "If you send money directly to a supplier in China from abroad, you take a risk: if something goes wrong (non-compliant product, unreachable supplier), getting a refund is very difficult. We therefore recommend always going through an agent in China for payment: it's secure. In practice, you come to our Dakar office, hand over the amount in CFA francs, receive a written discharge, and we handle the payment with the supplier on the ground. We then send you the payment receipt."
         },
         "consolidation": {
           "title": "Small parcel consolidation",
-          "description": "Group several purchases into a single basket, for one shipment."
+          "description": "Group several purchases into a single basket, for one shipment.",
+          "details": "Ordering several items from different suppliers and want to receive them in a single shipment? We offer free consolidation: we group all your purchases into a single basket at our warehouse in China, and ship them together once you give us the go-ahead."
         }
       }
     },
@@ -289,23 +300,20 @@
       "subtitle": "Enter your Union Transit tracking number to see the status of your shipment.",
       "inputLabel": "Tracking number",
       "inputPlaceholder": "UT-2026-00123",
-      "demoNote": "Demonstration example",
       "cta": "Track"
     },
+    "searching": "Searching…",
+    "notFoundTitle": "Tracking number not found",
+    "notFoundText": "Double-check the number you entered, or contact your advisor if the problem continues.",
     "result": {
       "trackingNumberLabel": "Tracking number",
       "routeLabel": "Route",
-      "route": "Guangzhou → Dakar",
       "modeLabel": "Transport mode",
-      "mode": "Sea freight (LCL groupage)",
       "advisorLabel": "Assigned advisor",
-      "advisorName": "PM",
+      "advisorWhatsappMessage": "Hello Mr MARA, I'm contacting you for information about my package.",
       "currentStatusLabel": "Current status",
       "lastUpdateLabel": "Last update",
-      "lastUpdateDate": "September 12, 2026",
       "timelineTitle": "Tracking history",
-      "departureDate": "September 18, 2026",
-      "arrivalDate": "October 28, 2026",
       "airStatuses": {
         "received": "Received",
         "inProgress": "In transit",
@@ -327,7 +335,6 @@
     "info": {
       "text": "For a sea shipment, we also send you a progress update every 15 days, even if you don't check this page."
     },
-    "demoDisclaimer": "Demonstration: this data is fictional. In V1, a search always shows this example; it will be connected to a real tracking system in a future version.",
     "banner": {
       "title": "A question about your shipment?",
       "subtitle": "Your advisor answers you directly.",
@@ -345,6 +352,9 @@
     },
     "form": {
       "title": "Request a quote",
+      "requestTypeLabel": "Type of request",
+      "requestTypeShipment": "Shipping goods",
+      "requestTypeSourcing": "Product sourcing",
       "companyNameLabel": "Company name (optional)",
       "lastNameLabel": "Last name",
       "firstNameLabel": "First name",
@@ -354,12 +364,16 @@
       "quantityLabel": "Quantity (optional)",
       "sizeLabel": "Size (dimensions, optional)",
       "weightLabel": "Weight (optional)",
+      "productToSourceLabel": "Product to source",
+      "specsLabel": "Desired specifications (optional)",
+      "expectationsLabel": "Expectations: price, quality, other (optional)",
       "notesLabel": "Additional notes (optional)",
       "submit": "Send on WhatsApp",
       "requiredNote": "Required fields",
       "confirmation": "Thank you, your message is ready on WhatsApp. Send it so we can reply with your quote within 48 hours maximum.",
       "whatsappMessage": {
-        "intro": "Hello Union Transit, I would like to request a quote.",
+        "intro": "Hello Union Transit, I'm contacting you to get a quote for the information below. Looking forward to your reply as soon as possible.",
+        "requestType": "Type of request",
         "companyName": "Company",
         "name": "Name",
         "phone": "Phone",
@@ -368,6 +382,9 @@
         "quantity": "Quantity",
         "size": "Size",
         "weight": "Weight",
+        "productToSource": "Product to source",
+        "specs": "Desired specifications",
+        "expectations": "Expectations",
         "notes": "Notes"
       }
     },
@@ -379,7 +396,50 @@
       "addressLabel": "Registered office",
       "emailLabel": "Email",
       "whatsappSnLabel": "WhatsApp Senegal",
-      "whatsappCnLabel": "WhatsApp China"
+      "whatsappCnLabel": "WhatsApp China",
+      "claimTitle": "A problem with your shipment?",
+      "claimText": "Delay, loss, financial issue, loading error... let us know about your complaint.",
+      "claimCta": "File a complaint"
+    }
+  },
+  "claim": {
+    "meta": {
+      "title": "Complaint — Union Transit",
+      "description": "Union Transit complaint form: delay, loss, financial issue, loading error or other."
+    },
+    "hero": {
+      "title": "File a complaint",
+      "subtitle": "A delay, a loss, a financial issue, a loading error, or any other situation affecting your shipment: tell us about it, we handle every complaint with care."
+    },
+    "form": {
+      "title": "Complaint form",
+      "lastNameLabel": "Last name",
+      "firstNameLabel": "First name",
+      "phoneLabel": "WhatsApp phone number",
+      "trackingNumberLabel": "Related tracking number (optional)",
+      "claimTypeLabel": "Type of complaint",
+      "claimTypeDelay": "Delay",
+      "claimTypeLoss": "Loss",
+      "claimTypeFinancial": "Financial issue",
+      "claimTypeLoading": "Loading error",
+      "claimTypeOther": "Other",
+      "descriptionLabel": "Describe your complaint",
+      "submit": "Send the complaint",
+      "requiredNote": "Required fields",
+      "confirmation": "Thank you, your complaint is ready on WhatsApp. Send the message so we can handle it as quickly as possible.",
+      "whatsappMessage": {
+        "intro": "Hello, I would like to file a complaint.",
+        "name": "Name",
+        "phone": "Phone",
+        "trackingNumber": "Tracking number",
+        "claimType": "Type of complaint",
+        "description": "Description"
+      }
+    },
+    "banner": {
+      "title": "Need to talk about it directly?",
+      "subtitle": "We get back to you as soon as possible.",
+      "cta": "Write on WhatsApp"
     }
   },
   "legal": {

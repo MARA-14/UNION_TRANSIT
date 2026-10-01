@@ -16,6 +16,10 @@ export const routing = defineRouting({
       en: "/tracking",
     },
     "/contact": "/contact",
+    "/claim": {
+      fr: "/reclamation",
+      en: "/complaint",
+    },
     "/legal": {
       fr: "/mentions-legales",
       en: "/legal-notice",

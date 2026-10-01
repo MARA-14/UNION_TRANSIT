@@ -184,6 +184,20 @@ export function StarIcon({
   );
 }
 
+export function ChevronDownIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <path
+        d="M6 9l6 6 6-6"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function SearchCheckIcon({ className }: IconProps) {
   return (
     <svg {...common} className={className}>

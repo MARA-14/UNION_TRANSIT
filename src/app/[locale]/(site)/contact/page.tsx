@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import ContactForm from "@/components/ContactForm";
 import WhatsAppLink from "@/components/WhatsAppLink";
+import { Link } from "@/i18n/navigation";
 import { MapPinIcon, MailIcon, PhoneIcon } from "@/components/icons";
 import {
   WHATSAPP_SN,
@@ -120,6 +121,19 @@ export default async function ContactPage({
                   </div>
                 </li>
               </ul>
+            </div>
+
+            <div className="rounded-2xl border border-navy/10 bg-white p-6">
+              <h2 className="font-heading text-lg font-bold text-navy">
+                {t("sidebar.claimTitle")}
+              </h2>
+              <p className="mt-2 text-sm text-navy/70">{t("sidebar.claimText")}</p>
+              <Link
+                href="/claim"
+                className="mt-4 inline-flex min-h-[44px] items-center rounded-md border-2 border-navy px-5 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white focus-visible:outline focus-visible:outline-3 focus-visible:outline-gold focus-visible:outline-offset-2"
+              >
+                {t("sidebar.claimCta")}
+              </Link>
             </div>
           </aside>
         </div>
