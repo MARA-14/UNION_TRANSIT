@@ -20,9 +20,13 @@ export const routing = defineRouting({
       fr: "/reclamation",
       en: "/complaint",
     },
-    "/legal": {
-      fr: "/mentions-legales",
-      en: "/legal-notice",
+    "/privacy": {
+      fr: "/politique-confidentialite",
+      en: "/privacy-policy",
+    },
+    "/terms": {
+      fr: "/cgu",
+      en: "/terms",
     },
     "/coming-soon": {
       fr: "/bientot-disponible",

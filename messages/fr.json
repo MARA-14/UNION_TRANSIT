@@ -20,7 +20,8 @@
   "footer": {
     "navTitle": "Liens rapides",
     "contactTitle": "Contact",
-    "legalLink": "Mentions légales",
+    "privacyLink": "Politique de confidentialité",
+    "termsLink": "CGU",
     "claimLink": "Réclamation",
     "rights": "Tous droits réservés.",
     "addressLabel": "Siège social"
@@ -430,29 +431,66 @@
       "cta": "Écrire sur WhatsApp"
     }
   },
-  "legal": {
+  "privacy": {
     "meta": {
-      "title": "Mentions légales — Union Transit",
-      "description": "Mentions légales d'Union Transit SUARL, société de logistique basée à Kaolack, Sénégal."
+      "title": "Politique de confidentialité — Union Transit",
+      "description": "Comment Union Transit collecte, utilise et protège vos données personnelles."
     },
-    "title": "Mentions légales",
-    "company": {
-      "title": "Identification de la société",
-      "name": "Raison sociale : Union Transit, SUARL",
-      "headquartersLabel": "Siège social",
-      "rccm": "RCCM : SN-KLK-2026-B-2842",
-      "ninea": "NINEA : 013342845",
-      "manager": "Gérant : Papa Touty Mara",
-      "contactLabel": "Contact",
-      "host": "Hébergeur : [nom et adresse de l'hébergeur à compléter]"
+    "title": "Politique de confidentialité",
+    "dataCollected": {
+      "title": "Quelles données sont collectées",
+      "text": "Nous collectons uniquement les informations que vous nous transmettez volontairement via nos formulaires (devis, réclamation, avis) : nom, prénom, téléphone, email facultatif, et les détails de votre demande (type de marchandise, numéro de suivi, description, etc.)."
     },
-    "personalData": {
-      "title": "Politique de confidentialité",
-      "text": "Les informations saisies dans le formulaire de contact sont utilisées uniquement pour traiter votre demande de devis et vous recontacter. Elles ne sont ni revendues, ni transmises à des tiers. Le formulaire ne transmet vos données qu'à Union Transit, via WhatsApp."
+    "dataUse": {
+      "title": "Comment nous utilisons vos données",
+      "text": "Ces informations servent uniquement à traiter votre demande, vous répondre et assurer le suivi de votre dossier. Elles ne sont ni vendues, ni partagées avec des tiers à des fins commerciales."
+    },
+    "dataStorage": {
+      "title": "Où sont stockées vos données",
+      "text": "Vos données sont conservées de façon sécurisée dans nos outils de gestion internes, accessibles uniquement par notre équipe."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "Ce site utilise un seul cookie technique, pour mémoriser la langue que vous avez choisie (français ou anglais). Aucun cookie publicitaire ou de suivi n'est utilisé."
+    },
+    "rights": {
+      "title": "Vos droits",
+      "text": "Vous pouvez à tout moment demander l'accès, la correction ou la suppression de vos données en nous contactant à"
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Conditions générales d'utilisation — Union Transit",
+      "description": "Conditions générales d'utilisation du site Union Transit."
+    },
+    "title": "Conditions générales d'utilisation",
+    "purpose": {
+      "title": "Objet",
+      "text": "Ce site présente les services d'Union Transit (fret aérien et maritime, achats en Chine, suivi de marchandise) et permet de demander un devis, suivre un envoi ou formuler une réclamation. Il ne permet ni achat en ligne ni paiement : toute prestation fait l'objet d'un devis et d'un accord séparé."
+    },
+    "quotes": {
+      "title": "Devis et tarifs",
+      "text": "Aucun prix n'est affiché sur le site. Un devis est communiqué sur demande, généralement sous 48 h, et n'engage les parties qu'après confirmation écrite."
+    },
+    "tracking": {
+      "title": "Suivi de marchandise",
+      "text": "Les informations affichées sur la page Suivi sont mises à jour manuellement par notre équipe et fournies à titre indicatif. En cas de doute, contactez votre conseiller."
     },
     "intellectualProperty": {
       "title": "Propriété intellectuelle",
       "text": "L'ensemble des contenus de ce site (textes, logo, images, mise en forme) est la propriété d'Union Transit, sauf mention contraire. Toute reproduction sans autorisation est interdite."
+    },
+    "externalLinks": {
+      "title": "Liens externes",
+      "text": "Le site contient des liens vers WhatsApp pour faciliter le contact. Union Transit n'est pas responsable du contenu ou du fonctionnement de ces services tiers."
+    },
+    "changes": {
+      "title": "Modification des CGU",
+      "text": "Ces conditions peuvent être mises à jour à tout moment. La version en vigueur est celle publiée sur cette page."
+    },
+    "law": {
+      "title": "Droit applicable",
+      "text": "Les présentes conditions sont soumises au droit sénégalais."
     }
   },
   "comingSoon": {

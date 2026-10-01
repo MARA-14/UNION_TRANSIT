@@ -20,7 +20,8 @@
   "footer": {
     "navTitle": "Quick links",
     "contactTitle": "Contact",
-    "legalLink": "Legal notice",
+    "privacyLink": "Privacy policy",
+    "termsLink": "Terms of use",
     "claimLink": "Complaint",
     "rights": "All rights reserved.",
     "addressLabel": "Registered office"
@@ -430,29 +431,66 @@
       "cta": "Write on WhatsApp"
     }
   },
-  "legal": {
+  "privacy": {
     "meta": {
-      "title": "Legal notice — Union Transit",
-      "description": "Legal notice of Union Transit SUARL, a logistics company based in Kaolack, Senegal."
+      "title": "Privacy policy — Union Transit",
+      "description": "How Union Transit collects, uses and protects your personal data."
     },
-    "title": "Legal notice",
-    "company": {
-      "title": "Company identification",
-      "name": "Legal name: Union Transit, SUARL",
-      "headquartersLabel": "Registered office",
-      "rccm": "RCCM: SN-KLK-2026-B-2842",
-      "ninea": "NINEA: 013342845",
-      "manager": "Manager: Papa Touty Mara",
-      "contactLabel": "Contact",
-      "host": "Host: [hosting provider name and address to be completed]"
+    "title": "Privacy policy",
+    "dataCollected": {
+      "title": "What data we collect",
+      "text": "We only collect the information you voluntarily provide through our forms (quote, complaint, review): last name, first name, phone number, optional email, and the details of your request (type of goods, tracking number, description, etc.)."
     },
-    "personalData": {
-      "title": "Privacy policy",
-      "text": "Information entered in the contact form is used only to process your quote request and get back to you. It is neither resold nor shared with third parties. The form only sends your data to Union Transit, via WhatsApp."
+    "dataUse": {
+      "title": "How we use your data",
+      "text": "This information is used only to process your request, get back to you and follow up on your file. It is neither sold nor shared with third parties for commercial purposes."
+    },
+    "dataStorage": {
+      "title": "Where your data is stored",
+      "text": "Your data is kept securely in our internal management tools, accessible only to our team."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "This site uses a single technical cookie, to remember the language you chose (French or English). No advertising or tracking cookies are used."
+    },
+    "rights": {
+      "title": "Your rights",
+      "text": "You can request access to, correction of, or deletion of your data at any time by contacting us at"
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Terms of use — Union Transit",
+      "description": "Terms of use for the Union Transit website."
+    },
+    "title": "Terms of use",
+    "purpose": {
+      "title": "Purpose",
+      "text": "This site presents Union Transit's services (air and sea freight, purchasing in China, shipment tracking) and lets you request a quote, track a shipment or file a complaint. It does not support online purchases or payments: every service is subject to a separate quote and agreement."
+    },
+    "quotes": {
+      "title": "Quotes and pricing",
+      "text": "No prices are displayed on the site. A quote is provided on request, generally within 48 hours, and is only binding once confirmed in writing."
+    },
+    "tracking": {
+      "title": "Shipment tracking",
+      "text": "The information shown on the Tracking page is updated manually by our team and provided for guidance only. If in doubt, contact your advisor."
     },
     "intellectualProperty": {
       "title": "Intellectual property",
       "text": "All content on this site (text, logo, images, layout) is the property of Union Transit, unless stated otherwise. Any reproduction without authorization is prohibited."
+    },
+    "externalLinks": {
+      "title": "External links",
+      "text": "The site contains links to WhatsApp to make contact easier. Union Transit is not responsible for the content or operation of these third-party services."
+    },
+    "changes": {
+      "title": "Changes to these terms",
+      "text": "These terms may be updated at any time. The version in force is the one published on this page."
+    },
+    "law": {
+      "title": "Governing law",
+      "text": "These terms are governed by the laws of Senegal."
     }
   },
   "comingSoon": {

@@ -88,16 +88,24 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 py-5">
-        <div className="container-page flex flex-col-reverse items-center gap-2 sm:flex-row sm:justify-between">
+        <div className="container-page flex flex-col-reverse items-center gap-3 sm:flex-row sm:justify-between">
           <p className="text-xs text-white/60">
             © {year} Union Transit. {t("footer.rights")}
           </p>
-          <Link
-            href="/legal"
-            className="text-xs text-white/70 hover:text-white underline underline-offset-4"
-          >
-            {t("footer.legalLink")}
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacy"
+              className="text-xs text-white/70 hover:text-white underline underline-offset-4"
+            >
+              {t("footer.privacyLink")}
+            </Link>
+            <Link
+              href="/terms"
+              className="text-xs text-white/70 hover:text-white underline underline-offset-4"
+            >
+              {t("footer.termsLink")}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
