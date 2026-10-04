@@ -130,7 +130,8 @@
         "nameLabel": "Your name (optional)",
         "commentLabel": "Your comment (optional)",
         "submit": "Send my review",
-        "thankYou": "Thank you for your review!"
+        "thankYou": "Thank you for your review!",
+        "error": "Something went wrong while sending. Please try again."
       }
     },
     "banner": {
@@ -380,7 +381,9 @@
       "requiredNote": "Required fields",
       "successTitle": "Your request has been sent successfully.",
       "successText": "An advisor will contact you within 48 hours maximum. If it's urgent, contact us directly (also available on WhatsApp):",
-      "errorText": "Something went wrong while sending. Please contact us directly:"
+      "errorText": "Something went wrong while sending. Please contact us directly:",
+      "backHome": "Back to home",
+      "validationError": "Please fill in all required fields (*) before sending your request."
     },
     "sidebar": {
       "directTitle": "A quick question?",
@@ -423,7 +426,9 @@
       "requiredNote": "Required fields",
       "successTitle": "Your complaint has been sent successfully.",
       "successText": "An advisor will contact you within 48 hours maximum. If it's urgent, contact us directly (also available on WhatsApp):",
-      "errorText": "Something went wrong while sending. Please contact us directly:"
+      "errorText": "Something went wrong while sending. Please contact us directly:",
+      "backHome": "Back to home",
+      "validationError": "Please fill in all required fields (*) before sending your claim."
     },
     "banner": {
       "title": "Need to talk about it directly?",

@@ -130,7 +130,8 @@
         "nameLabel": "Votre nom (facultatif)",
         "commentLabel": "Votre commentaire (facultatif)",
         "submit": "Envoyer mon avis",
-        "thankYou": "Merci pour votre avis !"
+        "thankYou": "Merci pour votre avis !",
+        "error": "Un problème est survenu lors de l'envoi. Merci de réessayer."
       }
     },
     "banner": {
@@ -380,7 +381,9 @@
       "requiredNote": "Champs obligatoires",
       "successTitle": "Votre demande a bien été transmise.",
       "successText": "Un conseiller vous contactera sous 48 h maximum. Si c'est urgent, contactez-nous directement (également disponible sur WhatsApp) :",
-      "errorText": "Un problème est survenu lors de l'envoi. Merci de nous contacter directement :"
+      "errorText": "Un problème est survenu lors de l'envoi. Merci de nous contacter directement :",
+      "backHome": "Retour à l'accueil",
+      "validationError": "Merci de remplir tous les champs obligatoires (*) avant d'envoyer votre demande."
     },
     "sidebar": {
       "directTitle": "Une question rapide ?",
@@ -423,7 +426,9 @@
       "requiredNote": "Champs obligatoires",
       "successTitle": "Votre réclamation a bien été transmise.",
       "successText": "Un conseiller vous contactera sous 48 h maximum. Si c'est urgent, contactez-nous directement (également disponible sur WhatsApp) :",
-      "errorText": "Un problème est survenu lors de l'envoi. Merci de nous contacter directement :"
+      "errorText": "Un problème est survenu lors de l'envoi. Merci de nous contacter directement :",
+      "backHome": "Retour à l'accueil",
+      "validationError": "Merci de remplir tous les champs obligatoires (*) avant d'envoyer votre réclamation."
     },
     "banner": {
       "title": "Besoin d'en parler directement ?",

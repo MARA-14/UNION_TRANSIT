@@ -10,8 +10,10 @@ export default function AvisForm() {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (rating === 0) return;
 
@@ -19,8 +21,12 @@ export default function AvisForm() {
     const name = (form.get("name") as string) ?? "";
     const comment = (form.get("comment") as string) ?? "";
 
-    logToSheet({ type: "avis", rating, name, comment });
-    setSubmitted(true);
+    setSending(true);
+    setFailed(false);
+    const ok = await logToSheet({ type: "avis", rating, name, comment });
+    setSending(false);
+    if (ok) setSubmitted(true);
+    else setFailed(true);
   }
 
   if (submitted) {
@@ -82,9 +88,15 @@ export default function AvisForm() {
         />
       </div>
 
+      {failed && (
+        <p role="alert" className="text-sm text-red-700">
+          {t("error")}
+        </p>
+      )}
+
       <button
         type="submit"
-        disabled={rating === 0}
+        disabled={rating === 0 || sending}
         className="min-h-[44px] w-full sm:w-auto rounded-md bg-success px-6 text-sm font-semibold text-white transition-colors hover:bg-success/90 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-3 focus-visible:outline-navy focus-visible:outline-offset-2"
       >
         {t("submit")}

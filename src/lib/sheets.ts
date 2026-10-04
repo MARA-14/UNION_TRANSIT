@@ -20,7 +20,13 @@ export async function logToSheet(payload: SheetPayload): Promise<boolean> {
       headers: { "Content-Type": "text/plain" },
       body: JSON.stringify(payload),
     });
-    return res.ok;
+    if (!res.ok) return false;
+    try {
+      const data = await res.json();
+      return data?.result === "success";
+    } catch {
+      return true; // unreadable body: trust the HTTP status
+    }
   } catch (err) {
     console.warn("logToSheet: request failed", err);
     return false;

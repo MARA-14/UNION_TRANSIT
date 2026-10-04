@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import {
   WHATSAPP_CLAIMS,
@@ -8,6 +8,7 @@ import {
   buildWhatsAppLink,
 } from "@/lib/whatsapp";
 import { logToSheet } from "@/lib/sheets";
+import { Link } from "@/i18n/navigation";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -15,6 +16,16 @@ export default function ClaimForm() {
   const t = useTranslations("claim.form");
   const tWa = useTranslations("whatsapp");
   const [status, setStatus] = useState<Status>("idle");
+  const [missing, setMissing] = useState<string[]>([]);
+  const successRef = useRef<HTMLDivElement>(null);
+
+  // The form is replaced by a shorter confirmation block, which leaves the
+  // visitor scrolled below it: bring the confirmation back into view.
+  useEffect(() => {
+    if (status === "success") {
+      successRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [status]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -26,6 +37,17 @@ export default function ClaimForm() {
     const trackingNumber = (form.get("trackingNumber") as string) ?? "";
     const claimType = (form.get("claimType") as string) ?? "";
     const description = (form.get("description") as string) ?? "";
+
+    const empty = ["lastName", "firstName", "phone", "claimType", "description"].filter(
+      (name) => !((form.get(name) as string) ?? "").trim(),
+    );
+    if (empty.length > 0) {
+      setMissing(empty);
+      setStatus("idle");
+      document.getElementById(empty[0])?.focus();
+      return;
+    }
+    setMissing([]);
 
     const claimTypeLabels: Record<string, string> = {
       delay: t("claimTypeDelay"),
@@ -51,12 +73,15 @@ export default function ClaimForm() {
   }
 
   const inputClass =
-    "w-full min-h-[44px] rounded-md border border-navy/20 bg-white px-4 py-2 text-navy placeholder:text-navy/30 focus-visible:outline focus-visible:outline-3 focus-visible:outline-gold focus-visible:outline-offset-2";
+    "w-full min-h-[44px] rounded-md border border-navy/20 bg-white px-4 py-2 text-navy placeholder:text-navy/30 aria-[invalid=true]:border-red-500 aria-[invalid=true]:bg-red-50 focus-visible:outline focus-visible:outline-3 focus-visible:outline-gold focus-visible:outline-offset-2";
   const labelClass = "block text-sm font-medium text-navy mb-1.5";
 
   if (status === "success") {
     return (
-      <div className="rounded-xl border border-success/30 bg-success/10 p-6">
+      <div
+        ref={successRef}
+        className="scroll-mt-28 rounded-xl border border-success/30 bg-success/10 p-6"
+      >
         <p className="font-heading font-semibold text-success">
           {t("successTitle")}
         </p>
@@ -66,6 +91,12 @@ export default function ClaimForm() {
             {formatWhatsAppDisplay(WHATSAPP_CLAIMS)}
           </a>
         </p>
+        <Link
+          href="/"
+          className="mt-6 inline-flex min-h-[44px] items-center rounded-md bg-navy px-5 text-sm font-semibold text-white hover:bg-navy-dark"
+        >
+          {t("backHome")}
+        </Link>
       </div>
     );
   }
@@ -77,13 +108,13 @@ export default function ClaimForm() {
           <label htmlFor="lastName" className={labelClass}>
             {t("lastNameLabel")} <span aria-hidden="true">*</span>
           </label>
-          <input id="lastName" name="lastName" type="text" required className={inputClass} />
+          <input id="lastName" name="lastName" type="text" aria-invalid={missing.includes("lastName")} className={inputClass} />
         </div>
         <div>
           <label htmlFor="firstName" className={labelClass}>
             {t("firstNameLabel")} <span aria-hidden="true">*</span>
           </label>
-          <input id="firstName" name="firstName" type="text" required className={inputClass} />
+          <input id="firstName" name="firstName" type="text" aria-invalid={missing.includes("firstName")} className={inputClass} />
         </div>
       </div>
 
@@ -92,7 +123,7 @@ export default function ClaimForm() {
           <label htmlFor="phone" className={labelClass}>
             {t("phoneLabel")} <span aria-hidden="true">*</span>
           </label>
-          <input id="phone" name="phone" type="tel" required className={inputClass} />
+          <input id="phone" name="phone" type="tel" aria-invalid={missing.includes("phone")} className={inputClass} />
         </div>
         <div>
           <label htmlFor="trackingNumber" className={labelClass}>
@@ -106,7 +137,7 @@ export default function ClaimForm() {
         <label htmlFor="claimType" className={labelClass}>
           {t("claimTypeLabel")} <span aria-hidden="true">*</span>
         </label>
-        <select id="claimType" name="claimType" required defaultValue="" className={inputClass}>
+        <select id="claimType" name="claimType" aria-invalid={missing.includes("claimType")} defaultValue="" className={inputClass}>
           <option value="" disabled>
             —
           </option>
@@ -125,13 +156,18 @@ export default function ClaimForm() {
         <textarea
           id="description"
           name="description"
-          rows={5}
-          required
+          rows={5} aria-invalid={missing.includes("description")}
           className={inputClass}
         />
       </div>
 
       <p className="text-xs text-navy/50">{t("requiredNote")}</p>
+
+      {missing.length > 0 && (
+        <div role="alert" className="rounded-xl border border-red-300 bg-red-50 p-4">
+          <p className="text-sm font-medium text-red-700">{t("validationError")}</p>
+        </div>
+      )}
 
       {status === "error" && (
         <div role="alert" className="rounded-xl border border-gold/40 bg-gold/10 p-4">

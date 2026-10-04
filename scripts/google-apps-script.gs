@@ -103,8 +103,45 @@ function doGet(e) {
   );
 }
 
+function isBlank(value) {
+  return value === undefined || value === null || (value + "").trim() === "";
+}
+
+// Champs obligatoires par type de formulaire. Le site les verifie deja, mais
+// l'adresse du script est publique : on revérifie ici pour refuser tout envoi
+// incomplet (aucune ligne ajoutee, aucun email envoye).
+function validate(data) {
+  var required;
+  if (data.type === "avis") {
+    var rating = Number(data.rating);
+    return rating >= 1 && rating <= 5;
+  } else if (data.type === "reclamation") {
+    required = ["lastName", "firstName", "phone", "claimType", "description"];
+  } else {
+    required = ["lastName", "firstName", "phone", "goodsType"];
+  }
+  for (var i = 0; i < required.length; i++) {
+    if (isBlank(data[required[i]])) return false;
+  }
+  return true;
+}
+
+function jsonResponse(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(
+    ContentService.MimeType.JSON,
+  );
+}
+
 function doPost(e) {
-  var data = JSON.parse(e.postData.contents);
+  var data;
+  try {
+    data = JSON.parse(e.postData.contents);
+  } catch (err) {
+    return jsonResponse({ result: "error", message: "invalid" });
+  }
+  if (!data || !validate(data)) {
+    return jsonResponse({ result: "error", message: "missing_fields" });
+  }
   var timestamp = new Date();
 
   if (data.type === "avis") {
