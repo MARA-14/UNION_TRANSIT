@@ -9,7 +9,7 @@ export type Rule = {
 };
 
 const NAME_RE = /^[^\d_!@#$%^&*()+=[\]{}<>/\\|?~`:;"]{2,50}$/;
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const EMAIL_RE = /^[A-Za-z0-9]+([._%+-][A-Za-z0-9]+)*@([A-Za-z0-9]+(-[A-Za-z0-9]+)*\.)+[A-Za-z]{2,}$/;
 const TRACKING_RE = /^[A-Za-z0-9-]{4,30}$/;
 
 /**

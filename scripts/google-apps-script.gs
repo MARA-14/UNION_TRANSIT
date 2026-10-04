@@ -111,7 +111,7 @@ function isBlank(value) {
 // est publique : on refuse tout envoi incomplet ou non conforme (aucune ligne
 // ajoutee, aucun email envoye).
 var NAME_RE = /^[^\d_!@#$%^&*()+=\[\]{}<>\/\\|?~`:;"]{2,50}$/;
-var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+var EMAIL_RE = /^[A-Za-z0-9]+([._%+-][A-Za-z0-9]+)*@([A-Za-z0-9]+(-[A-Za-z0-9]+)*\.)+[A-Za-z]{2,}$/;
 var TRACKING_RE = /^[A-Za-z0-9-]{4,30}$/;
 var CLAIM_TYPES = ["Retard", "Perte", "Problème financier", "Erreur de chargement", "Autre"];
 
