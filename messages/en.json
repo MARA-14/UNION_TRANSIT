@@ -383,7 +383,7 @@
       "successText": "An advisor will contact you within 48 hours maximum. If it's urgent, contact us directly (also available on WhatsApp):",
       "errorText": "Something went wrong while sending. Please contact us directly:",
       "backHome": "Back to home",
-      "validationError": "Please fill in all required fields (*) before sending your request."
+      "validationError": "Please fill in or correct the following fields before sending your request:"
     },
     "sidebar": {
       "directTitle": "A quick question?",
@@ -428,7 +428,7 @@
       "successText": "An advisor will contact you within 48 hours maximum. If it's urgent, contact us directly (also available on WhatsApp):",
       "errorText": "Something went wrong while sending. Please contact us directly:",
       "backHome": "Back to home",
-      "validationError": "Please fill in all required fields (*) before sending your claim."
+      "validationError": "Please fill in or correct the following fields before sending your claim:"
     },
     "banner": {
       "title": "Need to talk about it directly?",
@@ -514,5 +514,34 @@
     "title": "This page doesn't exist",
     "text": "The page you are looking for is no longer available or has been moved.",
     "cta": "Back to home"
+  },
+  "validation": {
+    "required": "required field",
+    "fields": {
+      "lastName": "Last name",
+      "firstName": "First name",
+      "phone": "Phone",
+      "email": "Email",
+      "companyName": "Company",
+      "notes": "Notes",
+      "productToSource": "Product to source",
+      "specs": "Specifications",
+      "expectations": "Expectations",
+      "goodsType": "Type of goods",
+      "quantity": "Quantity",
+      "size": "Size",
+      "weight": "Weight",
+      "trackingNumber": "Tracking number",
+      "claimType": "Claim type",
+      "description": "Description"
+    },
+    "invalid": {
+      "name": "enter a valid name (letters only, 2 to 50 characters)",
+      "phone": "invalid Senegalese number (9 digits, e.g. 77 123 45 67, or +221 77 123 45 67)",
+      "email": "invalid email address (e.g. name@example.com)",
+      "tracking": "invalid tracking number (letters, digits and dashes, 4 to 30 characters)",
+      "choice": "please choose an option",
+      "text": "text too short or too long"
+    }
   }
 }

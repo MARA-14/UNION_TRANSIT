@@ -10,16 +10,26 @@ import {
 } from "@/lib/whatsapp";
 import { logToSheet } from "@/lib/sheets";
 import { Link } from "@/i18n/navigation";
+import { validateFields, normalizeSnPhone, formatSnPhone, type FieldError, type Rule } from "@/lib/validation";
 
 type RequestType = "shipment" | "sourcing";
 type Status = "idle" | "sending" | "success" | "error";
+
+const RULES_KIND: Record<string, string> = {
+  lastName: "name",
+  firstName: "name",
+  phone: "phone",
+  email: "email",
+};
 
 export default function ContactForm() {
   const t = useTranslations("contact.form");
   const tWa = useTranslations("whatsapp");
   const [requestType, setRequestType] = useState<RequestType>("shipment");
   const [status, setStatus] = useState<Status>("idle");
-  const [missing, setMissing] = useState<string[]>([]);
+  const tv = useTranslations("validation");
+  const [errors, setErrors] = useState<Record<string, FieldError>>({});
+  const missing = Object.keys(errors);
   const successRef = useRef<HTMLDivElement>(null);
 
   // The form is replaced by a shorter confirmation block, which leaves the
@@ -43,22 +53,37 @@ export default function ContactForm() {
 
     const isSourcing = requestType === "sourcing";
 
-    const requiredFields = [
-      "lastName",
-      "firstName",
-      "phone",
-      isSourcing ? "productToSource" : "goodsType",
-    ];
-    const empty = requiredFields.filter(
-      (name) => !((form.get(name) as string) ?? "").trim(),
+    const rules: Record<string, Rule> = {
+      lastName: { kind: "name", required: true },
+      firstName: { kind: "name", required: true },
+      phone: { kind: "phone", required: true },
+      email: { kind: "email" },
+      companyName: { kind: "text", max: 100 },
+      notes: { kind: "text", max: 1000 },
+      ...(isSourcing
+        ? {
+            productToSource: { kind: "text", required: true, min: 2, max: 150 },
+            specs: { kind: "text", max: 1000 },
+            expectations: { kind: "text", max: 1000 },
+          }
+        : {
+            goodsType: { kind: "text", required: true, min: 2, max: 150 },
+            quantity: { kind: "text", max: 100 },
+            size: { kind: "text", max: 100 },
+            weight: { kind: "text", max: 100 },
+          }),
+    };
+    const values = Object.fromEntries(
+      Object.keys(rules).map((name) => [name, (form.get(name) as string) ?? ""]),
     );
-    if (empty.length > 0) {
-      setMissing(empty);
+    const found = validateFields(values, rules);
+    if (Object.keys(found).length > 0) {
+      setErrors(found);
       setStatus("idle");
-      document.getElementById(empty[0])?.focus();
+      document.getElementById(Object.keys(found)[0])?.focus();
       return;
     }
-    setMissing([]);
+    setErrors({});
 
     const requestTypeLabel = isSourcing
       ? t("requestTypeSourcing")
@@ -85,8 +110,8 @@ export default function ContactForm() {
       companyName,
       lastName,
       firstName,
-      phone,
-      email,
+      phone: formatSnPhone(normalizeSnPhone(phone) as string),
+      email: email.trim(),
       goodsType,
       quantity,
       size,
@@ -192,13 +217,13 @@ export default function ContactForm() {
           <label htmlFor="phone" className={labelClass}>
             {t("phoneLabel")} <span aria-hidden="true">*</span>
           </label>
-          <input id="phone" name="phone" type="tel" aria-invalid={missing.includes("phone")} className={inputClass} />
+          <input id="phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" maxLength={20} placeholder="77 123 45 67" aria-invalid={missing.includes("phone")} className={inputClass} />
         </div>
         <div>
           <label htmlFor="email" className={labelClass}>
             {t("emailLabel")}
           </label>
-          <input id="email" name="email" type="email" className={inputClass} />
+          <input id="email" name="email" type="email" maxLength={100} autoComplete="email" className={inputClass} />
         </div>
       </div>
 
@@ -274,6 +299,13 @@ export default function ContactForm() {
       {missing.length > 0 && (
         <div role="alert" className="rounded-xl border border-red-300 bg-red-50 p-4">
           <p className="text-sm font-medium text-red-700">{t("validationError")}</p>
+          <ul className="mt-2 list-disc pl-5 text-sm text-red-700">
+            {missing.map((name) => (
+              <li key={name}>
+                {tv(`fields.${name}`)} : {errors[name] === "required" ? tv("required") : tv(`invalid.${RULES_KIND[name] ?? "text"}`)}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 

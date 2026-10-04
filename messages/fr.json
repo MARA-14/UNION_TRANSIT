@@ -383,7 +383,7 @@
       "successText": "Un conseiller vous contactera sous 48 h maximum. Si c'est urgent, contactez-nous directement (également disponible sur WhatsApp) :",
       "errorText": "Un problème est survenu lors de l'envoi. Merci de nous contacter directement :",
       "backHome": "Retour à l'accueil",
-      "validationError": "Merci de remplir tous les champs obligatoires (*) avant d'envoyer votre demande."
+      "validationError": "Merci de remplir ou corriger les champs suivants avant d'envoyer votre demande :"
     },
     "sidebar": {
       "directTitle": "Une question rapide ?",
@@ -428,7 +428,7 @@
       "successText": "Un conseiller vous contactera sous 48 h maximum. Si c'est urgent, contactez-nous directement (également disponible sur WhatsApp) :",
       "errorText": "Un problème est survenu lors de l'envoi. Merci de nous contacter directement :",
       "backHome": "Retour à l'accueil",
-      "validationError": "Merci de remplir tous les champs obligatoires (*) avant d'envoyer votre réclamation."
+      "validationError": "Merci de remplir ou corriger les champs suivants avant d'envoyer votre réclamation :"
     },
     "banner": {
       "title": "Besoin d'en parler directement ?",
@@ -514,5 +514,34 @@
     "title": "Cette page n'existe pas",
     "text": "La page que vous cherchez n'est plus disponible ou a été déplacée.",
     "cta": "Retour à l'accueil"
+  },
+  "validation": {
+    "required": "champ obligatoire",
+    "fields": {
+      "lastName": "Nom",
+      "firstName": "Prénom",
+      "phone": "Téléphone",
+      "email": "Email",
+      "companyName": "Entreprise",
+      "notes": "Notes",
+      "productToSource": "Produit à sourcer",
+      "specs": "Caractéristiques",
+      "expectations": "Attentes",
+      "goodsType": "Type de marchandises",
+      "quantity": "Quantité",
+      "size": "Taille",
+      "weight": "Poids",
+      "trackingNumber": "Numéro de suivi",
+      "claimType": "Type de réclamation",
+      "description": "Description"
+    },
+    "invalid": {
+      "name": "saisissez un nom valide (lettres uniquement, 2 à 50 caractères)",
+      "phone": "numéro sénégalais invalide (9 chiffres, ex. 77 123 45 67, ou +221 77 123 45 67)",
+      "email": "adresse email invalide (ex. nom@exemple.com)",
+      "tracking": "numéro de suivi invalide (lettres, chiffres et tirets, 4 à 30 caractères)",
+      "choice": "veuillez choisir une option",
+      "text": "texte trop court ou trop long"
+    }
   }
 }

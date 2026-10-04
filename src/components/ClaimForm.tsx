@@ -9,14 +9,25 @@ import {
 } from "@/lib/whatsapp";
 import { logToSheet } from "@/lib/sheets";
 import { Link } from "@/i18n/navigation";
+import { validateFields, normalizeSnPhone, formatSnPhone, type FieldError, type Rule } from "@/lib/validation";
 
 type Status = "idle" | "sending" | "success" | "error";
+
+const RULES_KIND: Record<string, string> = {
+  lastName: "name",
+  firstName: "name",
+  phone: "phone",
+  trackingNumber: "tracking",
+  claimType: "choice",
+};
 
 export default function ClaimForm() {
   const t = useTranslations("claim.form");
   const tWa = useTranslations("whatsapp");
   const [status, setStatus] = useState<Status>("idle");
-  const [missing, setMissing] = useState<string[]>([]);
+  const tv = useTranslations("validation");
+  const [errors, setErrors] = useState<Record<string, FieldError>>({});
+  const missing = Object.keys(errors);
   const successRef = useRef<HTMLDivElement>(null);
 
   // The form is replaced by a shorter confirmation block, which leaves the
@@ -38,16 +49,29 @@ export default function ClaimForm() {
     const claimType = (form.get("claimType") as string) ?? "";
     const description = (form.get("description") as string) ?? "";
 
-    const empty = ["lastName", "firstName", "phone", "claimType", "description"].filter(
-      (name) => !((form.get(name) as string) ?? "").trim(),
+    const rules: Record<string, Rule> = {
+      lastName: { kind: "name", required: true },
+      firstName: { kind: "name", required: true },
+      phone: { kind: "phone", required: true },
+      trackingNumber: { kind: "tracking" },
+      claimType: {
+        kind: "choice",
+        required: true,
+        choices: ["delay", "loss", "financial", "loading", "other"],
+      },
+      description: { kind: "text", required: true, min: 10, max: 2000 },
+    };
+    const values = Object.fromEntries(
+      Object.keys(rules).map((name) => [name, (form.get(name) as string) ?? ""]),
     );
-    if (empty.length > 0) {
-      setMissing(empty);
+    const found = validateFields(values, rules);
+    if (Object.keys(found).length > 0) {
+      setErrors(found);
       setStatus("idle");
-      document.getElementById(empty[0])?.focus();
+      document.getElementById(Object.keys(found)[0])?.focus();
       return;
     }
-    setMissing([]);
+    setErrors({});
 
     const claimTypeLabels: Record<string, string> = {
       delay: t("claimTypeDelay"),
@@ -63,8 +87,8 @@ export default function ClaimForm() {
       type: "reclamation",
       lastName,
       firstName,
-      phone,
-      trackingNumber,
+      phone: formatSnPhone(normalizeSnPhone(phone) as string),
+      trackingNumber: trackingNumber.trim(),
       claimType: claimTypeLabel,
       description,
     });
@@ -123,13 +147,13 @@ export default function ClaimForm() {
           <label htmlFor="phone" className={labelClass}>
             {t("phoneLabel")} <span aria-hidden="true">*</span>
           </label>
-          <input id="phone" name="phone" type="tel" aria-invalid={missing.includes("phone")} className={inputClass} />
+          <input id="phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" maxLength={20} placeholder="77 123 45 67" aria-invalid={missing.includes("phone")} className={inputClass} />
         </div>
         <div>
           <label htmlFor="trackingNumber" className={labelClass}>
             {t("trackingNumberLabel")}
           </label>
-          <input id="trackingNumber" name="trackingNumber" type="text" className={inputClass} />
+          <input id="trackingNumber" name="trackingNumber" type="text" maxLength={30} aria-invalid={missing.includes("trackingNumber")} className={inputClass} />
         </div>
       </div>
 
@@ -166,6 +190,13 @@ export default function ClaimForm() {
       {missing.length > 0 && (
         <div role="alert" className="rounded-xl border border-red-300 bg-red-50 p-4">
           <p className="text-sm font-medium text-red-700">{t("validationError")}</p>
+          <ul className="mt-2 list-disc pl-5 text-sm text-red-700">
+            {missing.map((name) => (
+              <li key={name}>
+                {tv(`fields.${name}`)} : {errors[name] === "required" ? tv("required") : tv(`invalid.${RULES_KIND[name] ?? "text"}`)}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 

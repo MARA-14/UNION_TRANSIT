@@ -107,23 +107,63 @@ function isBlank(value) {
   return value === undefined || value === null || (value + "").trim() === "";
 }
 
-// Champs obligatoires par type de formulaire. Le site les verifie deja, mais
-// l'adresse du script est publique : on revérifie ici pour refuser tout envoi
-// incomplet (aucune ligne ajoutee, aucun email envoye).
+// Verifications cote serveur (memes regles que le site). L'adresse du script
+// est publique : on refuse tout envoi incomplet ou non conforme (aucune ligne
+// ajoutee, aucun email envoye).
+var NAME_RE = /^[^\d_!@#$%^&*()+=\[\]{}<>\/\\|?~`:;"]{2,50}$/;
+var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+var TRACKING_RE = /^[A-Za-z0-9-]{4,30}$/;
+var CLAIM_TYPES = ["Retard", "Perte", "Problème financier", "Erreur de chargement", "Autre"];
+
+// Numero senegalais : 9 chiffres (70/75/76/77/78 ou 3x + 7 chiffres),
+// avec +221 / 00221 / 221 facultatif.
+function validPhone(raw) {
+  var d = (raw + "").trim().replace(/[\s.\-()]/g, "");
+  if (d.charAt(0) === "+") d = d.slice(1);
+  else if (d.slice(0, 2) === "00") d = d.slice(2);
+  if (!/^\d+$/.test(d)) return false;
+  if (d.length === 12 && d.slice(0, 3) === "221") d = d.slice(3);
+  return /^(7[05678]|3\d)\d{7}$/.test(d);
+}
+
+function okName(v) {
+  return !isBlank(v) && NAME_RE.test((v + "").trim());
+}
+
+function okText(v, required, min, max) {
+  if (isBlank(v)) return !required;
+  var len = (v + "").trim().length;
+  return len >= min && len <= max;
+}
+
 function validate(data) {
-  var required;
   if (data.type === "avis") {
     var rating = Number(data.rating);
-    return rating >= 1 && rating <= 5;
-  } else if (data.type === "reclamation") {
-    required = ["lastName", "firstName", "phone", "claimType", "description"];
-  } else {
-    required = ["lastName", "firstName", "phone", "goodsType"];
+    return (
+      rating >= 1 && rating <= 5 &&
+      okText(data.name, false, 0, 100) &&
+      okText(data.comment, false, 0, 1000)
+    );
   }
-  for (var i = 0; i < required.length; i++) {
-    if (isBlank(data[required[i]])) return false;
+  if (!okName(data.lastName) || !okName(data.firstName) || !validPhone(data.phone || "")) {
+    return false;
   }
-  return true;
+  if (data.type === "reclamation") {
+    return (
+      CLAIM_TYPES.indexOf(data.claimType) !== -1 &&
+      okText(data.description, true, 10, 2000) &&
+      (isBlank(data.trackingNumber) || TRACKING_RE.test((data.trackingNumber + "").trim()))
+    );
+  }
+  return (
+    okText(data.goodsType, true, 2, 150) &&
+    okText(data.companyName, false, 0, 100) &&
+    (isBlank(data.email) || ((data.email + "").length <= 100 && EMAIL_RE.test((data.email + "").trim()))) &&
+    okText(data.quantity, false, 0, 100) &&
+    okText(data.size, false, 0, 1000) &&
+    okText(data.weight, false, 0, 1000) &&
+    okText(data.notes, false, 0, 1100)
+  );
 }
 
 function jsonResponse(obj) {
