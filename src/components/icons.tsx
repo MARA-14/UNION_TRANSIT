@@ -206,3 +206,16 @@ export function SearchCheckIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function FacebookIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <path
+        d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}

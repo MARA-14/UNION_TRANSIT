@@ -2,8 +2,8 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { WHATSAPP_CN, WHATSAPP_SN, formatWhatsAppDisplay } from "@/lib/whatsapp";
-import { SITE_EMAIL, SITE_ADDRESS_HQ } from "@/lib/contact";
-import { MailIcon, PhoneIcon, MapPinIcon } from "@/components/icons";
+import { SITE_EMAIL, SITE_ADDRESS_HQ, SITE_FACEBOOK } from "@/lib/contact";
+import { MailIcon, PhoneIcon, MapPinIcon, FacebookIcon } from "@/components/icons";
 import { LANDINGS } from "@/lib/landings";
 
 export default function Footer() {
@@ -99,6 +99,12 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               <MapPinIcon className="h-4 w-4 shrink-0 text-gold mt-0.5" />
               <span>{SITE_ADDRESS_HQ}</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <FacebookIcon className="h-4 w-4 shrink-0 text-gold" />
+              <a href={SITE_FACEBOOK} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                Facebook
+              </a>
             </li>
           </ul>
         </div>
