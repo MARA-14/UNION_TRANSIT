@@ -11,7 +11,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "comingSoon.meta" });
-  return { title: t("title"), description: t("description") };
+  return { title: t("title"), description: t("description"), robots: { index: false } };
 }
 
 export default async function ComingSoonPage({

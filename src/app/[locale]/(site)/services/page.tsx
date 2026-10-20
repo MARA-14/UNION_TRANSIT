@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import AccordionCard from "@/components/AccordionCard";
 import InfoCard from "@/components/InfoCard";
@@ -22,8 +23,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "services.meta" });
-  return { title: t("title"), description: t("description") };
+  return pageMetadata(locale, "services.meta", "/services");
 }
 
 export default async function ServicesPage({

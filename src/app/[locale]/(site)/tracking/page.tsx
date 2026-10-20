@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import TrackingClient from "@/components/TrackingClient";
 import FinalBanner from "@/components/FinalBanner";
@@ -10,8 +11,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "tracking.meta" });
-  return { title: t("title"), description: t("description") };
+  return pageMetadata(locale, "tracking.meta", "/tracking");
 }
 
 export default async function TrackingPage({
