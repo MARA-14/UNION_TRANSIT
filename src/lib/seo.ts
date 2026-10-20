@@ -15,6 +15,12 @@ export const GOOGLE_SITE_VERIFICATION = "SKJ6TaFiJp--4gKigOlHpF6hID_e6z9pZKZvxIG
 export const INDEXED_PAGES: { href: AppPathnames; priority: number }[] = [
   { href: "/", priority: 1 },
   { href: "/services", priority: 0.9 },
+  { href: "/cargo-chine-senegal", priority: 0.9 },
+  { href: "/fret-aerien-chine-dakar", priority: 0.9 },
+  { href: "/groupage-maritime-chine-dakar", priority: 0.9 },
+  { href: "/conteneur-chine-dakar", priority: 0.9 },
+  { href: "/achat-sourcing-chine", priority: 0.8 },
+  { href: "/ecommerce-chine-senegal", priority: 0.8 },
   { href: "/contact", priority: 0.8 },
   { href: "/about", priority: 0.7 },
   { href: "/tracking", priority: 0.5 },
