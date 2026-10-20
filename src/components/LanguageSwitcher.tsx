@@ -16,6 +16,11 @@ export default function LanguageSwitcher({
   const params = useParams();
 
   function switchTo(nextLocale: "fr" | "en") {
+    // Les articles du blog n'existent qu'en français : on renvoie vers la liste des articles.
+    if (pathname === "/blog/[slug]" && nextLocale !== "fr") {
+      router.replace("/blog", { locale: nextLocale });
+      return;
+    }
     router.replace(
       // @ts-expect-error -- params shape is dynamic per current route
       { pathname, params },

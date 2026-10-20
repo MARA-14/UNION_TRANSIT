@@ -1,4 +1,4 @@
-import type { AppPathnames } from "@/i18n/routing";
+import type { StaticPathnames } from "@/i18n/routing";
 
 // Pages d'atterrissage SEO : une page par recherche visée (cargo, aérien, groupage, conteneur, sourcing, e-commerce).
 // Les textes sont dans messages/*.json, sous « landing.<key> ».
@@ -9,6 +9,6 @@ export const LANDINGS = [
   { key: "container", href: "/conteneur-chine-dakar" },
   { key: "sourcing", href: "/achat-sourcing-chine" },
   { key: "ecommerce", href: "/ecommerce-chine-senegal" },
-] as const satisfies readonly { key: string; href: AppPathnames }[];
+] as const satisfies readonly { key: string; href: StaticPathnames }[];
 
 export type LandingKey = (typeof LANDINGS)[number]["key"];

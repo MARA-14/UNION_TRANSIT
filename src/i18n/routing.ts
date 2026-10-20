@@ -52,6 +52,8 @@ export const routing = defineRouting({
       fr: "/ecommerce-chine-senegal",
       en: "/china-ecommerce-senegal",
     },
+    "/blog": "/blog",
+    "/blog/[slug]": "/blog/[slug]",
     "/coming-soon": {
       fr: "/bientot-disponible",
       en: "/coming-soon",
@@ -60,3 +62,6 @@ export const routing = defineRouting({
 });
 
 export type AppPathnames = keyof typeof routing.pathnames;
+
+// Routes sans paramètre dynamique (tout sauf les articles du blog).
+export type StaticPathnames = Exclude<AppPathnames, `${string}[${string}`>;

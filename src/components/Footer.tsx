@@ -48,6 +48,9 @@ export default function Footer() {
             <Link href="/tracking" className="text-white/80 hover:text-white">
               {t("nav.tracking")}
             </Link>
+            <Link href="/blog" className="text-white/80 hover:text-white">
+              {t("nav.blog")}
+            </Link>
             <Link href="/contact" className="text-white/80 hover:text-white">
               {t("nav.contact")}
             </Link>
