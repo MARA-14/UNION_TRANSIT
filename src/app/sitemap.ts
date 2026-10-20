@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { INDEXED_PAGES, absoluteUrl, languageAlternates } from "@/lib/seo";
+import { BLOG_ARTICLES } from "@/content/blog";
+import { INDEXED_PAGES, SITE_URL, absoluteUrl, languageAlternates } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return INDEXED_PAGES.flatMap(({ href, priority }) =>
+  const pages = INDEXED_PAGES.flatMap(({ href, priority }) =>
     routing.locales.map((locale) => ({
       url: absoluteUrl(href, locale),
       lastModified: new Date(),
@@ -12,4 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: languageAlternates(href) },
     })),
   );
+  // Articles du blog : français uniquement.
+  const articles = BLOG_ARTICLES.map((article) => ({
+    url: `${SITE_URL}/fr/blog/${article.slug}`,
+    lastModified: new Date(article.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+  return [...pages, ...articles];
 }

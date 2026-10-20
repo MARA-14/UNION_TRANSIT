@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
-import { routing, type AppPathnames } from "@/i18n/routing";
+import { routing, type StaticPathnames } from "@/i18n/routing";
 import { SITE_ADDRESS_HQ, SITE_EMAIL } from "@/lib/contact";
 import { WHATSAPP_CN, WHATSAPP_SN } from "@/lib/whatsapp";
 
@@ -12,7 +12,7 @@ export const SITE_URL = "https://uniontransitgroup.com";
 export const GOOGLE_SITE_VERIFICATION = "SKJ6TaFiJp--4gKigOlHpF6hID_e6z9pZKZvxIG7X7Y";
 
 // Pages publiques à faire indexer (réclamation, CGU, confidentialité restent indexables mais en priorité basse).
-export const INDEXED_PAGES: { href: AppPathnames; priority: number }[] = [
+export const INDEXED_PAGES: { href: StaticPathnames; priority: number }[] = [
   { href: "/", priority: 1 },
   { href: "/services", priority: 0.9 },
   { href: "/cargo-chine-senegal", priority: 0.9 },
@@ -21,6 +21,7 @@ export const INDEXED_PAGES: { href: AppPathnames; priority: number }[] = [
   { href: "/conteneur-chine-dakar", priority: 0.9 },
   { href: "/achat-sourcing-chine", priority: 0.8 },
   { href: "/ecommerce-chine-senegal", priority: 0.8 },
+  { href: "/blog", priority: 0.7 },
   { href: "/contact", priority: 0.8 },
   { href: "/about", priority: 0.7 },
   { href: "/tracking", priority: 0.5 },
@@ -29,12 +30,12 @@ export const INDEXED_PAGES: { href: AppPathnames; priority: number }[] = [
   { href: "/terms", priority: 0.1 },
 ];
 
-export function absoluteUrl(href: AppPathnames, locale: string) {
+export function absoluteUrl(href: StaticPathnames, locale: string) {
   const path = getPathname({ href, locale });
   return `${SITE_URL}${path === `/${locale}/` ? `/${locale}` : path}`;
 }
 
-export function languageAlternates(href: AppPathnames) {
+export function languageAlternates(href: StaticPathnames) {
   const languages: Record<string, string> = {};
   for (const locale of routing.locales) {
     languages[locale] = absoluteUrl(href, locale);
@@ -47,7 +48,7 @@ export function languageAlternates(href: AppPathnames) {
 export async function pageMetadata(
   locale: string,
   namespace: string,
-  href: AppPathnames,
+  href: StaticPathnames,
 ): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace });
   const url = absoluteUrl(href, locale);

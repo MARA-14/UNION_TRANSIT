@@ -10,7 +10,8 @@
     "tracking": "Suivi",
     "contact": "Contact",
     "quote": "Demander un devis",
-    "trackCta": "Suivre ma marchandise"
+    "trackCta": "Suivre ma marchandise",
+    "blog": "Blog"
   },
   "languageSwitcher": {
     "fr": "FR",
@@ -935,5 +936,20 @@
         }
       ]
     }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog : conseils pour importer de Chine au Sénégal | Union Transit",
+      "description": "Guides pratiques pour importer de Chine au Sénégal : trouver un fournisseur, acheter sur Alibaba ou 1688, payer en sécurité, choisir son cargo et préparer le dédouanement à Dakar."
+    },
+    "title": "Conseils pour importer de Chine",
+    "subtitle": "Nos guides pratiques pour acheter en Chine et recevoir vos marchandises au Sénégal en toute sérénité.",
+    "frenchOnly": "",
+    "readMore": "Lire l'article",
+    "published": "Publié le",
+    "backToBlog": "← Tous les articles",
+    "ctaTitle": "Un projet d'import ?",
+    "ctaSubtitle": "Décrivez votre besoin : réponse sous 48 h maximum.",
+    "ctaButton": "Demander un devis"
   }
 }

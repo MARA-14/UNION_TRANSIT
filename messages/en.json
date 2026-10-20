@@ -10,7 +10,8 @@
     "tracking": "Tracking",
     "contact": "Contact",
     "quote": "Request a quote",
-    "trackCta": "Track my goods"
+    "trackCta": "Track my goods",
+    "blog": "Blog"
   },
   "languageSwitcher": {
     "fr": "FR",
@@ -935,5 +936,20 @@
         }
       ]
     }
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog: tips for importing from China to Senegal | Union Transit",
+      "description": "Practical guides for importing from China to Senegal: finding a supplier, buying on Alibaba or 1688, paying safely, choosing your cargo and preparing customs clearance in Dakar."
+    },
+    "title": "Tips for importing from China",
+    "subtitle": "Our practical guides to buying in China and receiving your goods in Senegal with peace of mind.",
+    "frenchOnly": "Our articles are currently available in French only.",
+    "readMore": "Read the article",
+    "published": "Published on",
+    "backToBlog": "← All articles",
+    "ctaTitle": "An import project?",
+    "ctaSubtitle": "Describe your need: answer within 48 hours.",
+    "ctaButton": "Request a quote"
   }
 }

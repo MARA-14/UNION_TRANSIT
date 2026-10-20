@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import type { AppPathnames } from "@/i18n/routing";
+import type { StaticPathnames } from "@/i18n/routing";
 
 const ctaClass =
   "inline-flex min-h-[44px] items-center rounded-md bg-gold px-6 text-sm font-semibold text-navy-dark transition-colors hover:bg-gold/90 focus-visible:outline focus-visible:outline-3 focus-visible:outline-white focus-visible:outline-offset-2";
@@ -12,7 +12,7 @@ type BaseProps = {
   secondaryHref?: string;
 };
 
-type InternalProps = BaseProps & { ctaHref: AppPathnames; ctaExternalHref?: never };
+type InternalProps = BaseProps & { ctaHref: StaticPathnames; ctaExternalHref?: never };
 type ExternalProps = BaseProps & { ctaExternalHref: string; ctaHref?: never };
 
 export default function FinalBanner(props: InternalProps | ExternalProps) {
