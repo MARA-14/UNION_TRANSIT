@@ -34,7 +34,7 @@
   },
   "home": {
     "meta": {
-      "title": "Cargo Chine Sénégal : fret aérien et maritime vers Dakar | Union Transit",
+      "title": "Cargo Chine Dakar : transitaire fiable Chine-Sénégal | Union Transit",
       "description": "Votre expert cargo Chine-Sénégal : fret aérien express (1 à 3 jours), groupage maritime et conteneur depuis Guangzhou et Yiwu vers Dakar. Sourcing, shopping en Chine, paiement fournisseurs. Devis sous 48 h."
     },
     "hero": {
@@ -143,7 +143,7 @@
   },
   "services": {
     "meta": {
-      "title": "Fret aérien, groupage et conteneur Chine-Dakar | Union Transit",
+      "title": "Transitaire Chine : aérien, groupage, conteneur vers Dakar | Union Transit",
       "description": "Fret aérien express et normal, groupage maritime (LCL), conteneur complet 20' et 40' de la Chine vers Dakar, sourcing, contrôle qualité et paiement de vos fournisseurs chinois."
     },
     "hero": {
@@ -559,13 +559,14 @@
         "air": "Fret aérien Chine Dakar",
         "sea": "Groupage maritime Chine Dakar",
         "container": "Conteneur Chine Dakar",
-        "sourcing": "Sourcing et shopping en Chine"
+        "sourcing": "Sourcing et shopping en Chine",
+        "ecommerce": "E-commerce Chine"
       }
     },
     "cargo": {
       "meta": {
         "title": "Cargo Chine Sénégal : votre expert cargo aérien et maritime | Union Transit",
-        "description": "Votre cargo Chine-Sénégal de A à Z : fret aérien express 1 à 3 jours, aérien normal 7 à 10 jours, groupage maritime et conteneur depuis Guangzhou et Yiwu vers Dakar. Devis sous 48 h."
+        "description": "Transitaire Chine fiable et expert cargo Chine-Sénégal : fret aérien express 1 à 3 jours, aérien normal 7 à 10 jours, groupage et conteneur Chine Dakar depuis Guangzhou et Yiwu. Devis sous 48 h."
       },
       "hero": {
         "title": "Cargo Chine Sénégal : vos marchandises de Guangzhou et Yiwu jusqu'à Dakar",
@@ -611,6 +612,10 @@
         {
           "q": "Pourquoi passer par un expert cargo plutôt qu'un cargo informel ?",
           "a": "Un expert cargo vous donne un devis écrit, un numéro de suivi, un conseiller joignable et un contrôle de la marchandise avant le départ. Vous savez ce que vous payez, où se trouvent vos colis et à qui vous adresser en cas de problème."
+        },
+        {
+          "q": "Comment reconnaître un transitaire Chine fiable ?",
+          "a": "Un transitaire fiable vous remet un devis écrit sans frais cachés, vous donne un numéro de suivi, contrôle votre marchandise avant le départ et vous laisse un interlocuteur joignable. C'est exactement ce que propose Union Transit sur la ligne Chine Dakar."
         },
         {
           "q": "Combien coûte un cargo de la Chine vers le Sénégal ?",
@@ -867,6 +872,66 @@
         {
           "q": "Combien coûte le service de sourcing ?",
           "a": "Le tarif dépend du produit à trouver et de vos exigences. Décrivez votre besoin dans le formulaire de devis : réponse sous 48 h."
+        }
+      ]
+    },
+    "ecommerce": {
+      "meta": {
+        "title": "E-commerce Chine Sénégal : importez pour votre boutique en ligne | Union Transit",
+        "description": "E-commerçants et vendeurs ecom au Sénégal : achetez vos produits en Chine, testez-les en aérien express, puis réapprovisionnez votre stock en groupage vers Dakar. Sourcing, paiement fournisseurs, contrôle qualité."
+      },
+      "hero": {
+        "title": "E-commerce Chine : le transitaire des vendeurs en ligne au Sénégal",
+        "intro": "Vous vendez sur Instagram, TikTok, WhatsApp, Facebook ou votre propre boutique en ligne ? Union Transit trouve vos produits en Chine, les paie, les contrôle et les achemine de la Chine à Dakar, au rythme de votre activité ecom."
+      },
+      "highlights": [
+        {
+          "label": "Test produit",
+          "value": "aérien express 1 à 3 jours"
+        },
+        {
+          "label": "Réassort",
+          "value": "aérien 7 à 10 jours"
+        },
+        {
+          "label": "Stock",
+          "value": "groupage ou conteneur"
+        },
+        {
+          "label": "Regroupement",
+          "value": "gratuit"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Testez un produit avant d'acheter en volume",
+          "text": "En e-commerce, on teste avant de stocker. Commandez quelques pièces et recevez-les en 1 à 3 jours en aérien express : vous validez la qualité, faites vos photos et vidéos, et lancez vos ventes sans risquer un gros stock."
+        },
+        {
+          "title": "Réapprovisionnez au bon coût",
+          "text": "Quand un produit marche, passez à l'aérien normal (7 à 10 jours) pour les réassorts réguliers, puis au groupage maritime ou au conteneur pour réduire votre coût par pièce sur les gros volumes."
+        },
+        {
+          "title": "Plusieurs fournisseurs, un seul envoi",
+          "text": "Vos produits viennent de différents vendeurs sur Alibaba, 1688 ou Taobao ? Faites-les livrer à notre équipe en Chine : nous les regroupons gratuitement en un seul envoi vers le Sénégal."
+        },
+        {
+          "title": "Un transitaire fiable pour votre business",
+          "text": "Paiement sécurisé des fournisseurs (Alipay, WeChat, virement), contrôle qualité avant expédition, numéro de suivi et conseiller dédié : vous vous concentrez sur la vente, nous gérons la Chine et le transport."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Je débute en ecom, pouvez-vous m'aider à trouver des produits ?",
+          "a": "Oui, notre service de sourcing recherche les produits et les fournisseurs adaptés à votre budget et à la qualité attendue. Le tarif dépend du produit."
+        },
+        {
+          "q": "Quel transport choisir pour une boutique en ligne ?",
+          "a": "L'aérien express pour tester, l'aérien normal pour les réassorts réguliers, le groupage ou le conteneur pour les gros volumes. Votre conseiller vous aide à choisir dans le devis."
+        },
+        {
+          "q": "Pouvez-vous payer mes fournisseurs chinois ?",
+          "a": "Oui, par Alipay, WeChat ou virement bancaire, pour éviter les transferts risqués."
         }
       ]
     }

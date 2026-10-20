@@ -48,6 +48,10 @@ export const routing = defineRouting({
       fr: "/achat-sourcing-chine",
       en: "/sourcing-china",
     },
+    "/ecommerce-chine-senegal": {
+      fr: "/ecommerce-chine-senegal",
+      en: "/china-ecommerce-senegal",
+    },
     "/coming-soon": {
       fr: "/bientot-disponible",
       en: "/coming-soon",

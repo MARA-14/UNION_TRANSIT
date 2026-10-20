@@ -559,7 +559,8 @@
         "air": "Air freight China Dakar",
         "sea": "Sea groupage China Dakar",
         "container": "Container China Dakar",
-        "sourcing": "Sourcing and shopping in China"
+        "sourcing": "Sourcing and shopping in China",
+        "ecommerce": "China e-commerce"
       }
     },
     "cargo": {
@@ -611,6 +612,10 @@
         {
           "q": "Why use a cargo expert rather than an informal cargo?",
           "a": "A cargo expert gives you a written quote, a tracking number, a reachable advisor and an inspection of your goods before departure. You know what you pay, where your parcels are and who to contact if something goes wrong."
+        },
+        {
+          "q": "How do I recognise a reliable China freight forwarder?",
+          "a": "A reliable forwarder gives you a written quote with no hidden fees, a tracking number, inspects your goods before departure and stays reachable. That is exactly what Union Transit offers on the China to Dakar route."
         },
         {
           "q": "How much does cargo from China to Senegal cost?",
@@ -867,6 +872,66 @@
         {
           "q": "How much does the sourcing service cost?",
           "a": "The fee depends on the product to find and your requirements. Describe your need in the quote form: answer within 48 hours."
+        }
+      ]
+    },
+    "ecommerce": {
+      "meta": {
+        "title": "China e-commerce to Senegal: import for your online store | Union Transit",
+        "description": "E-commerce sellers in Senegal: buy your products in China, test them with express air freight, then restock by groupage to Dakar. Sourcing, supplier payments, quality control."
+      },
+      "hero": {
+        "title": "China e-commerce: the freight forwarder for online sellers in Senegal",
+        "intro": "Selling on Instagram, TikTok, WhatsApp, Facebook or your own online store? Union Transit finds your products in China, pays for them, inspects them and ships them from China to Dakar, at the pace of your e-commerce business."
+      },
+      "highlights": [
+        {
+          "label": "Product test",
+          "value": "express air 1 to 3 days"
+        },
+        {
+          "label": "Restock",
+          "value": "air 7 to 10 days"
+        },
+        {
+          "label": "Inventory",
+          "value": "groupage or container"
+        },
+        {
+          "label": "Consolidation",
+          "value": "free"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Test a product before buying in volume",
+          "text": "In e-commerce, you test before you stock. Order a few pieces and receive them in 1 to 3 days by express air: check quality, shoot your photos and videos and start selling without risking a large inventory."
+        },
+        {
+          "title": "Restock at the right cost",
+          "text": "Once a product sells, switch to standard air (7 to 10 days) for regular restocks, then to sea groupage or a container to lower your cost per unit on large volumes."
+        },
+        {
+          "title": "Several suppliers, one shipment",
+          "text": "Products from different sellers on Alibaba, 1688 or Taobao? Have them delivered to our team in China: we consolidate them into one shipment to Senegal free of charge."
+        },
+        {
+          "title": "A reliable freight forwarder for your business",
+          "text": "Secure supplier payments (Alipay, WeChat, bank transfer), quality control before shipping, a tracking number and a dedicated advisor: you focus on selling, we handle China and transport."
+        }
+      ],
+      "faq": [
+        {
+          "q": "I'm new to e-commerce, can you help me find products?",
+          "a": "Yes, our sourcing service searches for products and suppliers that fit your budget and expected quality. The fee depends on the product."
+        },
+        {
+          "q": "Which transport should an online store choose?",
+          "a": "Express air to test, standard air for regular restocks, groupage or a container for large volumes. Your advisor helps you choose in the quote."
+        },
+        {
+          "q": "Can you pay my Chinese suppliers?",
+          "a": "Yes, via Alipay, WeChat or bank transfer, to avoid risky transfers."
         }
       ]
     }

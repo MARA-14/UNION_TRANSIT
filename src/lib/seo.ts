@@ -20,6 +20,7 @@ export const INDEXED_PAGES: { href: AppPathnames; priority: number }[] = [
   { href: "/groupage-maritime-chine-dakar", priority: 0.9 },
   { href: "/conteneur-chine-dakar", priority: 0.9 },
   { href: "/achat-sourcing-chine", priority: 0.8 },
+  { href: "/ecommerce-chine-senegal", priority: 0.8 },
   { href: "/contact", priority: 0.8 },
   { href: "/about", priority: 0.7 },
   { href: "/tracking", priority: 0.5 },
