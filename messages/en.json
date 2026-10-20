@@ -559,12 +559,12 @@
         "air": "Air freight China Dakar",
         "sea": "Sea groupage China Dakar",
         "container": "Container China Dakar",
-        "sourcing": "Purchasing and sourcing in China"
+        "sourcing": "Sourcing and shopping in China"
       }
     },
     "cargo": {
       "meta": {
-        "title": "China to Senegal cargo: air, groupage and containers | Union Transit",
+        "title": "China to Senegal cargo: your air and sea cargo expert | Union Transit",
         "description": "Your China-Senegal cargo from A to Z: express air freight in 1 to 3 days, standard air in 7 to 10 days, sea groupage and containers from Guangzhou and Yiwu to Dakar. Quote within 48 h."
       },
       "hero": {
@@ -608,6 +608,10 @@
         }
       ],
       "faq": [
+        {
+          "q": "Why use a cargo expert rather than an informal cargo?",
+          "a": "A cargo expert gives you a written quote, a tracking number, a reachable advisor and an inspection of your goods before departure. You know what you pay, where your parcels are and who to contact if something goes wrong."
+        },
         {
           "q": "How much does cargo from China to Senegal cost?",
           "a": "The price depends on the transport mode, weight, volume and type of goods. Send us this information through the quote form or on WhatsApp: you receive a detailed quote with no hidden fees within 48 hours."
@@ -804,11 +808,11 @@
     },
     "sourcing": {
       "meta": {
-        "title": "Buying in China from Senegal: sourcing, inspection, payment | Union Transit",
+        "title": "China sourcing and shopping from Senegal | Union Transit",
         "description": "Buy in China safely from Senegal: supplier search, direct factory contacts, quality control and supplier payments (Alipay, WeChat, bank transfer)."
       },
       "hero": {
-        "title": "Buying in China from Senegal, without the risk",
+        "title": "China sourcing and shopping from Senegal, without the risk",
         "intro": "Finding the right product, the right supplier and paying them safely is often the hardest part of importing. Our team in China handles it for you, then ships your goods to Dakar."
       },
       "highlights": [
@@ -833,6 +837,10 @@
         {
           "title": "Product sourcing",
           "text": "Have a product idea but don't know where to find it? We search and select suppliers that match your budget and expected quality. The fee depends on the product and the required specifications."
+        },
+        {
+          "title": "Shopping in China: you choose, we buy and deliver",
+          "text": "Found items on Alibaba, 1688, Taobao or at a wholesaler in Guangzhou or Yiwu? Send us the links: we order, pay, receive and consolidate your purchases, then ship them by cargo to Senegal. Your shopping in China, without travelling."
         },
         {
           "title": "Direct contact with factories",

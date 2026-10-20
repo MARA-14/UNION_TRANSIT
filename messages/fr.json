@@ -35,7 +35,7 @@
   "home": {
     "meta": {
       "title": "Cargo Chine Sénégal : fret aérien et maritime vers Dakar | Union Transit",
-      "description": "Transitaire cargo Chine-Sénégal : fret aérien express (1 à 3 jours), groupage maritime et conteneur depuis Guangzhou et Yiwu vers Dakar. Achat, paiement fournisseurs, suivi. Devis sous 48 h."
+      "description": "Votre expert cargo Chine-Sénégal : fret aérien express (1 à 3 jours), groupage maritime et conteneur depuis Guangzhou et Yiwu vers Dakar. Sourcing, shopping en Chine, paiement fournisseurs. Devis sous 48 h."
     },
     "hero": {
       "title": "Le cargo associé de votre business.",
@@ -559,17 +559,17 @@
         "air": "Fret aérien Chine Dakar",
         "sea": "Groupage maritime Chine Dakar",
         "container": "Conteneur Chine Dakar",
-        "sourcing": "Achat et sourcing en Chine"
+        "sourcing": "Sourcing et shopping en Chine"
       }
     },
     "cargo": {
       "meta": {
-        "title": "Cargo Chine Sénégal : aérien, groupage et conteneur | Union Transit",
+        "title": "Cargo Chine Sénégal : votre expert cargo aérien et maritime | Union Transit",
         "description": "Votre cargo Chine-Sénégal de A à Z : fret aérien express 1 à 3 jours, aérien normal 7 à 10 jours, groupage maritime et conteneur depuis Guangzhou et Yiwu vers Dakar. Devis sous 48 h."
       },
       "hero": {
         "title": "Cargo Chine Sénégal : vos marchandises de Guangzhou et Yiwu jusqu'à Dakar",
-        "intro": "Union Transit est un transitaire sénégalais avec une équipe en Chine et une équipe au Sénégal. Nous réceptionnons vos achats en Chine, les expédions par avion ou par bateau et vous tenons informé jusqu'à leur arrivée à Dakar, avec un seul conseiller pour tout votre dossier."
+        "intro": "Union Transit est votre expert cargo entre la Chine et le Sénégal, avec une équipe en Chine et une équipe au Sénégal. Nous réceptionnons vos achats en Chine, les expédions par avion ou par bateau et vous tenons informé jusqu'à leur arrivée à Dakar, avec un seul conseiller pour tout votre dossier."
       },
       "highlights": [
         {
@@ -608,6 +608,10 @@
         }
       ],
       "faq": [
+        {
+          "q": "Pourquoi passer par un expert cargo plutôt qu'un cargo informel ?",
+          "a": "Un expert cargo vous donne un devis écrit, un numéro de suivi, un conseiller joignable et un contrôle de la marchandise avant le départ. Vous savez ce que vous payez, où se trouvent vos colis et à qui vous adresser en cas de problème."
+        },
         {
           "q": "Combien coûte un cargo de la Chine vers le Sénégal ?",
           "a": "Le prix dépend du mode de transport, du poids, du volume et du type de marchandise. Envoyez-nous ces informations via le formulaire de devis ou sur WhatsApp : vous recevez un devis détaillé, sans frais cachés, sous 48 h maximum."
@@ -804,11 +808,11 @@
     },
     "sourcing": {
       "meta": {
-        "title": "Achat en Chine depuis le Sénégal : sourcing, contrôle, paiement | Union Transit",
-        "description": "Achetez en Chine sans risque depuis le Sénégal : recherche de fournisseurs, mise en relation avec les usines, contrôle qualité et paiement des fournisseurs (Alipay, WeChat, virement)."
+        "title": "Sourcing Chine et shopping en Chine depuis le Sénégal | Union Transit",
+        "description": "Sourcing Chine et shopping en Chine depuis le Sénégal : recherche de fournisseurs, achats sur Alibaba et 1688, contrôle qualité, paiement des fournisseurs (Alipay, WeChat, virement) et cargo jusqu'à Dakar."
       },
       "hero": {
-        "title": "Acheter en Chine depuis le Sénégal, sans risque",
+        "title": "Sourcing Chine et shopping en Chine depuis le Sénégal, sans risque",
         "intro": "Trouver le bon produit, le bon fournisseur et le payer en toute sécurité : c'est souvent la partie la plus difficile d'un import. Notre équipe en Chine s'en charge pour vous, puis expédie votre marchandise jusqu'à Dakar."
       },
       "highlights": [
@@ -833,6 +837,10 @@
         {
           "title": "Sourcing de produits",
           "text": "Vous avez une idée de produit mais ne savez pas où le trouver ? Nous recherchons et sélectionnons pour vous les fournisseurs adaptés à votre budget et à la qualité attendue. Le tarif dépend du produit et des caractéristiques demandées."
+        },
+        {
+          "title": "Shopping en Chine : vous choisissez, nous achetons et livrons",
+          "text": "Vous avez repéré des articles sur Alibaba, 1688, Taobao ou chez un grossiste de Guangzhou ou Yiwu ? Envoyez-nous les liens : nous passons commande, payons, réceptionnons et regroupons vos achats, puis les expédions par cargo jusqu'au Sénégal. Votre shopping en Chine, sans vous déplacer."
         },
         {
           "title": "Mise en relation directe avec les usines",
