@@ -28,6 +28,26 @@ export const routing = defineRouting({
       fr: "/cgu",
       en: "/terms",
     },
+    "/cargo-chine-senegal": {
+      fr: "/cargo-chine-senegal",
+      en: "/china-senegal-cargo",
+    },
+    "/fret-aerien-chine-dakar": {
+      fr: "/fret-aerien-chine-dakar",
+      en: "/air-freight-china-dakar",
+    },
+    "/groupage-maritime-chine-dakar": {
+      fr: "/groupage-maritime-chine-dakar",
+      en: "/sea-groupage-china-dakar",
+    },
+    "/conteneur-chine-dakar": {
+      fr: "/conteneur-chine-dakar",
+      en: "/container-china-dakar",
+    },
+    "/achat-sourcing-chine": {
+      fr: "/achat-sourcing-chine",
+      en: "/sourcing-china",
+    },
     "/coming-soon": {
       fr: "/bientot-disponible",
       en: "/coming-soon",

@@ -48,14 +48,14 @@ export default function AccordionCard({
           }`}
         />
       </button>
-      {open && (
-        <div
-          id={panelId}
-          className="border-t border-navy/10 px-6 pb-6 pt-4 text-sm text-navy/70"
-        >
-          {details}
-        </div>
-      )}
+      {/* Toujours rendu (masqué quand fermé) pour que le texte reste lisible par Google. */}
+      <div
+        id={panelId}
+        hidden={!open}
+        className="border-t border-navy/10 px-6 pb-6 pt-4 text-sm text-navy/70"
+      >
+        {details}
+      </div>
     </div>
   );
 }

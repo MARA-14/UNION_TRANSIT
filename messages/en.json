@@ -24,7 +24,8 @@
     "termsLink": "Terms of use",
     "claimLink": "Complaint",
     "rights": "All rights reserved.",
-    "addressLabel": "Registered office"
+    "addressLabel": "Registered office",
+    "routesTitle": "Our routes"
   },
   "whatsapp": {
     "writeOnWhatsApp": "Write on WhatsApp",
@@ -542,6 +543,324 @@
       "tracking": "invalid tracking number (letters, digits and dashes, 4 to 30 characters)",
       "choice": "please choose an option",
       "text": "text too short or too long"
+    }
+  },
+  "landing": {
+    "common": {
+      "breadcrumbHome": "Home",
+      "faqTitle": "Frequently asked questions",
+      "relatedTitle": "Our other China → Senegal solutions",
+      "ctaTitle": "Get your quote within 48 hours",
+      "ctaSubtitle": "Describe your goods: an advisor replies with a clear price and a precise lead time.",
+      "ctaButton": "Request a quote",
+      "ctaWhatsApp": "Write on WhatsApp",
+      "nav": {
+        "cargo": "China Senegal cargo",
+        "air": "Air freight China Dakar",
+        "sea": "Sea groupage China Dakar",
+        "container": "Container China Dakar",
+        "sourcing": "Purchasing and sourcing in China"
+      }
+    },
+    "cargo": {
+      "meta": {
+        "title": "China to Senegal cargo: air, groupage and containers | Union Transit",
+        "description": "Your China-Senegal cargo from A to Z: express air freight in 1 to 3 days, standard air in 7 to 10 days, sea groupage and containers from Guangzhou and Yiwu to Dakar. Quote within 48 h."
+      },
+      "hero": {
+        "title": "China to Senegal cargo: your goods from Guangzhou and Yiwu to Dakar",
+        "intro": "Union Transit is a Senegalese freight forwarder with a team in China and a team in Senegal. We receive your purchases in China, ship them by air or sea and keep you informed until they arrive in Dakar, with a single advisor for your whole file."
+      },
+      "highlights": [
+        {
+          "label": "Express air",
+          "value": "1 to 3 days"
+        },
+        {
+          "label": "Standard air",
+          "value": "7 to 10 days"
+        },
+        {
+          "label": "Full container",
+          "value": "40 to 60 days"
+        },
+        {
+          "label": "Quote",
+          "value": "within 48 h"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Which cargo option between China and Senegal?",
+          "text": "It depends on urgency, volume and the value of your goods. Express air freight suits samples and urgent shipments. Standard air is the right balance for regular orders of small volumes. Sea groupage (LCL) is the cheapest option for medium volumes: you share a container and only pay for the space you use. Full containers (FCL), 20 or 40 feet, are for large volumes. If in doubt, describe your shipment and we will advise the most cost-effective option."
+        },
+        {
+          "title": "Departures from Guangzhou and Yiwu",
+          "text": "Our teams receive your parcels in Guangzhou and Yiwu, China's two major wholesale markets. You can have several suppliers deliver to our address: we consolidate your small parcels into a single shipment to Senegal free of charge."
+        },
+        {
+          "title": "More than cargo: purchasing, inspection and payment in China",
+          "text": "Don't know where to find your product? We source it for you, connect you with reliable factories, inspect the goods before shipping and pay your Chinese suppliers on your behalf (Alipay, WeChat or bank transfer)."
+        },
+        {
+          "title": "Clear tracking until arrival",
+          "text": "Each shipment gets a Union Transit tracking number you can check on our website. For sea freight, we send you a progress update every 15 days, even if you don't ask: loading, departure, arrival at the port of Dakar, customs clearance and release."
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does cargo from China to Senegal cost?",
+          "a": "The price depends on the transport mode, weight, volume and type of goods. Send us this information through the quote form or on WhatsApp: you receive a detailed quote with no hidden fees within 48 hours."
+        },
+        {
+          "q": "How long does China to Dakar cargo take?",
+          "a": "Allow 1 to 3 days for express air, 7 to 10 days for standard air and 40 to 60 days for a full container. For sea groupage, the lead time depends on the container filling and is given in the quote."
+        },
+        {
+          "q": "Can I consolidate orders from several suppliers?",
+          "a": "Yes. Have your suppliers deliver to our team in China: we consolidate your parcels into one shipment free of charge."
+        },
+        {
+          "q": "How do I track my goods?",
+          "a": "With your tracking number on the Tracking page of our website, or directly with your advisor on WhatsApp."
+        }
+      ]
+    },
+    "air": {
+      "meta": {
+        "title": "Air freight China Dakar: express 1-3 days, standard 7-10 days | Union Transit",
+        "description": "Ship your parcels from China to Senegal by air: express in 1 to 3 days or standard in 7 to 10 days, from Guangzhou and Yiwu to Dakar. Quote within 48 h."
+      },
+      "hero": {
+        "title": "Air freight China Dakar: express or standard, depending on your urgency",
+        "intro": "For samples, high-value goods or orders you need fast, air freight is the quickest option between China and Senegal. Union Transit offers two services from Guangzhou and Yiwu."
+      },
+      "highlights": [
+        {
+          "label": "Express air",
+          "value": "1 to 3 days"
+        },
+        {
+          "label": "Standard air",
+          "value": "7 to 10 days"
+        },
+        {
+          "label": "Departures",
+          "value": "Guangzhou, Yiwu"
+        },
+        {
+          "label": "Arrival",
+          "value": "Dakar"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Express air: 1 to 3 days",
+          "text": "The fastest option. Ideal for urgent shipments, samples to approve before a large order or high-value products. Your goods reach Dakar in 1 to 3 days."
+        },
+        {
+          "title": "Standard air: 7 to 10 days",
+          "text": "The right balance between speed and cost. Choose it for regular restocking when you are not in a hurry to the day: clothing, accessories, phones, small equipment…"
+        },
+        {
+          "title": "Air or sea: how to choose?",
+          "text": "Air freight is mainly charged by weight, sea freight by volume. For a few light or urgent cartons, air is often the better deal. As volume grows, sea groupage becomes cheaper. Your advisor compares both options in your quote."
+        },
+        {
+          "title": "What we do for you",
+          "text": "Receiving your parcels at our teams in China, free consolidation of several suppliers, inspection of the goods, shipping and online tracking with your Union Transit number until arrival."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the price per kilo for air freight from China to Senegal?",
+          "a": "The rate depends on the service (express or standard), weight, dimensions and type of product. Request your quote: answer within 48 hours."
+        },
+        {
+          "q": "How long does a parcel take from China to Dakar by air?",
+          "a": "1 to 3 days with express air, 7 to 10 days with standard air."
+        },
+        {
+          "q": "Can I send a single small parcel?",
+          "a": "Yes, and you can also consolidate several purchases from different suppliers to pay for a single shipment."
+        }
+      ]
+    },
+    "sea": {
+      "meta": {
+        "title": "Sea groupage China Dakar (LCL): pay for your volume | Union Transit",
+        "description": "China-Senegal container groupage: share a container from Guangzhou and Yiwu to Dakar and only pay for your volume. Updates every 15 days, quote within 48 h."
+      },
+      "hero": {
+        "title": "Sea groupage China Dakar: the economical option for medium volumes",
+        "intro": "With groupage (LCL), your goods travel in a container shared with other customers. You only pay for the volume you use: the cheapest way to import from China to Senegal when you can't fill a whole container."
+      },
+      "highlights": [
+        {
+          "label": "Billing",
+          "value": "by volume used"
+        },
+        {
+          "label": "Tracking",
+          "value": "update every 15 days"
+        },
+        {
+          "label": "Departures",
+          "value": "Guangzhou, Yiwu"
+        },
+        {
+          "label": "Quote",
+          "value": "within 48 h"
+        }
+      ],
+      "sections": [
+        {
+          "title": "How does groupage work?",
+          "text": "You have your goods delivered to our teams in China. We receive them, check them and load them into a shared container bound for Dakar. The container leaves once full; you are informed at every step."
+        },
+        {
+          "title": "Who is it for?",
+          "text": "Traders, shops, wholesalers and individuals who regularly import medium volumes: clothing, shoes, appliances, furniture, spare parts, professional equipment…"
+        },
+        {
+          "title": "Regular updates, even without asking",
+          "text": "Sea freight takes time, so we keep you informed: loading, planned departure, departure from port, planned arrival, arrival in Dakar, customs clearance and release. A progress update is sent every 15 days and your shipment status is available online."
+        },
+        {
+          "title": "Groupage or full container?",
+          "text": "If your volume is close to a container, a full container (FCL) can be cheaper and leaves without waiting for other customers. Your advisor tells you the best option in the quote."
+        }
+      ],
+      "faq": [
+        {
+          "q": "What does groupage from China to Dakar cost?",
+          "a": "Groupage is charged by volume (cubic metres) and type of goods. Send us the dimensions and nature of your products for a precise quote within 48 hours."
+        },
+        {
+          "q": "How long does sea groupage to Dakar take?",
+          "a": "The lead time depends on container filling and the departure date; it is given in the quote. During transport, you receive a progress update every 15 days."
+        },
+        {
+          "q": "Are my goods checked before loading?",
+          "a": "Yes, we check the quantity and condition of your parcels when we receive them in China, before loading."
+        }
+      ]
+    },
+    "container": {
+      "meta": {
+        "title": "Container China Dakar, 20 and 40 ft (FCL) | Union Transit",
+        "description": "Ship a full 20' or 40' container from China to Dakar: loading in China, sea transport in 40 to 60 days, tracking and customs clearance. Quote within 48 h."
+      },
+      "hero": {
+        "title": "Full container China Dakar: 20 or 40 feet just for you",
+        "intro": "For large volumes, book a whole container (FCL). Your goods travel alone, without waiting for other customers, from China to the port of Dakar."
+      },
+      "highlights": [
+        {
+          "label": "Sizes",
+          "value": "20 and 40 feet"
+        },
+        {
+          "label": "Lead time",
+          "value": "40 to 60 days"
+        },
+        {
+          "label": "Tracking",
+          "value": "update every 15 days"
+        },
+        {
+          "label": "Quote",
+          "value": "within 48 h"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Why choose a full container?",
+          "text": "You control the departure date, your goods are not handled with other customers' cargo and the cost per cubic metre becomes very attractive for large volumes. It's the choice of wholesalers, construction projects, furniture and professional equipment."
+        },
+        {
+          "title": "From the factory to the port of Dakar",
+          "text": "We can buy and inspect your products at the factories, organise container loading in China, then follow sea transport, arrival in Dakar and customs clearance until your goods are released."
+        },
+        {
+          "title": "A single point of contact",
+          "text": "A dedicated advisor follows your container from A to Z and sends you a progress update every 15 days. You can also check the shipment status online with your tracking number."
+        }
+      ],
+      "faq": [
+        {
+          "q": "How much does a container from China to Senegal cost?",
+          "a": "The price depends on the size (20 or 40 feet), departure port, season and goods. Request a quote: we reply within 48 hours with a detailed price."
+        },
+        {
+          "q": "How long does a container from China to Dakar take?",
+          "a": "Generally 40 to 60 days between departure and release in Dakar."
+        },
+        {
+          "q": "What is the difference between 20 and 40 feet?",
+          "a": "A 40-foot container offers about twice the volume of a 20-foot one. Your advisor helps you choose based on the volume and weight of your order."
+        }
+      ]
+    },
+    "sourcing": {
+      "meta": {
+        "title": "Buying in China from Senegal: sourcing, inspection, payment | Union Transit",
+        "description": "Buy in China safely from Senegal: supplier search, direct factory contacts, quality control and supplier payments (Alipay, WeChat, bank transfer)."
+      },
+      "hero": {
+        "title": "Buying in China from Senegal, without the risk",
+        "intro": "Finding the right product, the right supplier and paying them safely is often the hardest part of importing. Our team in China handles it for you, then ships your goods to Dakar."
+      },
+      "highlights": [
+        {
+          "label": "Sourcing",
+          "value": "on quote"
+        },
+        {
+          "label": "Payment",
+          "value": "Alipay, WeChat, transfer"
+        },
+        {
+          "label": "Inspection",
+          "value": "before shipping"
+        },
+        {
+          "label": "Consolidation",
+          "value": "free"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Product sourcing",
+          "text": "Have a product idea but don't know where to find it? We search and select suppliers that match your budget and expected quality. The fee depends on the product and the required specifications."
+        },
+        {
+          "title": "Direct contact with factories",
+          "text": "We connect you with reliable factories, without middlemen who raise the price without adding value."
+        },
+        {
+          "title": "Secure payment of your Chinese suppliers",
+          "text": "Sending money directly to an unknown supplier abroad is risky. We pay your suppliers on your behalf via Alipay, WeChat or bank transfer and make sure the goods match the order."
+        },
+        {
+          "title": "Quality control before shipping",
+          "text": "Quantity, condition, compliance: we inspect your products before shipping to avoid bad surprises on arrival in Senegal."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Can you buy on Alibaba or 1688 for me?",
+          "a": "Yes, send us the product links or references: we check the supplier, place the order, pay and receive the goods before shipping them."
+        },
+        {
+          "q": "How do I pay a Chinese supplier from Senegal?",
+          "a": "We pay your suppliers for you via Alipay, WeChat or bank transfer. You avoid risky transfers and unnecessary fees."
+        },
+        {
+          "q": "How much does the sourcing service cost?",
+          "a": "The fee depends on the product to find and your requirements. Describe your need in the quote form: answer within 48 hours."
+        }
+      ]
     }
   }
 }

@@ -24,7 +24,8 @@
     "termsLink": "CGU",
     "claimLink": "Réclamation",
     "rights": "Tous droits réservés.",
-    "addressLabel": "Siège social"
+    "addressLabel": "Siège social",
+    "routesTitle": "Nos trajets"
   },
   "whatsapp": {
     "writeOnWhatsApp": "Écrire sur WhatsApp",
@@ -542,6 +543,324 @@
       "tracking": "numéro de suivi invalide (lettres, chiffres et tirets, 4 à 30 caractères)",
       "choice": "veuillez choisir une option",
       "text": "texte trop court ou trop long"
+    }
+  },
+  "landing": {
+    "common": {
+      "breadcrumbHome": "Accueil",
+      "faqTitle": "Questions fréquentes",
+      "relatedTitle": "Nos autres solutions Chine → Sénégal",
+      "ctaTitle": "Recevez votre devis sous 48 h",
+      "ctaSubtitle": "Décrivez votre marchandise : un conseiller vous répond avec un prix clair et un délai précis.",
+      "ctaButton": "Demander un devis",
+      "ctaWhatsApp": "Écrire sur WhatsApp",
+      "nav": {
+        "cargo": "Cargo Chine Sénégal",
+        "air": "Fret aérien Chine Dakar",
+        "sea": "Groupage maritime Chine Dakar",
+        "container": "Conteneur Chine Dakar",
+        "sourcing": "Achat et sourcing en Chine"
+      }
+    },
+    "cargo": {
+      "meta": {
+        "title": "Cargo Chine Sénégal : aérien, groupage et conteneur | Union Transit",
+        "description": "Votre cargo Chine-Sénégal de A à Z : fret aérien express 1 à 3 jours, aérien normal 7 à 10 jours, groupage maritime et conteneur depuis Guangzhou et Yiwu vers Dakar. Devis sous 48 h."
+      },
+      "hero": {
+        "title": "Cargo Chine Sénégal : vos marchandises de Guangzhou et Yiwu jusqu'à Dakar",
+        "intro": "Union Transit est un transitaire sénégalais avec une équipe en Chine et une équipe au Sénégal. Nous réceptionnons vos achats en Chine, les expédions par avion ou par bateau et vous tenons informé jusqu'à leur arrivée à Dakar, avec un seul conseiller pour tout votre dossier."
+      },
+      "highlights": [
+        {
+          "label": "Aérien express",
+          "value": "1 à 3 jours"
+        },
+        {
+          "label": "Aérien normal",
+          "value": "7 à 10 jours"
+        },
+        {
+          "label": "Conteneur complet",
+          "value": "40 à 60 jours"
+        },
+        {
+          "label": "Devis",
+          "value": "sous 48 h"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Quel cargo choisir entre la Chine et le Sénégal ?",
+          "text": "Tout dépend de l'urgence, du volume et de la valeur de votre marchandise. Le fret aérien express convient aux échantillons et aux envois urgents. L'aérien normal est le bon compromis pour les commandes régulières de petits volumes. Le groupage maritime (LCL) est la solution la plus économique pour les volumes moyens : vous partagez un conteneur et ne payez que l'espace utilisé. Enfin, le conteneur complet (FCL) 20 ou 40 pieds est réservé aux gros volumes. Si vous hésitez, décrivez-nous votre envoi : nous vous conseillons la formule la plus rentable."
+        },
+        {
+          "title": "Départs depuis Guangzhou et Yiwu",
+          "text": "Nos équipes réceptionnent vos colis à Guangzhou et à Yiwu, les deux grands marchés de gros chinois. Vous pouvez faire livrer plusieurs fournisseurs à notre adresse : nous regroupons gratuitement vos petits colis en un seul envoi vers le Sénégal."
+        },
+        {
+          "title": "Plus qu'un cargo : achat, contrôle et paiement en Chine",
+          "text": "Vous ne savez pas où trouver votre produit ? Nous le sourçons pour vous, vous mettons en relation avec des usines fiables, vérifions la marchandise avant l'expédition et payons vos fournisseurs chinois pour votre compte (Alipay, WeChat ou virement bancaire). Vous n'envoyez plus d'argent à l'aveugle."
+        },
+        {
+          "title": "Un suivi clair jusqu'à l'arrivée",
+          "text": "Chaque envoi reçoit un numéro de suivi Union Transit consultable sur notre site. Pour le maritime, nous vous envoyons un point d'avancement tous les 15 jours, même sans le demander : chargement, départ, arrivée au port de Dakar, dédouanement puis mise à disposition."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Combien coûte un cargo de la Chine vers le Sénégal ?",
+          "a": "Le prix dépend du mode de transport, du poids, du volume et du type de marchandise. Envoyez-nous ces informations via le formulaire de devis ou sur WhatsApp : vous recevez un devis détaillé, sans frais cachés, sous 48 h maximum."
+        },
+        {
+          "q": "Quel est le délai d'un cargo Chine-Dakar ?",
+          "a": "Comptez 1 à 3 jours en aérien express, 7 à 10 jours en aérien normal et 40 à 60 jours en conteneur complet. Pour le groupage maritime, le délai dépend du remplissage du conteneur et vous est précisé dans le devis."
+        },
+        {
+          "q": "Puis-je regrouper les commandes de plusieurs fournisseurs ?",
+          "a": "Oui. Faites livrer vos différents fournisseurs à notre équipe en Chine : nous consolidons gratuitement vos colis en un seul envoi."
+        },
+        {
+          "q": "Comment suivre ma marchandise ?",
+          "a": "Avec votre numéro de suivi sur la page Suivi du site, ou directement auprès de votre conseiller sur WhatsApp."
+        }
+      ]
+    },
+    "air": {
+      "meta": {
+        "title": "Fret aérien Chine Dakar : express 1-3 jours, normal 7-10 jours | Union Transit",
+        "description": "Envoyez vos colis de Chine au Sénégal par avion : aérien express en 1 à 3 jours ou aérien normal en 7 à 10 jours, depuis Guangzhou et Yiwu vers Dakar. Devis sous 48 h."
+      },
+      "hero": {
+        "title": "Fret aérien Chine Dakar : express ou normal, selon votre urgence",
+        "intro": "Pour vos échantillons, vos marchandises de valeur ou vos commandes à recevoir vite, le fret aérien est la solution la plus rapide entre la Chine et le Sénégal. Union Transit propose deux formules au départ de Guangzhou et de Yiwu."
+      },
+      "highlights": [
+        {
+          "label": "Aérien express",
+          "value": "1 à 3 jours"
+        },
+        {
+          "label": "Aérien normal",
+          "value": "7 à 10 jours"
+        },
+        {
+          "label": "Départs",
+          "value": "Guangzhou, Yiwu"
+        },
+        {
+          "label": "Arrivée",
+          "value": "Dakar"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Aérien express : 1 à 3 jours",
+          "text": "La formule la plus rapide. Idéale pour les envois urgents, les échantillons à valider avant une grosse commande ou les produits à forte valeur. Votre marchandise arrive à Dakar en 1 à 3 jours."
+        },
+        {
+          "title": "Aérien normal : 7 à 10 jours",
+          "text": "Le bon équilibre entre rapidité et coût. À choisir pour vos réassorts réguliers quand vous n'êtes pas pressé au jour près : vélos, vêtements, accessoires, téléphones, petits équipements…"
+        },
+        {
+          "title": "Aérien ou maritime : comment choisir ?",
+          "text": "L'avion est facturé principalement au poids, le bateau au volume. Pour quelques cartons légers ou urgents, l'aérien est souvent le plus intéressant. Dès que le volume augmente, le groupage maritime devient plus économique. Votre conseiller compare les deux options dans votre devis."
+        },
+        {
+          "title": "Ce que nous faisons pour vous",
+          "text": "Réception de vos colis chez nos équipes en Chine, regroupement gratuit de plusieurs fournisseurs, vérification de la marchandise, expédition puis suivi en ligne avec votre numéro Union Transit jusqu'à l'arrivée."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quel est le prix du fret aérien Chine Sénégal au kilo ?",
+          "a": "Le tarif dépend de la formule (express ou normal), du poids, des dimensions et du type de produit. Demandez votre devis : réponse sous 48 h maximum."
+        },
+        {
+          "q": "Combien de temps met un colis de Chine à Dakar par avion ?",
+          "a": "1 à 3 jours en aérien express, 7 à 10 jours en aérien normal."
+        },
+        {
+          "q": "Puis-je envoyer un seul petit colis ?",
+          "a": "Oui, et vous pouvez aussi regrouper plusieurs achats chez différents fournisseurs pour payer un seul envoi."
+        }
+      ]
+    },
+    "sea": {
+      "meta": {
+        "title": "Groupage maritime Chine Dakar (LCL) : payez votre volume | Union Transit",
+        "description": "Groupage conteneur Chine-Sénégal : partagez un conteneur depuis Guangzhou et Yiwu vers Dakar et ne payez que votre volume. Suivi tous les 15 jours, devis sous 48 h."
+      },
+      "hero": {
+        "title": "Groupage maritime Chine Dakar : la solution économique pour vos volumes moyens",
+        "intro": "Avec le groupage (LCL), vos marchandises voyagent dans un conteneur partagé avec d'autres clients. Vous ne payez que le volume que vous occupez : c'est la façon la plus économique d'importer de Chine au Sénégal quand vous n'avez pas de quoi remplir un conteneur entier."
+      },
+      "highlights": [
+        {
+          "label": "Facturation",
+          "value": "au volume utilisé"
+        },
+        {
+          "label": "Suivi",
+          "value": "point tous les 15 jours"
+        },
+        {
+          "label": "Départs",
+          "value": "Guangzhou, Yiwu"
+        },
+        {
+          "label": "Devis",
+          "value": "sous 48 h"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Comment fonctionne le groupage ?",
+          "text": "Vous faites livrer vos marchandises à nos équipes en Chine. Nous les réceptionnons, les vérifions et les chargeons dans un conteneur partagé à destination de Dakar. Le conteneur part une fois rempli ; vous êtes informé à chaque étape."
+        },
+        {
+          "title": "Pour qui ?",
+          "text": "Commerçants, boutiques, grossistes et particuliers qui importent régulièrement des volumes moyens : vêtements, chaussures, électroménager, mobilier, pièces détachées, matériel professionnel…"
+        },
+        {
+          "title": "Un suivi régulier, même sans le demander",
+          "text": "Le maritime prend du temps, alors nous vous tenons informé : chargement, départ prévu, départ du port, arrivée prévue, arrivée à Dakar, dédouanement et mise à disposition. Un point d'avancement vous est envoyé tous les 15 jours et l'état de votre envoi est consultable en ligne."
+        },
+        {
+          "title": "Groupage ou conteneur complet ?",
+          "text": "Si votre volume approche celui d'un conteneur, le conteneur complet (FCL) peut revenir moins cher et part sans attendre d'autres clients. Votre conseiller vous indique la meilleure option dans le devis."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quel est le prix du groupage Chine Dakar ?",
+          "a": "Le groupage est facturé selon le volume (en mètres cubes) et le type de marchandise. Envoyez-nous les dimensions et la nature de vos produits pour un devis précis sous 48 h."
+        },
+        {
+          "q": "Quel est le délai du groupage maritime vers Dakar ?",
+          "a": "Le délai dépend du remplissage du conteneur et de la date de départ ; il vous est précisé dans le devis. Pendant le transport, vous recevez un point d'avancement tous les 15 jours."
+        },
+        {
+          "q": "Ma marchandise est-elle vérifiée avant le chargement ?",
+          "a": "Oui, nous contrôlons la quantité et l'état de vos colis à la réception en Chine, avant de les charger."
+        }
+      ]
+    },
+    "container": {
+      "meta": {
+        "title": "Conteneur Chine Dakar 20 et 40 pieds (FCL) | Union Transit",
+        "description": "Expédiez un conteneur complet 20' ou 40' de la Chine vers Dakar : chargement en Chine, transport maritime en 40 à 60 jours, suivi et dédouanement. Devis sous 48 h."
+      },
+      "hero": {
+        "title": "Conteneur complet Chine Dakar : 20 ou 40 pieds rien que pour vous",
+        "intro": "Pour les gros volumes, réservez un conteneur entier (FCL). Votre marchandise voyage seule, sans attendre d'autres clients, de la Chine jusqu'au port de Dakar."
+      },
+      "highlights": [
+        {
+          "label": "Formats",
+          "value": "20 et 40 pieds"
+        },
+        {
+          "label": "Délai",
+          "value": "40 à 60 jours"
+        },
+        {
+          "label": "Suivi",
+          "value": "point tous les 15 jours"
+        },
+        {
+          "label": "Devis",
+          "value": "sous 48 h"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Pourquoi choisir le conteneur complet ?",
+          "text": "Vous maîtrisez la date de départ, votre marchandise n'est pas manipulée avec celle d'autres clients et le coût par mètre cube devient très intéressant dès que les volumes sont importants. C'est la solution des grossistes, des projets de construction, de l'ameublement ou de l'équipement professionnel."
+        },
+        {
+          "title": "De l'usine au port de Dakar",
+          "text": "Nous pouvons acheter et contrôler vos produits auprès des usines, organiser le chargement du conteneur en Chine, puis suivre le transport maritime, l'arrivée à Dakar et le dédouanement jusqu'à la mise à disposition de votre marchandise."
+        },
+        {
+          "title": "Un seul interlocuteur",
+          "text": "Un conseiller dédié suit votre conteneur de A à Z et vous envoie un point d'avancement tous les 15 jours. Vous pouvez aussi consulter l'état de l'envoi en ligne avec votre numéro de suivi."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Combien coûte un conteneur de Chine au Sénégal ?",
+          "a": "Le prix dépend du format (20 ou 40 pieds), du port de départ, de la période et de la marchandise. Demandez un devis : nous vous répondons sous 48 h avec un prix détaillé."
+        },
+        {
+          "q": "Quel est le délai d'un conteneur Chine Dakar ?",
+          "a": "Comptez en général 40 à 60 jours entre le départ et la mise à disposition à Dakar."
+        },
+        {
+          "q": "Quelle différence entre 20 et 40 pieds ?",
+          "a": "Un 40 pieds offre environ deux fois le volume d'un 20 pieds. Votre conseiller vous aide à choisir selon le volume et le poids de votre commande."
+        }
+      ]
+    },
+    "sourcing": {
+      "meta": {
+        "title": "Achat en Chine depuis le Sénégal : sourcing, contrôle, paiement | Union Transit",
+        "description": "Achetez en Chine sans risque depuis le Sénégal : recherche de fournisseurs, mise en relation avec les usines, contrôle qualité et paiement des fournisseurs (Alipay, WeChat, virement)."
+      },
+      "hero": {
+        "title": "Acheter en Chine depuis le Sénégal, sans risque",
+        "intro": "Trouver le bon produit, le bon fournisseur et le payer en toute sécurité : c'est souvent la partie la plus difficile d'un import. Notre équipe en Chine s'en charge pour vous, puis expédie votre marchandise jusqu'à Dakar."
+      },
+      "highlights": [
+        {
+          "label": "Sourcing",
+          "value": "sur devis"
+        },
+        {
+          "label": "Paiement",
+          "value": "Alipay, WeChat, virement"
+        },
+        {
+          "label": "Contrôle",
+          "value": "avant expédition"
+        },
+        {
+          "label": "Consolidation",
+          "value": "gratuite"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Sourcing de produits",
+          "text": "Vous avez une idée de produit mais ne savez pas où le trouver ? Nous recherchons et sélectionnons pour vous les fournisseurs adaptés à votre budget et à la qualité attendue. Le tarif dépend du produit et des caractéristiques demandées."
+        },
+        {
+          "title": "Mise en relation directe avec les usines",
+          "text": "Nous vous mettons en contact avec des usines fiables, sans intermédiaires qui gonflent le prix sans valeur ajoutée."
+        },
+        {
+          "title": "Paiement sécurisé de vos fournisseurs chinois",
+          "text": "Envoyer de l'argent directement à un fournisseur inconnu à l'étranger est risqué. Nous réglons vos fournisseurs pour votre compte par Alipay, WeChat ou virement bancaire, et nous assurons que la marchandise correspond à la commande."
+        },
+        {
+          "title": "Contrôle qualité avant expédition",
+          "text": "Quantité, état, conformité : nous vérifions vos produits avant de les expédier, pour éviter les mauvaises surprises à l'arrivée au Sénégal."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Pouvez-vous acheter sur Alibaba ou 1688 pour moi ?",
+          "a": "Oui, envoyez-nous les liens ou les références des produits : nous vérifions le fournisseur, passons la commande, payons et réceptionnons la marchandise avant de l'expédier."
+        },
+        {
+          "q": "Comment payer un fournisseur chinois depuis le Sénégal ?",
+          "a": "Nous payons vos fournisseurs pour vous via Alipay, WeChat ou virement bancaire. Vous évitez les transferts risqués et les frais inutiles."
+        },
+        {
+          "q": "Combien coûte le service de sourcing ?",
+          "a": "Le tarif dépend du produit à trouver et de vos exigences. Décrivez votre besoin dans le formulaire de devis : réponse sous 48 h."
+        }
+      ]
     }
   }
 }
