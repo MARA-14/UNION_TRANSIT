@@ -113,7 +113,7 @@ export default function Footer() {
       <div className="border-t border-white/10 py-5">
         <div className="container-page flex flex-col-reverse items-center gap-3 sm:flex-row sm:justify-between">
           <p className="text-xs text-white/60">
-            © {year} Union Transit. {t("footer.rights")}
+            © {year} Union Transit SUARL. {t("footer.rights")}
           </p>
           <div className="flex items-center gap-4">
             <Link
