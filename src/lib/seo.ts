@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import { routing, type StaticPathnames } from "@/i18n/routing";
-import { SITE_ADDRESS_HQ, SITE_EMAIL, SITE_FACEBOOK } from "@/lib/contact";
+import { SITE_ADDRESS_HQ, SITE_EMAIL, SITE_FACEBOOK, SITE_GOOGLE_BUSINESS } from "@/lib/contact";
 import { WHATSAPP_CN, WHATSAPP_SN } from "@/lib/whatsapp";
 
 // Domaine de production : sert aux URLs canoniques, au sitemap et aux balises hreflang.
@@ -79,10 +79,12 @@ export function organizationJsonLd(locale: string) {
     "@type": ["Organization", "LocalBusiness"],
     "@id": `${SITE_URL}/#organization`,
     name: "Union Transit",
-    alternateName: ["Union Transit Group", "UTG Cargo"],
+    legalName: "Union Transit SUARL",
+    alternateName: ["Union Transit SUARL", "Union Transit Group", "UTG Cargo"],
     url: `${SITE_URL}/${locale}`,
     logo: `${SITE_URL}/logo.png`,
-    sameAs: [SITE_FACEBOOK],
+    sameAs: [SITE_FACEBOOK, SITE_GOOGLE_BUSINESS],
+    hasMap: SITE_GOOGLE_BUSINESS,
     image: `${SITE_URL}/logo.png`,
     description,
     email: SITE_EMAIL,
