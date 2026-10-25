@@ -5,3 +5,6 @@ export const SITE_ADDRESS_HQ = "Parcelle Assainies, Unité 4, Lot 29, Kaolack, S
 
 // Page Facebook officielle (liée au site dans les données structurées et le pied de page).
 export const SITE_FACEBOOK = "https://www.facebook.com/uniontransitcargo/";
+
+// Fiche Google Business (Kaolack), reliée au site dans les données structurées et le pied de page.
+export const SITE_GOOGLE_BUSINESS = "https://share.google/3C6GYuimiItueefkx";
