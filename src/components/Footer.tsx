@@ -2,12 +2,27 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { WHATSAPP_CN, WHATSAPP_SN, formatWhatsAppDisplay } from "@/lib/whatsapp";
-import { SITE_EMAIL, SITE_ADDRESS_HQ } from "@/lib/contact";
-import { MailIcon, PhoneIcon, MapPinIcon } from "@/components/icons";
+import {
+  SITE_EMAIL,
+  SITE_ADDRESS_HQ,
+  SITE_FACEBOOK_URL,
+  SITE_TIKTOK_URL,
+} from "@/lib/contact";
+import {
+  MailIcon,
+  PhoneIcon,
+  MapPinIcon,
+  FacebookIcon,
+  TikTokIcon,
+} from "@/components/icons";
 
 export default function Footer() {
   const t = useTranslations();
   const year = new Date().getFullYear();
+  const socials = [
+    { href: SITE_FACEBOOK_URL, label: t("footer.facebookLabel"), icon: <FacebookIcon className="h-5 w-5" /> },
+    { href: SITE_TIKTOK_URL, label: t("footer.tiktokLabel"), icon: <TikTokIcon className="h-5 w-5" /> },
+  ].filter((s) => s.href);
 
   return (
     <footer className="bg-navy-dark text-white">
@@ -84,6 +99,28 @@ export default function Footer() {
               <span>{SITE_ADDRESS_HQ}</span>
             </li>
           </ul>
+          {socials.length > 0 && (
+            <div className="mt-5">
+              <h3 className="font-heading text-sm font-semibold uppercase tracking-wide text-gold">
+                {t("footer.socialTitle")}
+              </h3>
+              <ul className="mt-3 flex items-center gap-3">
+                {socials.map((s) => (
+                  <li key={s.href}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={s.label}
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-gold hover:text-navy-dark"
+                    >
+                      {s.icon}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
 

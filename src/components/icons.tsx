@@ -206,3 +206,121 @@ export function SearchCheckIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function CarPartsIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function ShirtIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <path
+        d="M8.5 3L3 6l2 4 2-1v12h10V9l2 1 2-4-5.5-3a3.5 3.5 0 01-7 0z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function ChipIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="1.6" />
+      <rect x="9.5" y="9.5" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="M9 2.5V6M15 2.5V6M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function SparklesIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <path
+        d="M10 3l1.8 5.2L17 10l-5.2 1.8L10 17l-1.8-5.2L3 10l5.2-1.8L10 3zM18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9L18 14z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function PackageIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <path
+        d="M12 2.5l8.5 4.5v10L12 21.5 3.5 17V7L12 2.5zM3.5 7L12 11.5 20.5 7M12 11.5v10"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function WarehouseIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <path
+        d="M3 10l9-6 9 6v10H3V10zM8 20v-6h8v6M8 17h8"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function TruckIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <path
+        d="M2.5 6.5h11v10h-11zM13.5 10h4l3 3.2v3.3h-7"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <circle cx="7" cy="17.5" r="1.8" fill="var(--icon-bg, #fff)" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="17" cy="17.5" r="1.8" fill="var(--icon-bg, #fff)" stroke="currentColor" strokeWidth="1.6" />
+    </svg>
+  );
+}
+
+export function FacebookIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <path
+        d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+export function TikTokIcon({ className }: IconProps) {
+  return (
+    <svg {...common} className={className}>
+      <path
+        d="M16.6 3h-3v12.2a2.6 2.6 0 11-2.6-2.6c.3 0 .5 0 .8.1V9.6a5.6 5.6 0 105.8 5.6V9a7 7 0 004 1.3V7.3A4.2 4.2 0 0116.6 3z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}

@@ -24,7 +24,10 @@
     "termsLink": "CGU",
     "claimLink": "Réclamation",
     "rights": "Tous droits réservés.",
-    "addressLabel": "Siège social"
+    "addressLabel": "Siège social",
+    "socialTitle": "Nos réseaux",
+    "facebookLabel": "Suivez-nous sur Facebook",
+    "tiktokLabel": "Suivez-nous sur TikTok"
   },
   "whatsapp": {
     "writeOnWhatsApp": "Écrire sur WhatsApp",
@@ -116,6 +119,18 @@
         "allInOne": {
           "title": "Tout au même endroit",
           "description": "Achat, contrôle, paiement et transport chez un seul interlocuteur."
+        },
+        "warehouse": {
+          "title": "Entrepôt à Dakar",
+          "description": "Votre marchandise est réceptionnée dans notre entrepôt à Dakar."
+        },
+        "delivery": {
+          "title": "Livraison à votre choix",
+          "description": "Récupération à l'entrepôt ou livraison jusqu'à votre ville."
+        },
+        "products": {
+          "title": "Large choix de marchandises",
+          "description": "Pièces auto, vêtements, électronique, cosmétiques et tout ce qui est autorisé."
         }
       }
     },
@@ -543,5 +558,49 @@
       "choice": "veuillez choisir une option",
       "text": "texte trop court ou trop long"
     }
+  },
+  "products": {
+    "title": "Ce que nous transportons",
+    "subtitle": "De nombreuses catégories de marchandises, dans la limite de ce qui est autorisé par la réglementation.",
+    "items": {
+      "autoParts": {
+        "title": "Pièces automobiles",
+        "description": "Pièces détachées et accessoires pour véhicules."
+      },
+      "clothing": {
+        "title": "Vêtements",
+        "description": "Prêt-à-porter, chaussures et accessoires de mode."
+      },
+      "electronics": {
+        "title": "Électronique",
+        "description": "Téléphones, accessoires et appareils électroniques."
+      },
+      "cosmetics": {
+        "title": "Cosmétiques",
+        "description": "Produits de beauté et de soins."
+      },
+      "other": {
+        "title": "Et tout ce qui est autorisé",
+        "description": "Un doute sur votre produit ? Demandez-nous : nous vous confirmons s'il peut être transporté."
+      }
+    },
+    "note": "Certains produits sont interdits ou réglementés. Contactez-nous avant d'expédier en cas de doute."
+  },
+  "delivery": {
+    "title": "Vos options de livraison",
+    "subtitle": "Nous transportons votre marchandise jusqu'à Dakar. Ensuite, vous choisissez selon votre besoin.",
+    "options": {
+      "warehouse": {
+        "title": "Récupération à notre entrepôt de Dakar",
+        "description": "Nous acheminons votre marchandise jusqu'à notre entrepôt à Dakar. Vous venez la récupérer, ou la faire récupérer, quand vous le souhaitez.",
+        "ideal": "Idéal si vous êtes à Dakar ou si vous avez déjà votre propre solution de transport."
+      },
+      "city": {
+        "title": "Livraison jusqu'à votre ville",
+        "description": "Si vous le souhaitez, nous vous transmettons votre colis jusqu'à votre ville de destination, sans que vous ayez à vous déplacer.",
+        "ideal": "Idéal si vous êtes en dehors de Dakar et voulez recevoir votre colis près de chez vous."
+      }
+    },
+    "note": "Indiquez votre choix lors de votre demande de devis."
   }
 }

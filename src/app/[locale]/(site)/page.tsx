@@ -6,6 +6,8 @@ import AvisForm from "@/components/AvisForm";
 import AccordionCard from "@/components/AccordionCard";
 import ValueCard from "@/components/ValueCard";
 import FinalBanner from "@/components/FinalBanner";
+import ProductTypes from "@/components/ProductTypes";
+import DeliveryOptions from "@/components/DeliveryOptions";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import {
   PlaneIcon,
@@ -17,6 +19,9 @@ import {
   LayersIcon,
   ShieldIcon,
   MapPinIcon,
+  WarehouseIcon,
+  TruckIcon,
+  PackageIcon,
   SearchCheckIcon,
 } from "@/components/icons";
 import { WHATSAPP_SN } from "@/lib/whatsapp";
@@ -157,6 +162,10 @@ export default async function HomePage({
         </div>
       </section>
 
+      <ProductTypes />
+
+      <DeliveryOptions />
+
       {/* Why choose us */}
       <section className="bg-navy py-16 sm:py-20">
         <div className="container-page">
@@ -193,6 +202,21 @@ export default async function HomePage({
               icon={<LayersIcon className="h-5 w-5" />}
               title={t("why.items.allInOne.title")}
               description={t("why.items.allInOne.description")}
+            />
+            <ValueCard
+              icon={<WarehouseIcon className="h-5 w-5" />}
+              title={t("why.items.warehouse.title")}
+              description={t("why.items.warehouse.description")}
+            />
+            <ValueCard
+              icon={<TruckIcon className="h-5 w-5" />}
+              title={t("why.items.delivery.title")}
+              description={t("why.items.delivery.description")}
+            />
+            <ValueCard
+              icon={<PackageIcon className="h-5 w-5" />}
+              title={t("why.items.products.title")}
+              description={t("why.items.products.description")}
             />
           </div>
         </div>

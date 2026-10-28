@@ -24,7 +24,10 @@
     "termsLink": "Terms of use",
     "claimLink": "Complaint",
     "rights": "All rights reserved.",
-    "addressLabel": "Registered office"
+    "addressLabel": "Registered office",
+    "socialTitle": "Our social media",
+    "facebookLabel": "Follow us on Facebook",
+    "tiktokLabel": "Follow us on TikTok"
   },
   "whatsapp": {
     "writeOnWhatsApp": "Write on WhatsApp",
@@ -116,6 +119,18 @@
         "allInOne": {
           "title": "Everything in one place",
           "description": "Purchasing, inspection, payment and transport with a single contact."
+        },
+        "warehouse": {
+          "title": "Warehouse in Dakar",
+          "description": "Your goods are received at our warehouse in Dakar."
+        },
+        "delivery": {
+          "title": "Delivery of your choice",
+          "description": "Pick-up at the warehouse or delivery to your city."
+        },
+        "products": {
+          "title": "Wide range of goods",
+          "description": "Auto parts, clothing, electronics, cosmetics and anything permitted."
         }
       }
     },
@@ -543,5 +558,49 @@
       "choice": "please choose an option",
       "text": "text too short or too long"
     }
+  },
+  "products": {
+    "title": "What we ship",
+    "subtitle": "A wide range of goods, within what is permitted by regulations.",
+    "items": {
+      "autoParts": {
+        "title": "Auto parts",
+        "description": "Spare parts and accessories for vehicles."
+      },
+      "clothing": {
+        "title": "Clothing",
+        "description": "Ready-to-wear, shoes and fashion accessories."
+      },
+      "electronics": {
+        "title": "Electronics",
+        "description": "Phones, accessories and electronic devices."
+      },
+      "cosmetics": {
+        "title": "Cosmetics",
+        "description": "Beauty and skincare products."
+      },
+      "other": {
+        "title": "And anything that is permitted",
+        "description": "Not sure about your product? Ask us: we will confirm whether it can be shipped."
+      }
+    },
+    "note": "Some products are prohibited or regulated. Contact us before shipping if in doubt."
+  },
+  "delivery": {
+    "title": "Your delivery options",
+    "subtitle": "We ship your goods to Dakar. After that, you choose what suits your needs.",
+    "options": {
+      "warehouse": {
+        "title": "Pick up at our Dakar warehouse",
+        "description": "We carry your goods to our warehouse in Dakar. You collect them, or have them collected, whenever you like.",
+        "ideal": "Ideal if you are in Dakar or already have your own transport."
+      },
+      "city": {
+        "title": "Delivery to your city",
+        "description": "If you wish, we forward your parcel all the way to your destination city, so you don't have to travel.",
+        "ideal": "Ideal if you are outside Dakar and want to receive your parcel close to home."
+      }
+    },
+    "note": "Tell us your choice when you request a quote."
   }
 }
