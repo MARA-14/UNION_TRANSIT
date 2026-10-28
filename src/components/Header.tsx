@@ -11,11 +11,12 @@ export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const links: { href: "/" | "/services" | "/about" | "/tracking"; label: string }[] = [
+  const links: { href: "/" | "/services" | "/about" | "/tracking" | "/blog"; label: string }[] = [
     { href: "/", label: t("home") },
     { href: "/services", label: t("services") },
     { href: "/about", label: t("about") },
     { href: "/tracking", label: t("tracking") },
+    { href: "/blog", label: t("blog") },
   ];
 
   return (

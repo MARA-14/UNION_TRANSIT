@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { spaceGrotesk, ibmPlexSans } from "@/lib/fonts";
+import { GOOGLE_SITE_VERIFICATION, SITE_URL, organizationJsonLd } from "@/lib/seo";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -20,6 +21,8 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "home.meta" });
 
   return {
+    metadataBase: new URL(SITE_URL),
+    verification: { google: GOOGLE_SITE_VERIFICATION },
     title: {
       default: t("title"),
       template: "%s",
@@ -52,6 +55,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${spaceGrotesk.variable} ${ibmPlexSans.variable}`}>
       <body className="flex min-h-screen flex-col font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd(locale)) }}
+        />
         <NextIntlClientProvider>
           <a
             href="#main-content"

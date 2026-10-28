@@ -320,6 +320,10 @@ export function TikTokIcon({ className }: IconProps) {
       <path
         d="M16.6 3h-3v12.2a2.6 2.6 0 11-2.6-2.6c.3 0 .5 0 .8.1V9.6a5.6 5.6 0 105.8 5.6V9a7 7 0 004 1.3V7.3A4.2 4.2 0 0116.6 3z"
         fill="currentColor"
+        d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
       />
     </svg>
   );

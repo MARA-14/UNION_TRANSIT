@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import FinalBanner from "@/components/FinalBanner";
 import { BadgeCheckIcon, ClockIcon, VerifiedSealIcon, MapPinIcon } from "@/components/icons";
@@ -9,8 +10,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "about.meta" });
-  return { title: t("title"), description: t("description") };
+  return pageMetadata(locale, "about.meta", "/about");
 }
 
 export default async function AboutPage({

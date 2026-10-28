@@ -2,31 +2,21 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { WHATSAPP_CN, WHATSAPP_SN, formatWhatsAppDisplay } from "@/lib/whatsapp";
-import {
-  SITE_EMAIL,
-  SITE_ADDRESS_HQ,
-  SITE_FACEBOOK_URL,
-  SITE_TIKTOK_URL,
-} from "@/lib/contact";
-import {
-  MailIcon,
-  PhoneIcon,
-  MapPinIcon,
-  FacebookIcon,
-  TikTokIcon,
-} from "@/components/icons";
+import { SITE_EMAIL, SITE_ADDRESS_HQ, SITE_FACEBOOK, SITE_TIKTOK } from "@/lib/contact";
+import { MailIcon, PhoneIcon, MapPinIcon, FacebookIcon, TikTokIcon } from "@/components/icons";
+import { LANDINGS } from "@/lib/landings";
 
 export default function Footer() {
   const t = useTranslations();
   const year = new Date().getFullYear();
   const socials = [
-    { href: SITE_FACEBOOK_URL, label: t("footer.facebookLabel"), icon: <FacebookIcon className="h-5 w-5" /> },
-    { href: SITE_TIKTOK_URL, label: t("footer.tiktokLabel"), icon: <TikTokIcon className="h-5 w-5" /> },
+    { href: SITE_FACEBOOK, label: t("footer.facebookLabel"), icon: <FacebookIcon className="h-5 w-5" /> },
+    { href: SITE_TIKTOK, label: t("footer.tiktokLabel"), icon: <TikTokIcon className="h-5 w-5" /> },
   ].filter((s) => s.href);
 
   return (
     <footer className="bg-navy-dark text-white">
-      <div className="container-page py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="container-page py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
             <Image
@@ -62,12 +52,28 @@ export default function Footer() {
             <Link href="/tracking" className="text-white/80 hover:text-white">
               {t("nav.tracking")}
             </Link>
+            <Link href="/blog" className="text-white/80 hover:text-white">
+              {t("nav.blog")}
+            </Link>
             <Link href="/contact" className="text-white/80 hover:text-white">
               {t("nav.contact")}
             </Link>
             <Link href="/claim" className="text-white/80 hover:text-white">
               {t("footer.claimLink")}
             </Link>
+          </nav>
+        </div>
+
+        <div>
+          <h2 className="font-heading text-sm font-semibold uppercase tracking-wide text-gold">
+            {t("footer.routesTitle")}
+          </h2>
+          <nav className="mt-3 flex flex-col gap-2 text-sm">
+            {LANDINGS.map((l) => (
+              <Link key={l.key} href={l.href} className="text-white/80 hover:text-white">
+                {t(`landing.common.nav.${l.key}`)}
+              </Link>
+            ))}
           </nav>
         </div>
 
