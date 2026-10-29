@@ -34,7 +34,9 @@
   "whatsapp": {
     "writeOnWhatsApp": "Write on WhatsApp",
     "shareExperience": "Share my experience on WhatsApp",
-    "talkToAdvisor": "Talk to an advisor on WhatsApp"
+    "talkToAdvisor": "Talk to an advisor on WhatsApp",
+    "floatingLabel": "Talk to an advisor",
+    "floatingMessage": "Hello Union Transit, I would like to speak to an advisor."
   },
   "home": {
     "meta": {
