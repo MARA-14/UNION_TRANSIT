@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { WHATSAPP_SN, buildWhatsAppLink } from "@/lib/whatsapp";
 
 export async function generateMetadata({
@@ -26,10 +25,6 @@ export default async function ComingSoonPage({
 
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center gap-8 bg-navy px-6 py-16 text-center text-white">
-      <div className="absolute right-6 top-6">
-        <LanguageSwitcher variant="dark" />
-      </div>
-
       <Image
         src="/logo.png"
         alt="Union Transit"

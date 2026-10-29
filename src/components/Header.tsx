@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -62,9 +61,6 @@ export default function Header() {
 
         {/* Right cluster: stays close to the logo at every breakpoint so there is never a bare gap before the menu button. */}
         <div className="ml-auto flex items-center gap-2 sm:gap-3">
-          <div className="hidden sm:block">
-            <LanguageSwitcher variant="light" />
-          </div>
           <Link
             href="/tracking"
             className="inline-flex min-h-[44px] items-center rounded-md border-2 border-navy px-3 sm:px-4 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white focus-visible:outline focus-visible:outline-3 focus-visible:outline-gold focus-visible:outline-offset-2"
@@ -119,9 +115,6 @@ export default function Header() {
               );
             })}
             <div className="mt-2 flex flex-col gap-3 border-t border-navy/10 pt-3">
-              <div className="sm:hidden">
-                <LanguageSwitcher variant="light" />
-              </div>
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}

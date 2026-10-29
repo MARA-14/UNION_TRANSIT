@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function NotFound() {
   const t = useTranslations("notFound");
@@ -18,7 +17,6 @@ export default function NotFound() {
             className="h-9 w-auto brightness-0 invert"
           />
         </Link>
-        <LanguageSwitcher variant="dark" />
       </header>
 
       <div className="container-page flex flex-1 flex-col items-center justify-center gap-6 py-16 text-center text-white">

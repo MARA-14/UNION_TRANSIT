@@ -44,7 +44,7 @@ export function languageAlternates(href: StaticPathnames) {
   return languages;
 }
 
-// Métadonnées d'une page : titre et description traduits, URL canonique et versions FR/EN.
+// Métadonnées d'une page : titre et description traduits, URL canonique et hreflang.
 export async function pageMetadata(
   locale: string,
   namespace: string,
@@ -61,7 +61,7 @@ export async function pageMetadata(
       description: t("description"),
       url,
       siteName: "Union Transit",
-      locale: locale === "fr" ? "fr_SN" : "en_US",
+      locale: "fr_SN",
       type: "website",
       images: [{ url: "/logo.png", alt: "Union Transit" }],
     },
@@ -71,9 +71,7 @@ export async function pageMetadata(
 // Données structurées (schema.org) décrivant l'entreprise pour Google.
 export function organizationJsonLd(locale: string) {
   const description =
-    locale === "fr"
-      ? "Transitaire et cargo entre la Chine (Guangzhou, Yiwu) et le Sénégal (Dakar) : fret aérien express et normal, groupage maritime, conteneur complet, sourcing, contrôle qualité et paiement des fournisseurs."
-      : "Freight forwarder and cargo between China (Guangzhou, Yiwu) and Senegal (Dakar): express and standard air freight, sea groupage, full containers, sourcing, quality control and supplier payments.";
+    "Transitaire et cargo entre la Chine (Guangzhou, Yiwu) et le Sénégal (Dakar) : fret aérien express et normal, groupage maritime, conteneur complet, sourcing, contrôle qualité et paiement des fournisseurs.";
   return {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness"],
