@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import FinalBanner from "@/components/FinalBanner";
 import { BLOG_ARTICLES, getArticle } from "@/content/blog";
 import { SITE_URL } from "@/lib/seo";
+import { LANDINGS } from "@/lib/landings";
 
 // Les articles n'existent qu'en français.
 export const dynamicParams = false;
@@ -53,6 +54,7 @@ export default async function BlogArticlePage({
   if (locale !== "fr" || !article) notFound();
   setRequestLocale(locale);
   const t = await getTranslations("blog");
+  const tc = await getTranslations("landing.common");
 
   const jsonLd = [
     {
@@ -129,6 +131,24 @@ export default async function BlogArticlePage({
           </div>
         </div>
       </article>
+
+      <section className="pb-14">
+        <div className="container-page max-w-3xl mx-auto">
+          <h2 className="font-heading text-xl font-bold text-navy">{tc("relatedTitle")}</h2>
+          <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+            {LANDINGS.map((l) => (
+              <li key={l.key}>
+                <Link
+                  href={l.href}
+                  className="block rounded-lg border border-navy/10 px-4 py-3 text-navy hover:bg-navy/5"
+                >
+                  {tc(`nav.${l.key}`)} →
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <FinalBanner
         title={t("ctaTitle")}
