@@ -12,6 +12,76 @@ export type BlogArticle = {
 
 export const BLOG_ARTICLES: BlogArticle[] = [
   {
+    slug: "choisir-un-transitaire-chine-senegal-fiable",
+    title: "Transitaire Chine Sénégal : comment choisir un transitaire fiable",
+    description:
+      "Comment reconnaître un transitaire Chine-Sénégal fiable : les vérifications à faire, les questions à poser avant de confier votre marchandise, et les signaux d'alerte à ne pas ignorer.",
+    date: "2026-11-09",
+    intro:
+      "Votre transitaire a votre marchandise, et souvent votre argent, entre les mains pendant des semaines. Un bon transitaire Chine-Sénégal vous fait gagner du temps et de l'argent ; un mauvais peut vous faire tout perdre. Voici comment faire le bon choix avant d'envoyer votre premier colis.",
+    sections: [
+      {
+        heading: "1. Vérifiez que l'entreprise existe vraiment",
+        paragraphs: [
+          "Un transitaire sérieux a un nom d'entreprise, une adresse physique au Sénégal et des contacts joignables. Demandez où se trouvent ses bureaux, et n'hésitez pas à y passer. Méfiez-vous de ceux qui n'existent que sur un numéro WhatsApp, sans adresse ni site internet.",
+        ],
+      },
+      {
+        heading: "2. Exigez une présence en Chine",
+        paragraphs: [
+          "Pour réceptionner, contrôler et regrouper vos colis, il faut une équipe ou un entrepôt sur place, idéalement près des grands marchés comme Guangzhou et Yiwu. Demandez l'adresse de réception en Chine et un contact sur place. Un transitaire qui sous-traite tout sans rien voir ne peut pas vous garantir l'état de votre marchandise.",
+        ],
+      },
+      {
+        heading: "3. Demandez un devis clair et écrit",
+        paragraphs: [
+          "Le devis doit indiquer le mode de transport, le mode de calcul (au kilo, au volume ou au conteneur), le délai annoncé et ce qui est inclus : dédouanement, livraison, assurance. Un prix très bas qui ne précise rien cache souvent des frais qui apparaîtront à l'arrivée.",
+        ],
+      },
+      {
+        heading: "4. Posez les bonnes questions avant d'envoyer",
+        paragraphs: ["Un transitaire fiable répond clairement à ces questions :"],
+        list: [
+          "Quels sont vos délais réels en aérien et en maritime ?",
+          "Comment suivez-vous mon envoi, et qui me tient informé ?",
+          "Que se passe-t-il si un colis est abîmé ou perdu ?",
+          "Pouvez-vous regrouper des achats venant de plusieurs fournisseurs ?",
+          "Contrôlez-vous la marchandise à la réception en Chine ?",
+          "Les frais de dédouanement sont-ils compris dans le prix ?",
+        ],
+      },
+      {
+        heading: "5. Choisissez plusieurs modes de transport",
+        paragraphs: [
+          "Vos besoins changent : un échantillon urgent, une commande régulière, un gros stock. Un bon transitaire propose l'aérien express, l'aérien normal, le groupage maritime et le conteneur complet, et vous conseille le plus adapté à votre volume plutôt que le plus cher.",
+        ],
+      },
+      {
+        heading: "6. Les signaux d'alerte",
+        paragraphs: ["Prenez le temps de réfléchir si vous constatez :"],
+        list: [
+          "un prix nettement plus bas que tous les autres, sans explication ;",
+          "aucune adresse au Sénégal ni en Chine ;",
+          "un paiement demandé sur un compte personnel qui change d'une fois à l'autre ;",
+          "aucun numéro de suivi, ou des réponses floues sur la position de votre envoi ;",
+          "aucun client à qui vous pouvez demander son avis.",
+        ],
+      },
+      {
+        heading: "7. Commencez petit",
+        paragraphs: [
+          "Pour un premier envoi avec un nouveau transitaire, testez avec une petite quantité. Vous verrez la qualité du suivi, le respect des délais et l'état de la marchandise à l'arrivée, avant de confier des volumes plus importants.",
+        ],
+      },
+      {
+        heading: "Union Transit, votre transitaire Chine-Sénégal",
+        paragraphs: [
+          "Union Transit est présent en Chine (Guangzhou, Yiwu) et au Sénégal, avec son siège à Kaolack. Nous réceptionnons, contrôlons et regroupons gratuitement vos achats, payons vos fournisseurs si besoin, et les expédions par avion express (1 à 3 jours), avion normal (7 à 10 jours), groupage maritime ou conteneur complet. Demandez votre devis : réponse sous 48 h, sur WhatsApp ou via notre formulaire.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "comment-importer-de-chine-au-senegal",
     title: "Comment importer de Chine au Sénégal : le guide étape par étape",
     description:
