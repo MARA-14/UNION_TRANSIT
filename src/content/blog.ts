@@ -12,6 +12,71 @@ export type BlogArticle = {
 
 export const BLOG_ARTICLES: BlogArticle[] = [
   {
+    slug: "cargo-chine-senegal-delais-groupage",
+    title: "Cargo Chine Sénégal : pourquoi votre colis met parfois 5 mois au lieu de 2",
+    description:
+      "Cargo Chine Sénégal : aérien ou maritime, délais réels et étapes. Pourquoi un groupage annoncé à 60 jours peut arriver après 5 mois, et comment savoir à l'avance si votre envoi sera en retard.",
+    date: "2026-11-26",
+    intro:
+      "« Le cargo m'avait dit 2 mois, et ça fait 5 mois que j'attends mon colis. » Au Sénégal, beaucoup d'importateurs ont déjà vécu cette situation. Ce retard n'est presque jamais dû au bateau : il vient de la façon dont fonctionne le groupage maritime, et du fait que certains cargos annoncent des délais sans tout expliquer. Voici comment ça se passe vraiment, et comment éviter les mauvaises surprises.",
+    sections: [
+      {
+        heading: "Aérien ou maritime : deux logiques différentes",
+        paragraphs: [
+          "En aérien, votre colis part rapidement : 1 à 3 jours en express, 7 à 10 jours en aérien normal. Le délai est court et prévisible.",
+          "En maritime, il y a deux formules. Le conteneur complet (20 ou 40 pieds) vous est réservé : il part dès qu'il est chargé. Le groupage, lui, est un conteneur partagé entre plusieurs clients. C'est la solution la plus économique, mais c'est aussi là que naissent la plupart des retards.",
+        ],
+      },
+      {
+        heading: "Le groupage ne part que lorsque le conteneur est plein",
+        paragraphs: [
+          "Un conteneur de groupage ne quitte pas la Chine tant qu'il n'est pas rempli. Le cargo doit attendre d'avoir reçu assez de marchandises de ses différents clients pour que le voyage soit rentable. Selon la période et le nombre de clients, remplir un conteneur peut prendre quelques jours… ou plusieurs semaines, voire plusieurs mois.",
+          "Pendant tout ce temps, votre colis est bien arrivé à l'entrepôt en Chine, mais il attend. Le bateau n'est pas encore parti.",
+        ],
+      },
+      {
+        heading: "Le délai de 60 jours commence au départ du bateau",
+        paragraphs: [
+          "C'est le point le plus important, et celui qu'on vous dit rarement : le délai maritime annoncé (environ 40 à 60 jours) compte à partir du jour où le bateau quitte le port en Chine, et non à partir du jour où vous déposez ou faites livrer votre colis.",
+          "Le délai réel, c'est donc : le temps d'attente pour remplir le conteneur + le temps de transport en mer + le dédouanement à Dakar. Si le conteneur met 2 mois à se remplir, un envoi « à 60 jours » peut facilement arriver après 4 ou 5 mois.",
+        ],
+      },
+      {
+        heading: "Pourquoi certains cargos ne le disent pas",
+        paragraphs: [
+          "Pour remplir leurs conteneurs, certains cargos annoncent un délai court à tout le monde, sans préciser que le compteur ne démarre qu'au départ du bateau. Le client pense recevoir sa marchandise en 2 mois, et découvre le retard quand il est trop tard pour s'organiser.",
+          "Une explication honnête dès le départ change tout : vous savez si votre envoi risque d'attendre, et vous pouvez choisir une autre solution si vous êtes pressé.",
+        ],
+      },
+      {
+        heading: "Les questions à poser avant d'envoyer en groupage",
+        paragraphs: ["Avant de confier votre marchandise, demandez :"],
+        list: [
+          "Le délai annoncé compte-t-il à partir du dépôt du colis ou du départ du bateau ?",
+          "Le conteneur est-il déjà bien rempli ? Quelle est la date de départ prévue ?",
+          "Serai-je prévenu du chargement et du départ du bateau ?",
+          "Si je suis pressé, quelle alternative proposez-vous (aérien, conteneur complet) ?",
+        ],
+      },
+      {
+        heading: "Comment éviter les mauvaises surprises",
+        paragraphs: ["Quelques réflexes simples :"],
+        list: [
+          "Pour une marchandise urgente ou un test de produit, choisissez l'aérien.",
+          "Pour un gros volume, comparez avec un conteneur complet : il part sans attendre d'autres clients.",
+          "En groupage, anticipez : envoyez vos commandes bien avant la période où vous en aurez besoin (fêtes, rentrée, Tabaski…).",
+          "Exigez un suivi : chargement, départ du bateau, arrivée à Dakar, dédouanement.",
+        ],
+      },
+      {
+        heading: "Chez Union Transit, on vous le dit avant",
+        paragraphs: [
+          "Chez Union Transit, nous préférons être clairs dès le départ : quand vous envoyez en groupage, nous vous expliquons que le délai maritime démarre au départ du bateau, et nous vous tenons informé à chaque étape, avec un point d'avancement tous les 15 jours. Si vous êtes pressé, nous vous conseillons l'aérien ou le conteneur complet. Demandez votre devis : réponse sous 48 h, sur WhatsApp ou via notre formulaire.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "choisir-un-transitaire-chine-senegal-fiable",
     title: "Transitaire Chine Sénégal : comment choisir un transitaire fiable",
     description:
